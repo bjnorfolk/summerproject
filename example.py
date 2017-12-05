@@ -35,7 +35,7 @@ fig = utils.plot_spectrum(wavelengths, observed_flux, observed_ivar, model_flux)
 
 
 
-raise a 
+
 
 # Fit a Gaussian to the line at 6707 Angstroms.
 x, y, y_err, indices = lamost.get_data_to_fit(wavelengths, observed_flux,
@@ -61,7 +61,7 @@ ax.fill_between(x, draw_between[0], draw_between[1],
 p_opt_error = np.diag(np.sqrt(p_cov))
 
 
-raise a
+
 
 
 L = len(p_opt)
