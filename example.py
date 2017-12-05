@@ -67,7 +67,7 @@ p_opt_error = np.diag(np.sqrt(p_cov))
 L = len(p_opt)
 LI_p_opts = np.zeros((N, L))
 LI_p_covs = np.zeros((N, L, L))
-raise a
+
 
 for index, star in enumerate(catalog):
 
