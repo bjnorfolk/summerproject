@@ -14,6 +14,11 @@
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
@@ -27,12 +32,12 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Short title, max. 45 characters]{MNRAS \LaTeXe\ template -- title goes here}
+\title[Short title, max. 45 characters]{Mans not hot, Man can never be hot}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
-\author[K. T. Smith et al.]{
-Keith T. Smith,$^{1}$\thanks{E-mail: mn@ras.org.uk (KTS)}
+\author[B. J. Norfolk et al.]{
+Brodie J. Norfolk,$^{1}$\thanks{E-mail: bjee7@student.monash.edu (MU)}
 A. N. Other,$^{2}$
 Third Author$^{2,3}$
 and Fourth Author$^{3}$
@@ -45,7 +50,7 @@ $^{3}$Another Department, Different Institution, Street Address, City Postal Cod
 
 \date{Accepted XXX. Received YYY; in original form ZZZ}
 
-\pubyear{2015}
+\pubyear{2018}
 
 \begin{document}
 \label{firstpage}
@@ -66,15 +71,35 @@ keyword1 -- keyword2 -- keyword3
 
 \section{Introduction}
 
-This is a simple template for authors to write new MNRAS papers.
-See \texttt{mnras\_sample.tex} for a more complex example, and \texttt{mnras\_guide.tex}
-for a full user guide.
+Barium stars as first recognized by \citet{Bidelman1951}, are chemically unique red giants that exhibit envelopes with an overabundance of both carbon, and heavy elements (Z > 30) in comparison to the Sun. The red giants studied here display especially strong s-process enhancement for Ba\Rmnum{2} and Sr\Rmnum{2} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. (thinking I should extend this sentence with a little on the Carbon, maybe I should search for carbon in my figures ?). The slow newtron capture process (s-process), occuring in the interior of AGB (asymptotic giant branch) stars, synthesizes roughly half of all elements heavier than iron \citep[e.g.][]{busso1999,travaglio2001,
+herwig2005,romano2010,kobayashi2011,prantzos2012,bisterzo2014,
+karakas12016}. Late in the AGB phase, during the thermally pulsing-AGB (TP-AGB) phase, thermal instabilities occur in the He shell every $10^5$ years or so, depending on the H-exhausted core mass, and will drive a convective zone that sweeps the entire region lying between the core mass and He-shell mixing the products of nucleosynthesis within these regions. The energy from the thermal pulses force the star to expand, pushing the H-shell out to cooler regions and allowing the convective envelope to move inwards to regions previously mixed by the thermal pulse driven convective zones. This expansion and resultsing inward movement is classified as the third dredge up (TDU), and is theorized to occur after each thermal pulse. During the TP-AGB phase, enrichent on the surface in $^{12}$C and heavy elements produced by the s-process is a result of the repeated downwash extensions of TDU \citep[e.g.][]{busso2001}. Post TDU, the star contracts and reignites the H-shell producing the majority of the surface lumiosity for the next interpulse period. The interpulse, thermal pulse, and dredge up cycle may occur numerous times and is dependent on the intitial mass, composition and mass-loss rate of the star.
+\\
+mass ranges
+\\
+According to the mass-transfer hypothesis, extrinsic Barium stars are a consequence of stellar wind accretion \citep{boffin1988,jorissen1992} or Roche-lobe overflow \citep{webbink1986}, in a binary system containing a previous AGB companion star (intrinsic Barium star) in its final phase as a white dwarf \citep{bohm1980,bohm1984}. In fact, \citet{mcclure1983} determines 85\% of all Barium stars are in binary systems and those that appear singular are actually pole-on, or highly eccentric binaries with significant radial velocity variations only occuring in a small phase range as detailed by \citet{pourbaix2004}.
+\\
+In this paper ... 
 
-All papers should start with an Introduction section, which sets the work
-in context, cites relevant earlier studies in the field by \citet{Others2013},
-and describes the problem the authors aim to solve \citep[e.g.][]{Author2012}.
 
-\section{Methods, Observations, Simulations etc.}
+\section{Observations}
+
+\section{Analysis and Results}
+
+\section{Discussion}
+
+\section{Conclusions}
+
+The last numbered section should briefly summarise what has been done, and describe
+the final conclusions which the authors draw from their work.
+
+\section*{Acknowledgements}
+
+The Acknowledgements section is not numbered. Here you can thank helpful
+colleagues, acknowledge funding agencies, telescopes and facilities used etc.
+Try to keep it short.
+
+\section{Examples}
 
 Normally the next section describes the techniques the authors used.
 It is frequently split into subsections, such as Section~\ref{sec:maths} below.
@@ -130,28 +155,73 @@ e.g. Table~\ref{tab:example_table}.
 \end{table}
 
 
-\section{Conclusions}
-
-The last numbered section should briefly summarise what has been done, and describe
-the final conclusions which the authors draw from their work.
-
-\section*{Acknowledgements}
-
-The Acknowledgements section is not numbered. Here you can thank helpful
-colleagues, acknowledge funding agencies, telescopes and facilities used etc.
-Try to keep it short.
-
-
 % The best way to enter references is to use BibTeX:
-
-%\bibliographystyle{mnras}
-%\bibliography{example} % if your bibtex file is called example.bib
+ 
+\bibliographystyle{mnras}
+\bibliography{example} % if your bibtex file is called example.bib
 
 \begin{thebibliography}{99}
 \bibitem[\protect\citeauthoryear{Author}{2012}]{Author2012}
 Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
 \bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
 Others S., 2012, Journal of Interesting Stuff, 17, 198
+
+
+\bibitem[\protect\citeauthoryear{Bidelman \& Keenan}{1951}]{Bidelman1951}
+Bidelman, W.~P. \& Keenan, P.~C. , 1951, ApJ, 114, 473
+\bibitem[\protect\citeauthoryear{Busso et al.}{1999}]{busso1999}
+Busso, M., Gallino, R., \& Wasserburg, P.~C. 1999, 
+ARA\& A, 37, 239
+\bibitem[\protect\citeauthoryear{Travaglio et al.}{2001}]{travaglio2001}
+Travaglio, C., et al. 2001, 
+ApJ, 549, 346
+\bibitem[\protect\citeauthoryear{Herwig}{2005}]{herwig2005}
+Herwig, F. 2005, 
+ARA\& A, 43, 435
+\bibitem[\protect\citeauthoryear{Romano et al.}{2010}]{romano2010}
+Romano, D., et al. 2010, 
+A\& A, 522, A32
+\bibitem[\protect\citeauthoryear{Kobayashi et al.}{2011}]{kobayashi2011}
+Kobayashi, C., Karakas, A., \& Umeda, H. 2011, 
+MNRAS, 414, 3231
+\bibitem[\protect\citeauthoryear{Prantzos}{2012}]{prantzos2012}
+Prantzos, N. 2012, 
+A\& A, 542, A67
+\bibitem[\protect\citeauthoryear{Bisterzo et al.}{2014}]{bisterzo2014}
+Bisterzo, S., et al. 2014, 
+ApJ, 787, 10
+\bibitem[\protect\citeauthoryear{Karakas}{2016}]{karakas12016}
+Karakas, A. 2016, 
+SAIt, 87, 229
+\bibitem[\protect\citeauthoryear{Busso et al.}{2001}]{busso2001}
+Busso, M., Gallino, R., Lambert, D.~L., Travaglio, C.\& Smith, V.~V. 2001, 
+ApJ, 557, 802
+\bibitem[\protect\citeauthoryear{McClure}{1983}]{mcclure1983}
+McClure, R.~D. 1983, 
+ApJ, 268, 264
+\bibitem[\protect\citeauthoryear{Pourbaix et al.}{2004}]{pourbaix2004}
+Pourbaix, D., Tokovinin, A.~A., Batten, A.~H., Fekel, F.~C., Hartkopf, W.~I. et al. 2001, 
+A\& A, 424, 727
+\bibitem[\protect\citeauthoryear{B\"ohm-Vitense}{1980}]{bohm1980}
+B\"ohm-Vitense, E. 1980, 
+ApJ, 239, L79
+\bibitem[\protect\citeauthoryear{B\"ohm-Vitense et al.}{1984}]{bohm1984}
+B\"ohm-Vitense, E., Nemec, J., Proffitt, C. 1984, 
+ApJ, 278, 726
+\bibitem[\protect\citeauthoryear{Boffin \& Jorissen}{1988}]{boffin1988}
+Boffin H, M.~J., Jorissen, A. 1988, 
+A\& A, 205, 155
+\bibitem[\protect\citeauthoryear{Jorissen \& Boffin}{1992}]{jorissen1992}
+Jorissen, A., Boffin H, M.~J., 1992, 
+Evidences for interaction among wide binary systems: To Ba or not to Ba? In: Duquennoy, A., Mayor, M.,(eds.) Binaries as tracers of stellar formation. Cambridge Univ. Press., p.185
+\bibitem[\protect\citeauthoryear{Webbink}{1986}]{webbink1986}
+Webbink, R.~F. 1986, 
+In: Leung, K.~C., Zhai, D.~S.(eds.) Critical Observations versus Physical Models for Close Binary Systems. Gordon and Breach, New York, p.403
+
+
+
+
+
 \end{thebibliography}
 
 
