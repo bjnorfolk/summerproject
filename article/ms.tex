@@ -8,11 +8,15 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
+\usepackage{booktabs}
 
 
 \usepackage{graphicx}	% Including figure files
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
+\usepackage{color}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\countertodo}[1]{\textcolor{green}{#1}}
 
 \makeatletter
 \newcommand{\rmnum}[1]{\romannumeral #1}
@@ -34,22 +38,20 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Short title, max. 45 characters]{Mans not hot, Man can never be hot}
+\title[Barium Stars in the Disk]{S-process Enhancement in Barium Disk Stars}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
 \author[B. J. Norfolk et al.]{
 Brodie J. Norfolk,$^{1}$\thanks{E-mail: bjee7@student.monash.edu (MU)}
-A. N. Other,$^{2}$
-Third Author$^{2,3}$
-and Fourth Author$^{3}$
+Andrew R. Casey,$^{1,2}$
+Mathew T. Miles,$^{1}$
+Alex J. Kemp,$^{1}$ \newauthor
+Karakas ? Lattanzio ? Schlaufman ? and others ?
 \\
-% List of institutions
-$^{1}$Royal Astronomical Society, Burlington House, Piccadilly, London W1J 0BQ, UK\\
-$^{2}$Department, Institution, Street Address, City Postal Code, Country\\
-$^{3}$Another Department, Different Institution, Street Address, City Postal Code, Country
+$^{1}$School of Physics \& Astronomy, Monash University, Clayton 3800, Victoria, Australia\\
+$^{2}$Faculty of Information Technology, Monash University, Clayton 3800, Victoria, Australia\\
 }
-
 \date{Accepted XXX. Received YYY; in original form ZZZ}
 
 \pubyear{2018}
@@ -60,10 +62,8 @@ $^{3}$Another Department, Different Institution, Street Address, City Postal Cod
 \maketitle
 
 \begin{abstract}
-This is a simple template for authors to write new MNRAS papers.
-The abstract should briefly describe the aims, methods, and main results of the paper.
-It should be a single paragraph not more than 250 words (200 words for Letters).
-No references should appear in the abstract.
+In this paper we present the analysis of 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 257 Barium star candidates that show enhancements of s-process elements. Barium stars exist as either intrinsic TP-AGB stars, producing enhancements in s-process elements via cyclic thermal pulses. Or, extrinsic giants still on the main sequence with enhancements in s-process element the results of polluton from a binary TP-AGB star. Enhancements in \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements through a data-driven analysis given a well-fitted model. We determined ...
+
 \end{abstract}
 
 \begin{keywords}
@@ -71,26 +71,29 @@ keyword1 -- keyword2 -- keyword3
 \end{keywords}
 
 
+% AGB stars and the s-process.
+
+% Comparisons to expectations of theoretical birth rate
+% Binary fraction at different metallicities
+% Mass differentials of binary stars
+% Yields of AGB stars at different masses and metallicities.
+
 \section{Introduction}
 
-Barium stars as first recognized by \citet{Bidelman1951}, are chemically unique red giants that exhibit envelopes with an overabundance of both carbon, and heavy elements (Z > 30) in comparison to the Sun. The red giants studied here display especially strong s-process enhancement for Ba\Rmnum{2} and Sr\Rmnum{2} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. (thinking I should extend this sentence with a little on the Carbon, maybe I should search for carbon in my figures ?). The slow neutron capture process (s-process), occuring in the interior of AGB (asymptotic giant branch) stars, synthesizes roughly half of all elements heavier than iron \citep[e.g.][]{busso1999,travaglio2001,
-herwig2005,romano2010,kobayashi2011,prantzos2012,bisterzo2014,
-karakas12016}. Late in the AGB phase, during the thermally pulsing-AGB (TP-AGB) phase, thermal instabilities occur in the He shell every $10^5$ years or so, depending on the H-exhausted core mass, and will drive a convective zone that sweeps the entire region lying between the core mass and He-shell; mixing the products of nucleosynthesis within these regions. The energy from the thermal pulses force the star to expand, pushing the H-shell out to cooler regions and allowing the convective envelope to move inwards to regions previously mixed by the thermal pulse driven convective zones. This expansion and resultsing inward movement is classified as the third dredge up (TDU), and is theorized to occur after each thermal pulse. During the TP-AGB phase, enrichent on the surface in $^{12}$C and heavy elements produced by the s-process is a result of the repeated downwash extensions of TDU \citep[e.g.][]{busso2001}. Post TDU, the star contracts and reignites the H-shell producing the majority of the surface luminosity for the next interpulse period. The interpulse, thermal pulse, and dredge up cycle may occur numerous times and is dependent on the intitial mass, composition and mass-loss rate of the star.
+Barium stars as first recognized by \citet{Bidelman1951}, are chemically unique objects that exhibit envelopes with an overabundance of both carbon, and heavy elements (Z > 30) in comparison to the Sun. Barium stars exist as either intrinsic or extrinsic objects; intrinsic barium stars are in the TP-AGB (thermally pulsing-asymptotic giant branch) phase, the overabundance of both carbon and heavy elements are produced through the s-process and exist on the surface as the result of a thermal pulsing cycle. According to the mass-transfer hypothesis, extrinsic Barium stars are a consequence of stellar wind accretion \citep{boffin1988,jorissen1992} or Roche-lobe overflow \citep{webbink1986}, and are within a binary system containing a previous TP-AGB companion star (intrinsic Barium star) in its final phase as a white dwarf \citep{bohm1980,bohm1984}. In fact, \citet{mcclure1983} determines 85\% of all Barium stars are in binary systems and those that appear singular are actually pole-on, or highly eccentric binaries with significant radial velocity variations only occuring in a small phase range as detailed by \citet{pourbaix2004}. For these reasons, the properties and occurrence rate of barium stars are informative of the theoretical birth rate of AGB stars, the binary star fraction as a function of metallicity, the mass ratio of binary stars, as well as AGB yields across different masses and metallicities. 
+
+The slow neutron capture process (s-process), occuring in the interior of AGB stars, synthesizes roughly half of all elements heavier than iron \citep[e.g.][]{busso1999,travaglio2001,herwig2005,romano2010,kobayashi2011,prantzos2012,bisterzo2014,karakas12016}. Late in the AGB phase, during the thermally pulsing-AGB (TP-AGB) phase, thermal instabilities occur in the He shell every $10^5$ years or so, depending on the H-exhausted core mass. These energy bursts drive a convective zone that sweeps the entire region lying between the core mass and He-shell; mixing the products of nucleosynthesis within these regions. The energy from the thermal pulses force the star to expand, pushing the H-shell out to cooler regions and allowing the convective envelope to move inwards to regions previously mixed by the thermal pulse driven convective zones. This expansion and resultsing inward movement is classified as the third dredge up (TDU), and is theorized to occur after each thermal pulse. During the TP-AGB phase, enrichent on the surface in $^{12}$C and heavy elements produced by the s-process is a result of the repeated downwash extensions of TDU \citep[e.g.][]{busso2001}. The star contracts PDU and reignites the H-shell producing the majority of the surface luminosity for the next interpulse period. The interpulse, thermal pulse, and dredge up cycle may occur numerous times and is dependent on the intitial mass, composition and mass-loss rate of the star.
 
 Barium giants form within a metallicity dependent initial mass range (approximately 0.8 - 8$M_{\odot}$), with the minimum mass for core helium and carbon burning decreasing as metalicity decreases. The age of these stars vary considerably, with observable stars in metal-poor globular clusters hosting populations of $\approx$12Gyr. In contrast, metal rich, young observable stars reaching the upper limit may only reach $\approx$100Myr, this includes stars that are at the core carbon burning limit or very close to it \citep[e.g.][]{whitelock2013}.
 
-According to the mass-transfer hypothesis, extrinsic Barium stars are a consequence of stellar wind accretion \citep{boffin1988,jorissen1992} or Roche-lobe overflow \citep{webbink1986}, and are within a binary system containing a previous AGB companion star (intrinsic Barium star) in its final phase as a white dwarf \citep{bohm1980,bohm1984}. In fact, \citet{mcclure1983} determines 85\% of all Barium stars are in binary systems and those that appear singular are actually pole-on, or highly eccentric binaries with significant radial velocity variations only occuring in a small phase range as detailed by \citet{pourbaix2004}.
+Many barium stars have been discovered in the disk and halo of the Milky Way \citep{gomez1997,mennessier1997}. Both studies show that the stellar populations of Barium stars can be separated into two groups when considering their \todo{absolute?} luminosity, kinematic, and spatial properties. Barium stars populating the halo have already been investigated \citep[e.g.][]{junqueira2001,drake2008,pereira2009,allen2006} and their relationship with metal-poor, yellow, symbiotic halo stars has been established by \citet{jorissen2005} and \citet{pereira2009}. Additionally, \citet{pereira2011} concludes metal-rich barium stars share similar kinematics to other metal-rich and super metal-rich stars already analysed, suggesting that they do not belong to the bulge population. Furthermore, it is necessary to establish known abundances of s-process elements in a greater sample of Barium stars in order to compare their birth rate to theoretical expectations \citep{han1995}, explore the binary fraction at different metallicities, and infer AGB star yields at different masses and metallicities.
 
-Barium stars currently have only been discovered in the disk and halo of the Galaxy according to \citet{gomez1997} and \citet{mennessier1997}. Both studies show the stellar populations of Barium stars can be seperated into two groups when divided according to luminosity, kinematic and spatial parameters. Barium stars populating the halo have already been investigated \citep[e.g.][]{junqueira2001,drake2008,pereira2009,allen2006} and their relationship with metal-poor, yellow, symbiotic halo stars has been established by \citet{jorissen2005} and \citet{pereira2009}. Additionally, \citet{pereira2011} concludes metal-rich barium stars share similar kinematics to other metal-rich and super metal-rich stars already analysed, demonstrating they do not belong to the bulge population. Furthermore, it is neccessary to establish known abundances of s-process elements in a greater sample of Barium stars to conclude the percentage population of said stars in the Galaxy, and compare with their theoratical birthrate \citep{han1995}
+In this paper we analysis 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 257 Barium star candidates that show enhancements of s-process elements. Specifcally, the giants studied here display especially molecular band absorption for CH, CN, and C$_2$ molecular bands, and strong s-process enhancement for \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. In Section \ref{sec:obs} we describe the observations and candidate selection, as well as the analysis follow up our follow-up observing campaign in Section \ref{sec:an}. In Section \ref{sec:dis} we discuss the properties of our Barium stars in context of existing literature. We provide concluding remarks in Section \ref{sec:con}
 
-In this paper we analysis the \textit{Cannon} fitted LAMOST spectra \citep{ho2017} to obtain a sample set of s-process enriched Barium stars and investigate atmospheric parameters including, the distributions of temperature, surface gravity and metalicity. Additionally, the abundances of elements not produced in the s-process such as sodium and technetium (Na and Tc) are examined to determine  if the sample Barium stars share similar abundance to field giants with equal metallicities. Moreover, the stellar sample is cross matched with GAIA, producing (not sure exactly what gaia gave us) neccessary to determine the kinematics of our Barium samples. 
+\section{Observations and Target Selection} \label{sec:obs}
+The spectral data of our stars were obtained from the \textit{Cannon} fits predictive model implemented by \citet{ho2017} on the LAMOST (Large Sky Area Multi-Object Fibre Spectroscopic Telescope) DR2 release \citep{luo2015}. The LAMOST spectral resolving power of R = 1800, a wavelength coverage from 3700\AA\ to 9000\AA, and \todo{a nominal S/N ratio of 100 (is this true?)}\countertodo{I read it in a paper somewhere, is it not true ?}. Stellar parameters ($T_{\rm eff}$, $\log{g}$, [M/H], [$\alpha$/M]) were derived using a data-driven model constructed using high fidelity APOGEE labels of 9,952 stars in common between LAMOST and the APOGEE survey.
 
-In our research we analysed 273 Barium canidates amoung the 454,180 stellar sample produced by \citet{ho2017} and with GAIA determined the galactic motions for 21 out the 273 canidates.
-
-\section{Observations and Target Selection}
-The spectral data of our stars were obtained from the \textit{Cannon} fits predictive model implemented by \citet{ho2017} on the LAMOST (Large Sky Area Multi-Object Fibre Spectroscopic Telescope) DR2 release \citep{luo2015}. The LAMOST spectral resolving power of R = 1800, a wavelength coverage from 3700$\AA$ to 9000$\AA$, and a nominal S/N ratio of 100. \citet{ho2017} cross-matches 9,952 stars between the low resolution spectra of LAMOST and the high resolution spectra from the APOGEE survey, and through a data driven spectral model. produces a 454,180 stellar data set. For this stellar data set the \textit{Cannon} predictive model infers $T_{eff}$, $log g$, $[Fe/H]$, and [$\alpha/M$] values.
-
-The Barium stars analysed in this research were obtained by filtering for significant flux residuals, taken as, a disparity between the normalised LAMOST flux and the data driven model derived by \citet{ho2017}. A negative residual as shown in (I know I shoould expand here on the psoter child)figure \ref{fig:figure1} illustrates an enhancement in Ba\Rmnum{2} and Sr\Rmnum{2} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. (thinking a sentence on why these lines are the strongest ?). The filter process had five requirements that each spectra for both enhancement lines had to meet to be considered a Barium star canidate, these included:
+The Barium stars analysed in this research were obtained by filtering for significant flux residuals, taken as, a disparity between the normalised LAMOST flux and the data driven model derived by \citet{ho2017}. A negative residual as shown in the poster child figure \ref{fig:figure1} illustrates an enhancement in \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. These \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements given a well-fit model for the data. We used five filters that each spectra for both enhancement lines had to meet to be considered a Barium star candidate, these included:
 
 \renewcommand\labelenumi{(\roman{enumi})}
 \renewcommand\theenumi\labelenumi
@@ -99,31 +102,94 @@ The Barium stars analysed in this research were obtained by filtering for signif
 \item Profile amplitude for both enhancement lines must exceed A$\leq$-0.05.
 \item Both amplittudes must be measured within 3$\sigma$ $(|A|/\sigma _A \geq 3)$.
 \item The wavelength at each absorption line must be within $2$\AA \hspace{0.2mm}$(\lambda \leq 2)$.
-\item The chi must be less then 3 (not sure on math wrting for this).
+\item $\chi^2 \leq 3$.
 \item And, the spectra must have a signal-to-noise ratio of S/N $\geq 30$.
 \end{enumerate}
-In addition, a visual observation of the accuracy between each normalised LAMOST flux and its accompanying data driven model was undertaken to exclude any results containing, false positives, candidates exhibiting data reduction issues, apparent absorption finer then the spectral resolution, and overly noisy normalised LAMOST spectra. This combined method generated the 273 Barium star candidates as listed in Table \ref{table:table1}. 
+In addition, a visual observation of the accuracy between each normalised LAMOST flux and its accompanying data driven model was undertaken to exclude any results containing, false positives, candidates exhibiting data reduction issues, apparent absorption finer then the spectral resolution, and overly noisy normalised LAMOST spectra. This combined method generated the 257 Barium star candidates as listed in Table \ref{table:table1}. 
+
+\begin{figure}
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=\columnwidth]{posterchild.png}
+    \caption{Posterchild}
+    \label{fig:figure1}
+\end{figure}
+
+\begin{table}[]
+\centering
+\caption{Available online in its entirety. Here we show a portion to demonstrate its style and content}
+\label{table:table1}
+\begin{tabular}{@{}|l|l|l|l|l|l|l|l|l|l|@{}}
+\toprule
+2MASSID             & RA (hms         & DEC (hms)        & Vr (km/s) & S/N & Teff (K) & Log g & {[}Fe/H{]} & {[}$\alpha$/H{]} & $\chi^2$  \\ \midrule
+J000134.95+490743.2 & 00:01:34.96 & +49:07:43.2 & -42.27    & 72  & 5044 & 3.11  & -0.54      & 0.11      & 0.79 \\ \midrule
+J000403.80+160257.1 & 00:04:03.80 & +16:02:57.2 & -35.38    & 42  & 5200 & 3.40  & -0.41      & 0.09      & 0.33 \\ \midrule
+J000908.48+421615.4 & 00:09:08.49 & +42:16:15.5 & -34.78    & 36  & 4825 & 3.02  & -0.46      & 0.16      & 0.25 \\ \midrule
+J001754.17+394140.0 & 00:17:54.17 & +39:41:40.0 & -42.87    & 39  & 5008 & 3.16  & -0.64      & 0.12      & 0.23 \\ \midrule
+J001841.57+040533.7 & 00:18:41.57 & +04:05:33.8 & -20.69    & 141 & 4840 & 3.68  & -0.52      & 0.06      & 0.93 \\ \midrule
+J002107.60+361533.0 & 00:21:07.60 & +36:15:33.1 & -53.06    & 44  & 4854 & 2.87  & 0.01       & 0.06      & 0.54 \\ \midrule
+J002537.59+411123.7 & 00:25:37.59 & +41:11:23.8 & -12.59    & 36  & 5075 & 3.30  & -0.32      & 0.10      & 0.33 \\ \midrule
+J003755.55+571706.8 & 00:37:55.55 & +57:17:06.9 & -5.70     & 49  & 4046 & 1.14  & -0.09      & -0.01     & 0.83 \\ \midrule
+J003813.23+423025.9 & 00:38:13.23 & +42:30:25.9 & -40.17    & 36  & 4475 & 2.12  & 0.14       & 0.00      & 0.51 \\ \midrule
+J003959.14+394614.6 & 00:39:59.14 & +39:46:14.6 & 5.10      & 35  & 4955 & 3.23  & -0.40      & 0.11      & 0.28 \\ \midrule
+J004119.68+324627.8 & 00:41:19.68 & +32:46:27.9 & 4.50      & 122 & 4861 & 2.59  & -0.31      & 0.08      & 1.67 \\ \midrule
+J004156.56+390945.6 & 00:41:56.57 & +39:09:45.6 & -254.52   & 44  & 4771 & 2.34  & -0.74      & 0.16      & 0.57 \\ \midrule
+J004743.01+433358.1 & 00:47:43.02 & +43:33:58.2 & -62.66    & 65  & 4834 & 2.64  & -0.60      & 0.17      & 1.06 \\ \midrule
+J005101.98+314045.6 & 00:51:01.98 & +31:40:45.7 & -23.68    & 98  & 5202 & 3.32  & -0.53      & 0.10      & 0.67 \\ \midrule
+J005254.69+203554.7 & 00:52:54.69 & +20:35:54.7 & 35.68     & 113 & 5026 & 3.17  & -0.82      & 0.20      & 1.01 \\ \midrule
+J010836.26+444435.9 & 01:08:36.26 & +44:44:35.9 & 12.59     & 49  & 5189 & 3.19  & -0.56      & 0.10      & 0.98 \\ \midrule
+J011919.20+195227.0 & 01:19:19.21 & +19:52:27.0 & -35.38    & 31  & 4897 & 2.77  & -0.54      & 0.11      & 0.29 \\ \midrule
+J011930.90-015027.3 & 01:19:30.91 & -01:50:27.4 & -143.30   & 44  & 5040 & 3.22  & -0.91      & 0.20      & 0.48 \\ \midrule
+J020316.40+462211.1 & 02:03:16.41 & +46:22:11.1 & 11.09     & 37  & 4897 & 2.89  & -0.39      & 0.11      & 0.51 \\ \bottomrule
+\end{tabular}
+\end{table}
 
 
-\section{Analysis and Results}
+\section{Analysis and Results}  \label{sec:an}
+\begin{figure}
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=\columnwidth]{HRdummy.png}
+    \caption{HR Diagram}
+    \label{fig:figure2}
+\end{figure}
 
-\subsection{Line Selection}
+\begin{figure}
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=\columnwidth]{ECCdummy.png}
+    \caption{Eccentricity}
+    \label{fig:figure3}
+\end{figure}
+
+\subsection{Line Selection and Atmospheric Parameters}
+
 \subsection{Technetium Lines}
+
 \subsection{Abundance Analysis}
 \subsection{Abundance Uncertainties}
 
-\section{Discussion}
+\section{Discussion} \label{sec:dis}
 
-\section{Conclusions}
+\subsection{HR Diagram}
+
+\subsection{Abundances}
+\subsubsection{Rejected Stars}
+\subsubsection{Sodium Abundance}
+\subsubsection{Heavy Element Abundance}
+\subsection{Kinematics}
+
+\section{Conclusions} \label{sec:con}
 
 The last numbered section should briefly summarise what has been done, and describe
 the final conclusions which the authors draw from their work.
 
 \section*{Acknowledgements}
 
-The Acknowledgements section is not numbered. Here you can thank helpful
-colleagues, acknowledge funding agencies, telescopes and facilities used etc.
-Try to keep it short.
+I thank Andrew R. Casey for finally re-hiring me. 
 
 %\section{Examples}
 %
