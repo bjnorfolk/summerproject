@@ -143,6 +143,17 @@ N_Bariumstars = N_St4077*N_Ba4554
 N_Tc = N_St4077*N_Ba4554*N_Tc4049*N_Tc4238*N_Tc4262*N_Tc4297*N_Tc5924
 N_TcAll = N_Tc4049*N_Tc4238*N_Tc4262*N_Tc4297*N_Tc5924
 N_Na = N_St4077*N_Ba4554*N_Na5889
+N_Tc3ormore = (N_St4077 * N_Ba4554) * ((N_Tc4049 + N_Tc4238 + N_Tc4262 + N_Tc4297 + N_Tc5924) >= 3)
+N_Tc2ormore = (N_St4077 * N_Ba4554) * ((N_Tc4049 + N_Tc4238 + N_Tc4262 + N_Tc4297 + N_Tc5924) >= 2)
+N_Tc1ormore = (N_Bariumstars) * ((N_Tc4049 + N_Tc4238 + N_Tc4262 + N_Tc4297 + N_Tc5924) >= 1)
+N_Tc4049s=N_Tc4049*N_Bariumstars
+N_Tc4238s=N_Tc4238*N_Bariumstars
+N_Tc4262s=N_Tc4262*N_Bariumstars
+N_Tc4297s=N_Tc4297*N_Bariumstars
+N_Tc5924s=N_Tc5924*N_Bariumstars
+
+
+
 
 print("Barium stars: {}".format(sum(N_Bariumstars)))
 print("Sodium 5889: {}".format(sum(N_Na5889)))
@@ -154,6 +165,11 @@ print("Technetium 5924: {}".format(sum(N_Tc5924)))
 print("Technetium all: {}".format(sum(N_TcAll)))
 print("Barium star Tc Matches: {}".format(sum(N_Tc)))
 print("Barium star Na Matches: {}".format(sum(N_Na)))
+print("Technetium 3: {}".format(sum(N_Tc3ormore)))
+print("Technetium 2: {}".format(sum(N_Tc2ormore)))
+print("Technetium 1: {}".format(sum(N_Tc1ormore)))
+
+
 
 
 """
@@ -193,9 +209,10 @@ for index, star in enumerate(csv):
 
     del fig
     print(index)
-
+"""
+"""
 for index, star in enumerate(csv):
-    if not N_Tc[index]: continue
+    if not N_Na[index]: continue
 
     observed_flux = all_observed_flux[index]
     observed_ivar = all_observed_ivar[index]
@@ -219,6 +236,9 @@ for index, star in enumerate(csv):
     fig.savefig('Goodfigures/Bariumstar_Na_pics/' +str(index) +'StBa' +'.png')
 
     fig = utils.plot_spectrum(wavelengths, observed_flux, observed_ivar, model_flux)
+    fig.axes[1].axvline(4077, c="#666666", zorder=-1)
+    fig.axes[1].axvline(4554, c="#666666", zorder=-1)
+    fig.axes[1].axvline(5889, c="#666666", zorder=-1)
     string="Barium star full"+starID[index] + "Index: " + str(index)
     fig.suptitle(string)
     fig.savefig('Goodfigures/Bariumstar_Na_pics/'+str(index)+'zfull'+'.png')
@@ -238,4 +258,14 @@ print("Technetium 5924: {}".format(sum(N_Tc5924)))
 print("Technetium all: {}".format(sum(N_TcAll)))
 print("Barium star Tc Matches: {}".format(sum(N_Tc)))
 print("Barium star Na Matches: {}".format(sum(N_Na)))
+print("Technetium 3: {}".format(sum(N_Tc3ormore)))
+print("Technetium 2: {}".format(sum(N_Tc2ormore)))
+print("Technetium 1: {}".format(sum(N_Tc1ormore)))
+print("Technetium 4049 single: {}".format(sum(N_Tc4049s)))
+print("Technetium 4238 single: {}".format(sum(N_Tc4238s)))
+print("Technetium 4262 single: {}".format(sum(N_Tc4262s)))
+print("Technetium 4297 single: {}".format(sum(N_Tc4297s)))
+print("Technetium 5924 single: {}".format(sum(N_Tc5924s)))
+
+
 
