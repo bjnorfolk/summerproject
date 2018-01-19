@@ -62,7 +62,7 @@ $^{2}$Faculty of Information Technology, Monash University, Clayton 3800, Victor
 \maketitle
 
 \begin{abstract}
-In this paper we present the analysis of 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 257 Barium star candidates that show enhancements of s-process elements. Barium stars exist as either intrinsic TP-AGB stars, producing enhancements in s-process elements via cyclic thermal pulses. Or, extrinsic giants still on the main sequence with enhancements in s-process element the results of polluton from a binary TP-AGB star. Enhancements in \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements through a data-driven analysis given a well-fitted model. We determined ...
+In this paper we present the analysis of 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 257 Barium star candidates that show enhancements of s-process elements. Barium stars exist as either intrinsic TP-AGB stars, producing enhancements in s-process elements via cyclic thermal pulses. Or, extrinsic giants still on the main sequence with enhancements in s-process element the results of polluton from a binary TP-AGB star. Enhancements in \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements through a data-driven analysis given a well-fitted model. We determined ... Sodium enrichment was present in 5 of our barium star candidates and could be attributed to the NeNa cycle in more evolved stars.
 
 \end{abstract}
 
@@ -88,12 +88,15 @@ Barium giants form within a metallicity dependent initial mass range (approximat
 
 Many barium stars have been discovered in the disk and halo of the Milky Way \citep{gomez1997,mennessier1997}. Both studies show that the stellar populations of Barium stars can be separated into two groups when considering their \todo{absolute?} luminosity, kinematic, and spatial properties. Barium stars populating the halo have already been investigated \citep[e.g.][]{junqueira2001,drake2008,pereira2009,allen2006} and their relationship with metal-poor, yellow, symbiotic halo stars has been established by \citet{jorissen2005} and \citet{pereira2009}. Additionally, \citet{pereira2011} concludes metal-rich barium stars share similar kinematics to other metal-rich and super metal-rich stars already analysed, suggesting that they do not belong to the bulge population. Furthermore, it is necessary to establish known abundances of s-process elements in a greater sample of Barium stars in order to compare their birth rate to theoretical expectations \citep{han1995}, explore the binary fraction at different metallicities, and infer AGB star yields at different masses and metallicities.
 
-In this paper we analysis 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 257 Barium star candidates that show enhancements of s-process elements. Specifcally, the giants studied here display especially molecular band absorption for CH, CN, and C$_2$ molecular bands, and strong s-process enhancement for \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. In Section \ref{sec:obs} we describe the observations and candidate selection, as well as the analysis follow up our follow-up observing campaign in Section \ref{sec:an}. In Section \ref{sec:dis} we discuss the properties of our Barium stars in context of existing literature. We provide concluding remarks in Section \ref{sec:con}
+In this paper we analysis 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 257 Barium star candidates that show enhancements of s-process elements. Specifcally, the giants studied here display especially strong s-process enhancement for \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. Additionally, molecular band absorption for G Band, CH bands is observed. In Section \ref{sec:methods} we describe the observations and candidate selection, as well as the analysis follow up our follow-up observing campaign with MAGGELLAN. In Section \ref{sec:dis} we discuss the properties of our Barium stars in context of existing literature. We provide concluding remarks in Section \ref{sec:con}
 
-\section{Observations and Target Selection} \label{sec:obs}
+\section{Methods} \label{sec:methods}
+\subsection{LAMOST Analysis}
+\subsubsection{Data-driven Analysis}
 The spectral data of our stars were obtained from the \textit{Cannon} fits predictive model implemented by \citet{ho2017} on the LAMOST (Large Sky Area Multi-Object Fibre Spectroscopic Telescope) DR2 release \citep{luo2015}. The LAMOST spectral resolving power of R = 1800, a wavelength coverage from 3700\AA\ to 9000\AA, and \todo{a nominal S/N ratio of 100 (is this true?)}\countertodo{I read it in a paper somewhere, is it not true ?}. Stellar parameters ($T_{\rm eff}$, $\log{g}$, [M/H], [$\alpha$/M]) were derived using a data-driven model constructed using high fidelity APOGEE labels of 9,952 stars in common between LAMOST and the APOGEE survey.
 
-The Barium stars analysed in this research were obtained by filtering for significant flux residuals, taken as, a disparity between the normalised LAMOST flux and the data driven model derived by \citet{ho2017}. A negative residual as shown in the poster child figure \ref{fig:figure1} illustrates an enhancement in \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. These \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements given a well-fit model for the data. We used five filters that each spectra for both enhancement lines had to meet to be considered a Barium star candidate, these included:
+\subsubsection{Candidate Selection} \label{sec:cand}
+The Barium stars analysed in this research were obtained by filtering for significant flux residuals, taken as, a disparity between the normalised LAMOST flux and the data driven model derived by \citet{ho2017}. A negative residual as shown in the poster child figure \ref{fig:figure1} illustrates an enhancement in \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. These \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements given a well-fit model for the data. We used five filters that each spectra, for both enhancement lines, had to meet to be considered a Barium star candidate; these included:
 
 \renewcommand\labelenumi{(\roman{enumi})}
 \renewcommand\theenumi\labelenumi
@@ -145,16 +148,30 @@ J020316.40+462211.1 & 02:03:16.41 & +46:22:11.1 & 11.09     & 37  & 4897 & 2.89 
 \end{tabular}
 \end{table}
 
+\subsubsection{Technetium Lines}
 
-\section{Analysis and Results}  \label{sec:an}
-\begin{figure}
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=\columnwidth]{HRdummy.png}
-    \caption{HR Diagram}
-    \label{fig:figure2}
-\end{figure}
+Enhancement of technetium lines in our sample would indicate the presence of high luminosity Tc-self-enriched AGB S stars \citep{jorissen1993} and, suggest our candidates are infact intrinsic Barium stars. We undertook an identical analysis to the process described in Section \ref{sec:cand}, negative residuals for Tc enhancement lines 4049\AA, 4238.19\AA, 4262.27\AA, 4297\AA, and 5924.47\AA\hspace{0.2mm} were filtered for. In agreement with previous findings \citep[e.g.][]{little1987,smith1984,smith1983}, the results indicate that none of the evolved barium stars in our sample exhibited the presence of Tc enhancement. It is noted, \todo{51} of our barium candidates were enhanced in Tc lines, although, this is attributed to \todo{something} and is disregarded.
+
+\subsubsection{Carbon Bands}
+
+
+
+\subsubsection{Sodium Doublet}
+
+According to \citet{el1995}, sodium overabundance observed in the atmospheres of A-F supergiant stars is synthesized in the convective core of main-sequence stars in the NeNa reaction chain. Sodium is transported to the surface of these supergiants via mixing of CNO cycle products during the first dredge-up, this constrains sodium enhancement to supergiants and giants only. \citet{antipova2004} discovered a sodium enhancement in a number of their barium star candidates, they relate this to the dredge-up of nuclear-burning material produced by convection during the red-giant phase. Moreover, they suggest [Na/Fe] values do not exhibit variations in metallicity, but [Na/Fe] ratios exhibit systematically higher values for giants with lower log g values. Similarily, \citet{decastro2016} highlights the possible weak, but statistically significant anti-correlation between [Na/Fe] ratio and log g, and illustrates this trend in previous studies\citep[e.g.][]{boyarchuk2002,mishenina2006,luck2007,takeda2008}. 
+
+Through an identical analysis to the process described in Section \ref{sec:cand}, we filtered for negative residuals in the enhanced sodium doublet lines 5889.950\AA\hspace{0.2mm} and 5895.924\AA. Our analysis produced 5 matches with our barium star candidates, this suggests sodium-rich material from the TP-AGB star polluted the barium star. Although, it's important to note a star with a minimum 1.5$M_\odot$ can exhibit sodium abundance through the NeNc cycle \citep{denissenkov1987}. During the giant phase synthesized sodium is brought to the surface via the first dredge-up, therefore, these candidates may display sodium enhancement without mass transfer from a TP-AGB star.
+
+\subsection{MAGELLAN Analysis}
+
+\subsubsection{Observations}
+
+\subsubsection{Abundance Analysis}
+
+\subsubsection{Abundance Uncertainties}
+
+\subsection{Dynamics}
+The dynamical analysis of our barium star candidates was accomplished by crossing matching the sample with GAIA \todo{ref gaia}, producing 21 matches, and then using gala Python package to intergrate the galactic dynamics. The Milky Way potential model was used to integrate the orbits of our candidates back a \todo{number} years, and compute distributions of orbital properties including orbital period, orbital energy, apocenter, eccentricity, and angular momentum in z.
 
 \begin{figure}
 	% To include a figure from a file named example.*
@@ -165,22 +182,27 @@ J020316.40+462211.1 & 02:03:16.41 & +46:22:11.1 & 11.09     & 37  & 4897 & 2.89 
     \label{fig:figure3}
 \end{figure}
 
-\subsection{Line Selection and Atmospheric Parameters}
+\begin{figure}
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=\columnwidth]{energy_angmomz.png}
+    \caption{Energy Vs. Angular Momentum in Z}
+    \label{fig:figure3}
+\end{figure}
 
-\subsection{Technetium Lines}
-
-\subsection{Abundance Analysis}
-\subsection{Abundance Uncertainties}
-
-\section{Discussion} \label{sec:dis}
+\section{Discussion}  \label{sec:dis}
 
 \subsection{HR Diagram}
+\begin{figure}
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=\columnwidth]{HRdummy.png}
+    \caption{HR Diagram}
+    \label{fig:figure2}
+\end{figure}
 
-\subsection{Abundances}
-\subsubsection{Rejected Stars}
-\subsubsection{Sodium Abundance}
-\subsubsection{Heavy Element Abundance}
-\subsection{Kinematics}
 
 \section{Conclusions} \label{sec:con}
 
@@ -189,7 +211,7 @@ the final conclusions which the authors draw from their work.
 
 \section*{Acknowledgements}
 
-I thank Andrew R. Casey for finally re-hiring me. 
+To John Power, hold in there buddy
 
 %\section{Examples}
 %
@@ -340,15 +362,47 @@ MNRAS, 277, 1443
 Pereira, C.~B., Sales Silva, J.,~A., Chavero, C., Roig, F.,\& Jilinski E. 2011, 
 A$\&$A, 533, A51
 \bibitem[\protect\citeauthoryear{Ho et al.}{2017}]{ho2017}
-Ho, A.~Y.~Q., Ness, M.~K., Hogg, D.~W. Rix, H.-W. Liu, C. Yang, F. Zhang, Y. Hou,\& Y. Wang, Y. 2017, 
+Ho, A.~Y.~Q., Ness, M.~K., Hogg, D.~W., Rix, H.-W. Liu, C., Yang, F., Zhang, Y., Hou, Y.,\& Wang, Y. 2017, 
 ApJ, 836, 5
-\bibitem[\protect\citeauthoryear{Luo A.L., Bai Z.R. et al}{(2015)}]{luo2015}
+\bibitem[\protect\citeauthoryear{Luo A.L., Bai Z.R. et al}{2015}]{luo2015}
 Luo, A.~L., Bai, Z.~R., et al. 2015, 
 RAA, in press
-
-
-
-
+\bibitem[\protect\citeauthoryear{Jorissen et al.}{1993}]{jorissen1993}
+Jorissen, A., Frayer, D.~T., Johnson, H.~W., Mayor, M.,\& Smith, V.~V. 1993, 
+A$\&$A, 271, 463
+\bibitem[\protect\citeauthoryear{Little-Marenin \& Little}{1987}]{little1987}
+Little-Marenin, I.~R.,\& Little, S.~J. 1987, 
+AJ, 93, 1539
+\bibitem[\protect\citeauthoryear{Smith}{1984}]{smith1984}
+Smith, V.~V. 1984, 
+A$\&$A, 132, 326
+\bibitem[\protect\citeauthoryear{Smith \& Wallerstein}{1983}]{smith1983}
+Smith, V.~V.,\& Wallerstein, G. 1983, 
+ApJ, 273, 742
+\bibitem[\protect\citeauthoryear{El Eid \& Champagne}{1995}]{el1995}
+El Eid, M.~F.,\& Champagne, A.~E. 1995, 
+ApJ, 451, 298
+\bibitem[\protect\citeauthoryear{Antipova et al.}{2004}]{antipova2004}
+Antipova, L.~I., Boyarchuk, A.~A., Pakhomov, Yu.~V.,\& Panchuk, V.~E. 2004, 
+ARep, 48, 597
+\bibitem[\protect\citeauthoryear{Boyarchuk et al.}{2002}]{boyarchuk2002}
+Boyarchuk, A.~A., Pakhomov, Y.~V., Antipova, L.~I.,\& Boyarchuk, M.~E. 2002, 
+ARep, 46, 819
+\bibitem[\protect\citeauthoryear{Takeda et al.}{2008}]{takeda2008}
+Takeda, Y., Sato, B.~V.,\& Murata, D. 2008, 
+AJ, 60, 781
+\bibitem[\protect\citeauthoryear{Mishenina et al.}{2006}]{mishenina2006}
+Mishenina, T.~V., Bienaym\' e, O., Gorbaneva, T.~I.,\& Charbonnel, C. 2006, 
+A$\&$A, 456, 1109
+\bibitem[\protect\citeauthoryear{Luck \& Heiter}{2007}]{luck2007}
+Luck R.~E.,\& Heiter, U. 2007, 
+AJ, 133, 2464
+\bibitem[\protect\citeauthoryear{Denissenkov \& Ivanov}{1987}]{denissenkov1987}
+Denissenkov P.~A.,\& Ivanov, V.~V. 1987, 
+SvAL, 13, 214
+\bibitem[\protect\citeauthoryear{de Castro et al.}{2016}]{decastro2016}
+de Castro, D.~B., Pereira, C.~B., Roig, F., Jilinski, E., Drake, N.~A., Chavero, C.,\& Sales Silva, J.~V. 2016, 
+MNRAS, 459, 4299
 
 
 \end{thebibliography}
