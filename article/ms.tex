@@ -96,7 +96,7 @@ In this paper we analysis 454,180 giant stars from LAMOST data release (DR) 2 to
 \section{Methods} \label{sec:methods}
 \subsection{LAMOST Analysis}
 \subsubsection{Data-driven Analysis}
-The spectral data of our stars were obtained from the \textit{Cannon} fits predictive model implemented by \citet{ho2017} on the LAMOST (Large Sky Area Multi-Object Fibre Spectroscopic Telescope) DR2 release \citep{luo2015}. The LAMOST spectral resolving power of R = 1800, a wavelength coverage from 3700\AA\ to 9000\AA, and \todo{a nominal S/N ratio of 100 (is this true?)}\countertodo{I read it in a paper somewhere, is it not true ?}. Stellar parameters ($T_{\rm eff}$, $\log{g}$, [M/H], [$\alpha$/M]) were derived using a data-driven model constructed using high fidelity APOGEE labels of 9,952 stars in common between LAMOST and the APOGEE survey.
+The LAMOST (Large sky Area Multi-Object Fibre Spectrographic) survey released low-resolution ($\mathcal{R} \approx 1800$) optical spectra (3700\,\AA\ to 9000\,\AA) for over two million stars in their second data release \citep{luo2015}. Stellar parameters ($T_{\rm eff}$, $\log{g}$, [M/H], [$\alpha$/M]) were derived using a data-driven model constructed using high fidelity APOGEE labels of 9,952 stars in common between LAMOST and the APOGEE survey. \todo{Write more about this: the precision in parameters, how giants were selected from dwarfs, and then talk about how many giant spectra we used}.
 
 \subsubsection{Candidate Selection} \label{sec:cand}
 The Barium stars analysed in this research were obtained by filtering for significant flux residuals, taken as, a disparity between the normalised LAMOST flux and the data driven model derived by \citet{ho2017}. A negative residual as shown in the poster child figure \ref{fig:figure1} illustrates an enhancement in \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. These \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements given a well-fit model for the data. We used five filters that each spectra, for both enhancement lines, had to meet to be considered a Barium star candidate; these included:
@@ -109,7 +109,7 @@ The Barium stars analysed in this research were obtained by filtering for signif
 \item Both amplittudes must be measured within 3$\sigma$ $(|A|/\sigma _A \geq 3)$.
 \item The wavelength at each absorption line must be within $2$\AA \hspace{0.2mm}$(\lambda \leq 2)$.
 \item $\chi^2 \leq 3$.
-\item And, the spectra must have a signal-to-noise ratio of S/N $\geq 30$.
+\item And, the spectra must have a signal-to-noise ratio of S/N $\geq 30$ per pixel.
 \end{enumerate}
 In addition, a visual observation of the accuracy between each normalised LAMOST flux and its accompanying data driven model was undertaken to exclude any results containing, false positives, candidates exhibiting data reduction issues, apparent absorption finer then the spectral resolution, and overly noisy normalised LAMOST spectra. This combined method generated the 257 Barium star candidates as listed in Table \ref{table:table1}. 
 
@@ -151,14 +151,18 @@ J020316.40+462211.1 & 02:03:16.41 & +46:22:11.1 & 11.09     & 37  & 4897 & 2.89 
 \end{tabular}
 \end{table}
 
-\subsubsection{Technetium Lines}
-
-Enhancement of technetium lines in our sample would indicate the presence of high luminosity Tc-self-enriched AGB S stars \citep{jorissen1993} and, suggest our candidates are infact intrinsic Barium stars. We undertook an identical analysis to the process described in Section \ref{sec:cand}, negative residuals for Tc enhancement lines 4049\AA, 4238.19\AA, 4262.27\AA, 4297\AA, and 5924.47\AA\hspace{0.2mm} were filtered for. In agreement with previous findings \citep[e.g.][]{little1987,smith1984,smith1983}, the results indicate that none of the evolved barium stars in our sample exhibited the presence of Tc enhancement. It is noted, \todo{51} of our barium candidates were enhanced in Tc lines, although, this is attributed to \todo{something} and is disregarded.
 
 \subsubsection{Carbon Bands}
 
 Barium stars are optimal sites for investigating the relationship between the neutron-capture elements and other species that may be
 depleted or enhanced, because they act as neutron seeds during the operation of the s-process. In the ABG phase the abundance of carbon is a product of helium fusion, specifically the triple-alpha process within a star. In an identical mechanism to the presence of s-process elelment enhancement, carbon enhanced stars exist intrinsically or extrinsically. Giants and supergiants become enhanced in carbon through TDU process discussed in Section \ref{sec:intro}, and extrinsic carbon enhancement occurs via mass transfer from a binary AGB star. In our sample of barium star candidates we discovered enhancement in both CH and the G band for 178 of our total 257 stars. \todo{maybe put a list of the stars ?}
+
+
+
+\subsubsection{Technetium Lines}
+
+Enhancement of technetium lines in our sample would indicate the presence of high luminosity Tc-self-enriched AGB S stars \citep{jorissen1993} and, suggest our candidates are infact intrinsic Barium stars. We undertook an identical analysis to the process described in Section \ref{sec:cand}, negative residuals for Tc enhancement lines 4049\AA, 4238.19\AA, 4262.27\AA, 4297\AA, and 5924.47\AA\hspace{0.2mm} were filtered for. In agreement with previous findings \citep[e.g.][]{little1987,smith1984,smith1983}, the results indicate that none of the evolved barium stars in our sample exhibited the presence of Tc enhancement. It is noted, \todo{51} of our barium candidates were enhanced in Tc lines, although, this is attributed to \todo{something} and is disregarded.
+
 
 \subsubsection{Sodium Doublet}
 
@@ -167,15 +171,27 @@ According to \citet{el1995}, sodium overabundance observed in the atmospheres of
 Through an identical analysis to the process described in Section \ref{sec:cand}, we filtered for negative residuals in the enhanced sodium doublet lines 5889.950\AA\hspace{0.2mm} and 5895.924\AA. Our analysis produced 5 matches with our barium star candidates, this suggests sodium-rich material from the TP-AGB star polluted the barium star. Although, it's important to note a star with a minimum 1.5$M_\odot$ can exhibit sodium abundance through the NeNc cycle \citep{denissenkov1987}. During the giant phase synthesized sodium is brought to the surface via the first dredge-up, therefore, these candidates may display sodium enhancement without mass transfer from a TP-AGB star.
 \todo{maybe put a list of the stars ?}
 
-\subsection{MAGELLAN Analysis}
+\subsection{Follow-up observations with Magellan/MIKE}
 
 \subsubsection{Observations}
+On the night of \todo{X} January 2018 we performed follow-up observations of \todo{X} barium star candidates using the MIKE spectrograph on the Magellan Clay telescope at Las Campanas Observatory, Chile. Candidates for follow-up observations were chosen based on observability constraints and ranked by their apparent visual magnitude. We observed \todo{X} stars in good seeing using the 0.7 arcsecond slit and 2x2 spatial on-chip binning, which provides a spectral resolution of ($\mathcal{R} \approx \todo{22,000}$). Exposure times were set to achieve a S/N ratio of 30 per pixel at 4500\,\AA. We acquired calibration (biases, milky, quartz, and Th-Ar arc lamp) frames in the afternoon.
+
+We reduced the data using the \texttt{CarPy} Python package \citep{kels03,kels14}. We used spline functions to continuum-normalise individual echelle orders, and resampled the normalised spectra onto a uniform-sized wavelength map. We used a rest-frame normalised template of a FGK-type star to place the observed spectra in the rest frame.
+
 
 \subsubsection{Abundance Analysis}
+We adopted the stellar parameters ($T_{\rm eff}$, $\log_{10}g$, [Fe/H]) provided from the data-driven analysis of \citep{Ho_2017}. Following the procedure outlined in \citep{Casey_2014}, we measured the strength of atomic absorption lines by fitting Gaussian profiles to the continuum-normalised spectra. Most elemental abundances were derived directly from these line measurements, except for elements that show significant hyperfine splitting \todo{(e.g., )} or blending \todo{(e.g., X)}. In these situations, we adopted a spectral synthesis approach. \todo{citations for line lists}
 
-\subsubsection{Abundance Uncertainties}
+
+\todo{Some sentences for andy to add regarding abundance analysis and verification of stellar parameters from LAMOST}
+
+\todo{Were ant of the stars observed with Magellan/MIKE the stars enhanced in Na? C?}
+
+
+%\subsubsection{Abundance Uncertainties}
 
 \subsection{Dynamics}
+\todo{rewrite this with more detail: see Casey \& Schlaufman (2017) to see how much detail you should give for dynamics analysis...}
 The dynamical analysis of our barium star candidates was accomplished by crossing matching the sample with GAIA \todo{ref gaia}, producing 21 matches, and then using gala Python package to intergrate the galactic dynamics. The Milky Way potential model was used to integrate the orbits of our candidates back a \todo{number} years, and compute distributions of orbital properties including orbital period, orbital energy, apocenter, eccentricity, and angular momentum in z.
 
 \begin{figure}
