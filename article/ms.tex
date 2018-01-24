@@ -15,6 +15,11 @@
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+\usepackage{float}
 \newcommand{\todo}[1]{\textcolor{red}{#1}}
 \newcommand{\countertodo}[1]{\textcolor{green}{#1}}
 
@@ -23,22 +28,13 @@
 \newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
 \makeatother
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
-
 % Please keep new commands to a minimum, and use \newcommand not \def to avoid
 % overwriting existing commands. Example:
 %\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-% Title of the paper, and the short title which is used in the headers.
-% Keep the title short and informative.
-\title[Barium stars in LAMOST]{Discovery of barium stars in the LAMOST survey}
+\title[S-process stars in LAMOST]{Discovery of s-process stars in the LAMOST survey}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -61,25 +57,15 @@ $^{2}$Faculty of Information Technology, Monash University, Clayton 3800, Victor
 \maketitle
 
 \begin{abstract}
-Stars with peculiar enhancements of carbon and heavy elements ($Z > 30$) are historically referred to as Barium stars. While this chemical abundance pattern can be explained by thermally pulsing asymptotic giant branch (AGB) stars, many barium stars have not evolved through the red giant (or main-sequence) phase and therefore cannot be an AGB star. These stars are generally thought to have accreted mass from a more evolved companion. For this reason the frequency and properties of less-evolved barium stars is uniquely informative on the binary fraction, AGB yields, mass transfer, and stellar evolution. Here we present the discovery of 257 barium stars from 454,180 giant stars observed by LAMOST. This sample constitutes the largest sample of barium stars discovered to date, and the most comprehensive search for barium stars in the Milky Way. \todo{Nearly all} of our barium stars are disk stars, and we find an \todo{steady/increasing/decreasing} fraction of barium stars with stellar metallicity, as \todo{expected} from AGB yields and stellar evolution theory.  
+Stars with peculiar enhancements of carbon and heavy elements ($Z > 30$) are historically referred to as Barium stars. While this chemical abundance pattern can be explained by thermally pulsing asymptotic giant branch (AGB) stars, many barium stars have not evolved through the red giant (or main-sequence) phase and therefore cannot be an AGB star. These stars are generally thought to have accreted mass from a more evolved companion. For this reason the frequency and properties of less-evolved barium stars is uniquely informative on the binary fraction, AGB yields, mass transfer, and stellar evolution. Here we present the discovery of 967 s-process candidates including; 257 barium stars, 49 barium doublet stars, and 661 strontium doublet stars from 454,180 giant stars observed by LAMOST. This sample constitutes the largest sample of barium stars discovered to date, and the most comprehensive search for barium stars in the Milky Way. \todo{Nearly all} of our barium stars are disk stars, and we find an \todo{steady/increasing/decreasing} fraction of barium stars with stellar metallicity, as \todo{expected} from AGB yields and stellar evolution theory.  
 % Technitium?
 \todo{Most (178/257) of our sample show strong carbon enhancement.}
 Despite previous claims indicating that barium stars are preferentially enhanced in sodium due to the NeNa nucleosynthesis cycle occurring in \todo{massive} AGB stars, only 5 ($<2$\,\%) of our Barium stars show any evidence of enhancement in sodium. \todo{This implies ....}
- %Barium stars exist as either intrinsic TP-AGB stars, producing enhancements in s-process elements via cyclic thermal pulses. Or, extrinsic giants still on the main sequence with enhancements in s-process element the results of polluton from a binary TP-AGB star. Enhancements in \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements through a data-driven analysis given a well-fitted model. 
-% We determined ... Sodium enrichment was present in 5 of our barium star candidates and could be attributed to the NeNa cycle in more evolved stars.
 \end{abstract}
 
 \begin{keywords}
 keyword1 -- keyword2 -- keyword3
 \end{keywords}
-
-
-% AGB stars and the s-process.
-
-% Comparisons to expectations of theoretical birth rate
-% Binary fraction at different metallicities
-% Mass differentials of binary stars
-% Yields of AGB stars at different masses and metallicities.
 
 \section{Introduction} \label{sec:intro}
 
@@ -91,15 +77,17 @@ Barium giants form within a metallicity dependent initial mass range (approximat
 
 Many barium stars have been discovered in the disk and halo of the Milky Way \citep{gomez1997,mennessier1997}. Both studies show that the stellar populations of Barium stars can be separated into two groups when considering their \todo{absolute?} luminosity, kinematic, and spatial properties. Barium stars populating the halo have already been investigated \citep[e.g.][]{junqueira2001,drake2008,pereira2009,allen2006} and their relationship with metal-poor, yellow, symbiotic halo stars has been established by \citet{jorissen2005} and \citet{pereira2009}. Additionally, \citet{pereira2011} concludes metal-rich barium stars share similar kinematics to other metal-rich and super metal-rich stars already analysed, suggesting that they do not belong to the bulge population. Furthermore, it is necessary to establish known abundances of s-process elements in a greater sample of Barium stars in order to compare their birth rate to theoretical expectations \citep{han1995}, explore the binary fraction at different metallicities, and infer AGB star yields at different masses and metallicities.
 
-In this paper we analysis 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 257 Barium star candidates that show enhancements of s-process elements. Specifcally, the giants studied here display especially strong s-process enhancement for \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. Additionally, molecular band absorption for G Band, CH bands is observed. In Section \ref{sec:methods} we describe the observations and candidate selection, as well as the analysis follow up our follow-up observing campaign with MAGGELLAN. In Section \ref{sec:dis} we discuss the properties of our Barium stars in context of existing literature. We provide concluding remarks in Section \ref{sec:con}
+In this paper we analysis 454,180 giant stars from LAMOST data release (DR) 2 to identify and examine 967 s-process candidates including barium stars, barium doublet stars and strontium doublet stars. Specifcally, the barium star giants studied here display especially strong s-process enhancement for \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. Our doublet candidates show s-process enhancement in 4554\AA \hspace{0.2mm} and 4934\AA for barium enhancement, and, 4554\AA \hspace{0.2mm} and 4215\AA for strontium enhancement. In Section \ref{sec:methods} we describe the observations and candidate selection, as well as the analysis follow up our follow-up observing campaign with MAGGELLAN. In Section \ref{sec:dis} we discuss the properties of our Barium stars in context of existing literature. We provide concluding remarks in Section \ref{sec:con}
 
 \section{Methods} \label{sec:methods}
 \subsection{LAMOST Analysis}
 \subsubsection{Data-driven Analysis}
-The LAMOST (Large sky Area Multi-Object Fibre Spectrographic) survey released low-resolution ($\mathcal{R} \approx 1800$) optical spectra (3700\,\AA\ to 9000\,\AA) for over two million stars in their second data release \citep{luo2015}. Stellar parameters ($T_{\rm eff}$, $\log{g}$, [M/H], [$\alpha$/M]) were derived using a data-driven model constructed using high fidelity APOGEE labels of 9,952 stars in common between LAMOST and the APOGEE survey. \todo{Write more about this: the precision in parameters, how giants were selected from dwarfs, and then talk about how many giant spectra we used}.
+The LAMOST (Large sky Area Multi-Object Fibre Spectrographic) survey released low-resolution ($\mathcal{R} \approx 1800$) optical spectra (3700\,\AA\ to 9000\,\AA) for over two million stars in their second data release \citep{luo2015}. Stellar parameters ($T_{\rm eff}$, $\log{g}$, [M/H], [$\alpha$/M]) were derived using a data-driven model constructed using high fidelity APOGEE labels of 9,952 giant stars in common between LAMOST and the APOGEE survey. The cross-validation of the model with S/N > 50, yielded typical uncertainties of 70K in $T_eff$, 0.1 in log g, 0.1 in [Fe/H], and 0.04 in [$\alpha$/M]. These uncertainties are broadly comparable to the conservative APOGEE DR12 uncertainties. \todo{not sure how the dwalfs come into play}
+
+\todo{Write more about this: the precision in parameters, how giants were selected from dwarfs, and then talk about how many giant spectra we used}.
 
 \subsubsection{Candidate Selection} \label{sec:cand}
-The Barium stars analysed in this research were obtained by filtering for significant flux residuals, taken as, a disparity between the normalised LAMOST flux and the data driven model derived by \citet{ho2017}. A negative residual as shown in the poster child figure \ref{fig:figure1} illustrates an enhancement in \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. These \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements given a well-fit model for the data. We used five filters that each spectra, for both enhancement lines, had to meet to be considered a Barium star candidate; these included:
+The Barium stars analysed in this research were obtained by filtering for significant flux residuals, taken as, a disparity between the normalised LAMOST flux and the data driven model derived by \citet{ho2017}. A negative residual as shown in the poster child figure \ref{fig:figure1} illustrates an enhancement in \ion{Ba}{II} and \ion{Sr}{II} at lines 4554\AA \hspace{0.2mm} and 4077\AA, respectively. These \ion{Ba}{II} and \ion{Sr}{II} resonance lines are very strong, allowing us to identify stars enhanced in neutron-capture elements given a well-fit model for the data. We used five filters that each spectra, for both enhancement lines, had to meet to be considered a s-process candidate; these included:
 
 \renewcommand\labelenumi{(\roman{enumi})}
 \renewcommand\theenumi\labelenumi
@@ -111,7 +99,7 @@ The Barium stars analysed in this research were obtained by filtering for signif
 \item $\chi^2 \leq 3$.
 \item And, the spectra must have a signal-to-noise ratio of S/N $\geq 30$ per pixel.
 \end{enumerate}
-In addition, a visual observation of the accuracy between each normalised LAMOST flux and its accompanying data driven model was undertaken to exclude any results containing, false positives, candidates exhibiting data reduction issues, apparent absorption finer then the spectral resolution, and overly noisy normalised LAMOST spectra. This combined method generated the 257 Barium star candidates as listed in Table \ref{table:table1}. 
+In addition, a visual observation of the accuracy between each normalised LAMOST flux and its accompanying data driven model was undertaken to exclude any results containing, false positives, candidates exhibiting data reduction issues, apparent absorption finer then the spectral resolution, and overly noisy normalised LAMOST spectra. This combined method generated 967 s-process candidates including; 257 barium stars, 49 barium doublet stars, and 661 strontium doublet stars, as listed in Table \ref{table:table1}. 
 
 \begin{figure}
 	% To include a figure from a file named example.*
@@ -122,7 +110,7 @@ In addition, a visual observation of the accuracy between each normalised LAMOST
     \label{fig:figure1}
 \end{figure}
 
-\begin{table}[]
+\begin{table*}
 \centering
 \caption{Available online in its entirety. Here we show a portion to demonstrate its style and content}
 \label{table:table1}
@@ -149,13 +137,13 @@ J011919.20+195227.0 & 01:19:19.21 & +19:52:27.0 & -35.38    & 31  & 4897 & 2.77 
 J011930.90-015027.3 & 01:19:30.91 & -01:50:27.4 & -143.30   & 44  & 5040 & 3.22  & -0.91      & 0.20      & 0.48 \\ \midrule
 J020316.40+462211.1 & 02:03:16.41 & +46:22:11.1 & 11.09     & 37  & 4897 & 2.89  & -0.39      & 0.11      & 0.51 \\ \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
 
 
 \subsubsection{Carbon Bands}
 
 Barium stars are optimal sites for investigating the relationship between the neutron-capture elements and other species that may be
-depleted or enhanced, because they act as neutron seeds during the operation of the s-process. In the ABG phase the abundance of carbon is a product of helium fusion, specifically the triple-alpha process within a star. In an identical mechanism to the presence of s-process elelment enhancement, carbon enhanced stars exist intrinsically or extrinsically. Giants and supergiants become enhanced in carbon through TDU process discussed in Section \ref{sec:intro}, and extrinsic carbon enhancement occurs via mass transfer from a binary AGB star. In our sample of barium star candidates we discovered enhancement in both CH and the G band for 178 of our total 257 stars. \todo{maybe put a list of the stars ?}
+depleted or enhanced, because they act as neutron seeds during the operation of the s-process. In the ABG phase the abundance of carbon is a product of helium fusion, specifically the triple-alpha process within a star. In an identical mechanism to the presence of s-process elelment enhancement, carbon enhanced stars exist intrinsically or extrinsically. Giants and supergiants become enhanced in carbon through TDU process discussed in Section \ref{sec:intro}, and extrinsic carbon enhancement occurs via mass transfer from a binary AGB star. In our sample of barium star candidates we discovered enhancement in both CH and the G band for 178 of our total 257 stars.
 
 
 
@@ -166,10 +154,7 @@ Enhancement of technetium lines in our sample would indicate the presence of hig
 
 \subsubsection{Sodium Doublet}
 
-According to \citet{el1995}, sodium overabundance observed in the atmospheres of A-F supergiant stars is synthesized in the convective core of main-sequence stars in the NeNa reaction chain. Sodium is transported to the surface of these supergiants via mixing of CNO cycle products during the first dredge-up, this constrains sodium enhancement to supergiants and giants only. \citet{antipova2004} discovered a sodium enhancement in a number of their barium star candidates, they relate this to the dredge-up of nuclear-burning material produced by convection during the red-giant phase. Moreover, they suggest [Na/Fe] values do not exhibit variations in metallicity, but [Na/Fe] ratios exhibit systematically higher values for giants with lower log g values. Similarily, \citet{decastro2016} highlights the possible weak, but statistically significant anti-correlation between [Na/Fe] ratio and log g, and illustrates this trend in previous studies\citep[e.g.][]{boyarchuk2002,mishenina2006,luck2007,takeda2008}. 
-
-Through an identical analysis to the process described in Section \ref{sec:cand}, we filtered for negative residuals in the enhanced sodium doublet lines 5889.950\AA\hspace{0.2mm} and 5895.924\AA. Our analysis produced 5 matches with our barium star candidates, this suggests sodium-rich material from the TP-AGB star polluted the barium star. Although, it's important to note a star with a minimum 1.5$M_\odot$ can exhibit sodium abundance through the NeNc cycle \citep{denissenkov1987}. During the giant phase synthesized sodium is brought to the surface via the first dredge-up, therefore, these candidates may display sodium enhancement without mass transfer from a TP-AGB star.
-\todo{maybe put a list of the stars ?}
+Through an identical analysis to the process described in Section \ref{sec:cand}, we filtered for negative residuals in the enhanced sodium doublet lines 5889.950\AA\hspace{0.2mm} and 5895.924\AA. Our analysis produced 5 matches with our barium star candidates, this suggests sodium-rich material from the TP-AGB star polluted the barium star. 
 
 \subsection{Follow-up observations with Magellan/MIKE}
 
@@ -191,8 +176,9 @@ We adopted the stellar parameters ($T_{\rm eff}$, $\log_{10}g$, [Fe/H]) provided
 %\subsubsection{Abundance Uncertainties}
 
 \subsection{Dynamics}
-\todo{rewrite this with more detail: see Casey \& Schlaufman (2017) to see how much detail you should give for dynamics analysis...}
-The dynamical analysis of our barium star candidates was accomplished by crossing matching the sample with GAIA \todo{ref gaia}, producing 21 matches, and then using gala Python package to intergrate the galactic dynamics. The Milky Way potential model was used to integrate the orbits of our candidates back a \todo{number} years, and compute distributions of orbital properties including orbital period, orbital energy, apocenter, eccentricity, and angular momentum in z.
+The dynamical analysis of our barium star candidates was accomplished by crossing matching the sample with GAIA \todo{ref gaia}, to produce 21 matches with proper motions, parallax, and galactic positions. We then, using the gala Python package, intergrated our data to calculate the orbits of our 21 candidates with a Milky Way Potential model. The parameters of the mass model are determined by least-squares fitting the enclosed mass profile of a pre-defined potential form to recent measurements compiled from the literature. These measurements are provided with the documentation of gala \citep{price2017}. The Milky Way potential implemented was constructed using a four component potential model consisting of a \citet{hernquist1990} bulge and nucleus, a \citet{miyamoto1975} disk, and an \citet{nfw1997} halo. In this potential, parameters of the disk and bulge were adjuted to be consistent with previous work \citep{bovy2015} and vary the scale mass and scale radius of the nucleus and halo, respectively. This potential model was used to integrate the orbits of our candidates back a \todo{number} years, and compute distributions of orbital properties including orbital period, orbital energy, apocenter, eccentricity, and angular momentum in z.
+\subsubsection{Galactic Positioning}
+The galactic position of our GAIA matched candidates was determined through observation of the relationship between orbital energy and angular momentum in z. For this relationship a comparison between for 1,000 random normal-looking LAMOST stars and our barum star candidates was made. Both samples followed an identical trend and given the fact that most LAMOST stars are disk stars, it was concluded that our barium star candidates existed in the disk of the Milky Way.
 
 \begin{figure}
 	% To include a figure from a file named example.*
@@ -214,7 +200,6 @@ The dynamical analysis of our barium star candidates was accomplished by crossin
 
 \section{Discussion}  \label{sec:dis}
 
-\subsection{HR Diagram}
 \begin{figure}
 	% To include a figure from a file named example.*
 	% Allowable file formats are eps or ps if compiling using latex
@@ -224,6 +209,10 @@ The dynamical analysis of our barium star candidates was accomplished by crossin
     \label{fig:figure2}
 \end{figure}
 
+\subsection{Sodium Enhancment}
+According to \citet{el1995}, sodium overabundance observed in the atmospheres of A-F supergiant stars is synthesized in the convective core of main-sequence stars in the NeNa reaction chain. Sodium is transported to the surface of these supergiants via mixing of CNO cycle products during the first dredge-up, this constrains sodium enhancement to supergiants and giants only. \citet{antipova2004} discovered a sodium enhancement in a number of their barium star candidates, they relate this to the dredge-up of nuclear-burning material produced by convection during the red-giant phase. Moreover, they suggest [Na/Fe] values do not exhibit variations in metallicity, but [Na/Fe] ratios exhibit systematically higher values for giants with lower log g values. Similarily, \citet{decastro2016} highlights the possible weak, but statistically significant anti-correlation between [Na/Fe] ratio and log g, and illustrates this trend in previous studies\citep[e.g.][]{boyarchuk2002,mishenina2006,luck2007,takeda2008}. 
+
+Although, it's important to note a star with a minimum 1.5$M_\odot$ can exhibit sodium abundance through the NeNc cycle \citep{denissenkov1987}. During the giant phase synthesized sodium is brought to the surface via the first dredge-up, therefore, these candidates may display sodium enhancement without mass transfer from a TP-AGB star. Lastly, it is important to note studies including \citet{decastro2016} conclude sodium enhancement is ubiquitous throughout barium stars yet in contradiction, our sample only exhibits only a $<2$\,\% sodium presence. 
 
 \section{Conclusions} \label{sec:con}
 
@@ -293,138 +282,146 @@ Fired Status: yes
 % The best way to enter references is to use BibTeX:
  
 \bibliographystyle{mnras}
-\bibliography{example} % if your bibtex file is called example.bib
+%\bibliography{example} % if your bibtex file is called example.bib
 
 \begin{thebibliography}{99}
-\bibitem[\protect\citeauthoryear{Author}{2012}]{Author2012}
-Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
-\bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
-Others S., 2012, Journal of Interesting Stuff, 17, 198
-
-
+\bibitem[\protect\citeauthoryear{Allen \& Barbuy}{2006}]{allen2006}
+Allen, D.~M.,\& Barbuy B. 2006, 
+A$\&$A, 454, 917
+\bibitem[\protect\citeauthoryear{Antipova et al.}{2004}]{antipova2004}
+Antipova, L.~I., Boyarchuk, A.~A., Pakhomov, Yu.~V.,\& Panchuk, V.~E. 2004, 
+ARep, 48, 597
 \bibitem[\protect\citeauthoryear{Bidelman \& Keenan}{1951}]{Bidelman1951}
 Bidelman, W.~P. \& Keenan, P.~C. , 1951, ApJ, 114, 473
-\bibitem[\protect\citeauthoryear{Busso et al.}{1999}]{busso1999}
-Busso, M., Gallino, R., \& Wasserburg, P.~C. 1999, 
-ARA$\&$A, 37, 239
-\bibitem[\protect\citeauthoryear{Travaglio et al.}{2001}]{travaglio2001}
-Travaglio, C., et al. 2001, 
-ApJ, 549, 346
-\bibitem[\protect\citeauthoryear{Herwig}{2005}]{herwig2005}
-Herwig, F. 2005, 
-ARA$\&$A, 43, 435
-\bibitem[\protect\citeauthoryear{Romano et al.}{2010}]{romano2010}
-Romano, D., et al. 2010, 
-A$\&$A, 522, A32
-\bibitem[\protect\citeauthoryear{Kobayashi et al.}{2011}]{kobayashi2011}
-Kobayashi, C., Karakas, A., \& Umeda, H. 2011, 
-MNRAS, 414, 3231
-\bibitem[\protect\citeauthoryear{Prantzos}{2012}]{prantzos2012}
-Prantzos, N. 2012, 
-A$\&$A, 542, A67
 \bibitem[\protect\citeauthoryear{Bisterzo et al.}{2014}]{bisterzo2014}
 Bisterzo, S., et al. 2014, 
 ApJ, 787, 10
-\bibitem[\protect\citeauthoryear{Karakas}{2016}]{karakas12016}
-Karakas, A. 2016, 
-SAIt, 87, 229
-\bibitem[\protect\citeauthoryear{Busso et al.}{2001}]{busso2001}
-Busso, M., Gallino, R., Lambert, D.~L., Travaglio, C.\& Smith, V.~V. 2001, 
-ApJ, 557, 802
-\bibitem[\protect\citeauthoryear{McClure}{1983}]{mcclure1983}
-McClure, R.~D. 1983, 
-ApJ, 268, 264
-\bibitem[\protect\citeauthoryear{Pourbaix et al.}{2004}]{pourbaix2004}
-Pourbaix, D., Tokovinin, A.~A., Batten, A.~H., Fekel, F.~C., Hartkopf, W.~I. et al. 2001, 
 A$\&$A, 424, 727
+\bibitem[\protect\citeauthoryear{Boffin \& Jorissen}{1988}]{boffin1988}
+Boffin H, M.~J.,\& Jorissen, A. 1988, 
+A$\&$A, 205, 155
 \bibitem[\protect\citeauthoryear{B\"ohm-Vitense}{1980}]{bohm1980}
 B\"ohm-Vitense, E. 1980, 
 ApJ, 239, L79
 \bibitem[\protect\citeauthoryear{B\"ohm-Vitense et al.}{1984}]{bohm1984}
 B\"ohm-Vitense, E., Nemec, J.,\& Proffitt, C. 1984, 
 ApJ, 278, 726
-\bibitem[\protect\citeauthoryear{Boffin \& Jorissen}{1988}]{boffin1988}
-Boffin H, M.~J.,\& Jorissen, A. 1988, 
-A$\&$A, 205, 155
+\bibitem[\protect\citeauthoryear{Bovy}{2015}]{bovy2015}
+Bovy, J. 2015, 
+ApJ, 216, 29
+\bibitem[\protect\citeauthoryear{Boyarchuk et al.}{2002}]{boyarchuk2002}
+Boyarchuk, A.~A., Pakhomov, Y.~V., Antipova, L.~I.,\& Boyarchuk, M.~E. 2002, 
+ARep, 46, 819
+\bibitem[\protect\citeauthoryear{Busso et al.}{1999}]{busso1999}
+Busso, M., Gallino, R., \& Wasserburg, P.~C. 1999, 
+ARA$\&$A, 37, 239
+\bibitem[\protect\citeauthoryear{Busso et al.}{2001}]{busso2001}
+Busso, M., Gallino, R., Lambert, D.~L., Travaglio, C.\& Smith, V.~V. 2001, 
+ApJ, 557, 802
+\bibitem[\protect\citeauthoryear{deCastro et al.}{2016}]{decastro2016}
+deCastro, D.~B., Pereira, C.~B., Roig, F., Jilinski, E., Drake, N.~A., Chavero, C.,\& Sales Silva, J.~V. 2016, 
+MNRAS, 459, 4299
+\bibitem[\protect\citeauthoryear{Denissenkov \& Ivanov}{1987}]{denissenkov1987}
+Denissenkov P.~A.,\& Ivanov, V.~V. 1987, 
+SvAL, 13, 214
+\bibitem[\protect\citeauthoryear{Drake \& Pereira}{2008}]{drake2008}
+Drake N.,~A.,\& Pereira, C.~B. 2008, 
+AJ, 135, 1070
+\bibitem[\protect\citeauthoryear{El Eid \& Champagne}{1995}]{el1995}
+El Eid, M.~F.,\& Champagne, A.~E. 1995, 
+ApJ, 451, 298
+\bibitem[\protect\citeauthoryear{Gomez et al.}{1997}]{gomez1997}
+Gomez, A.~E., Luri, X., Grenier, S., et al. 1997, 
+A$\&$A, 319, 881
+\bibitem[\protect\citeauthoryear{Han et al.}{1995}]{han1995}
+Han, Z., Eggleton, P.~P., Podsiadlowski, P.,\& Tout, C.~A. 1995, 
+MNRAS, 277, 1443
+\bibitem[\protect\citeauthoryear{Hernquist}{1990}]{hernquist1990}
+Hernquist, L. 1990, 
+ApJ, 356, 359
+\bibitem[\protect\citeauthoryear{Herwig}{2005}]{herwig2005}
+Herwig, F. 2005, 
+ARA$\&$A, 43, 435
+\bibitem[\protect\citeauthoryear{Ho et al.}{2017}]{ho2017}
+Ho, A.~Y.~Q., Ness, M.~K., Hogg, D.~W., Rix, H.-W. Liu, C., Yang, F., Zhang, Y., Hou, Y.,\& Wang, Y. 2017, 
+ApJ, 836, 5
 \bibitem[\protect\citeauthoryear{Jorissen \& Boffin}{1992}]{jorissen1992}
 Jorissen, A.,\& Boffin H, M.~J., 1992, 
 Evidences for interaction among wide binary systems: To Ba or not to Ba? In: Duquennoy, A., Mayor, M.,(eds.) Binaries as tracers of stellar formation. Cambridge Univ. Press., p.185
+\bibitem[\protect\citeauthoryear{Jorissen et al.}{1993}]{jorissen1993}
+Jorissen, A., Frayer, D.~T., Johnson, H.~W., Mayor, M.,\& Smith, V.~V. 1993, 
+A$\&$A, 271, 463
+\bibitem[\protect\citeauthoryear{Jorissen et al.}{2005}]{jorissen2005}
+Jorissen, A., Za$\check{c}$, L., Udry, S., Lindgren, H.,\& Musaev, F.~A. 2005, 
+A$\&$A, 441, 1135
+\bibitem[\protect\citeauthoryear{Junqueira \& Pereira}{2001}]{junqueira2001}
+Junqueira S.,\& Pereira, C.~B. 2001, 
+AJ, 122, 360
+\bibitem[\protect\citeauthoryear{Karakas}{2016}]{karakas12016}
+Karakas, A. 2016, 
+SAIt, 87, 229
+\bibitem[\protect\citeauthoryear{Kobayashi et al.}{2011}]{kobayashi2011}
+Kobayashi, C., Karakas, A., \& Umeda, H. 2011, 
+MNRAS, 414, 3231
+\bibitem[\protect\citeauthoryear{Little-Marenin \& Little}{1987}]{little1987}
+Little-Marenin, I.~R.,\& Little, S.~J. 1987, 
+AJ, 93, 1539
+\bibitem[\protect\citeauthoryear{Luck \& Heiter}{2007}]{luck2007}
+Luck R.~E.,\& Heiter, U. 2007, 
+AJ, 133, 2464
+\bibitem[\protect\citeauthoryear{Luo A.L., Bai Z.R. et al}{2015}]{luo2015}
+Luo, A.~L., Bai, Z.~R., et al. 2015, 
+RAA, in press
+\bibitem[\protect\citeauthoryear{McClure}{1983}]{mcclure1983}
+McClure, R.~D. 1983, 
+ApJ, 268, 264
+\bibitem[\protect\citeauthoryear{Mennessier et al.}{1997}]{mennessier1997}
+Mennessier, M.~O., Luri, X., Figueras, F., et al. 1997, 
+A$\&$A, 326, 722
+\bibitem[\protect\citeauthoryear{Mishenina et al.}{2006}]{mishenina2006}
+Mishenina, T.~V., Bienaym\' e, O., Gorbaneva, T.~I.,\& Charbonnel, C. 2006, 
+A$\&$A, 456, 1109
+\bibitem[\protect\citeauthoryear{Miyamoto-Nagai}{1975}]{miyamoto1975}
+Miyamoto, M,\& Nagai, R. 1975, 
+PASJ, 27, 533
+\bibitem[\protect\citeauthoryear{NFW}{1997}]{nfw1997}
+Navarro, J.~F., Frenk, C.~S.,\& White, S.~D.~M. 1997, 
+ApJ, 490, 493
+\bibitem[\protect\citeauthoryear{Pereira \& Drake}{2009}]{pereira2009}
+Pereira, C.~B.,\& Drake N.,~A. 2009, 
+A$\&$A, 496, 791
+\bibitem[\protect\citeauthoryear{Pereira et al.}{2011}]{pereira2011}
+Pereira, C.~B., Sales Silva, J.,~A., Chavero, C., Roig, F.,\& Jilinski E. 2011, 
+A$\&$A, 533, A51
+\bibitem[\protect\citeauthoryear{Pourbaix et al.}{2004}]{pourbaix2004}
+Pourbaix, D., Tokovinin, A.~A., Batten, A.~H., Fekel, F.~C., Hartkopf, W.~I. et al. 2001, 
+\bibitem[\protect\citeauthoryear{Prantzos}{2012}]{prantzos2012}
+Prantzos, N. 2012, 
+A$\&$A, 542, A67
+\bibitem[\protect\citeauthoryear{Price-Whelan}{2017}]{price2017}
+Price-Whelan, A.~M. 2017, 
+The Journal of Open Source Software, 2, 388
+\bibitem[\protect\citeauthoryear{Romano et al.}{2010}]{romano2010}
+Romano, D., et al. 2010, 
+A$\&$A, 522, A32
+\bibitem[\protect\citeauthoryear{Smith \& Wallerstein}{1983}]{smith1983}
+Smith, V.~V.,\& Wallerstein, G. 1983, 
+ApJ, 273, 742
+\bibitem[\protect\citeauthoryear{Smith}{1984}]{smith1984}
+Smith, V.~V. 1984, 
+A$\&$A, 132, 326
+\bibitem[\protect\citeauthoryear{Takeda et al.}{2008}]{takeda2008}
+Takeda, Y., Sato, B.~V.,\& Murata, D. 2008, 
+AJ, 60, 781
+\bibitem[\protect\citeauthoryear{Travaglio et al.}{2001}]{travaglio2001}
+Travaglio, C., et al. 2001, 
+ApJ, 549, 346
 \bibitem[\protect\citeauthoryear{Webbink}{1986}]{webbink1986}
 Webbink, R.~F. 1986, 
 In: Leung, K.~C., Zhai, D.~S.(eds.) Critical Observations versus Physical Models for Close Binary Systems. Gordon and Breach, New York, p.403
 \bibitem[\protect\citeauthoryear{Whitelock et al.}{2013}]{whitelock2013}
 Whitelock, P.~A., et al. 2013, 
 MNRAS, 428, 2216
-\bibitem[\protect\citeauthoryear{Gomez et al.}{1997}]{gomez1997}
-Gomez, A.~E., Luri, X., Grenier, S., et al. 1997, 
-A$\&$A, 319, 881
-\bibitem[\protect\citeauthoryear{Mennessier et al.}{1997}]{mennessier1997}
-Mennessier, M.~O., Luri, X., Figueras, F., et al. 1997, 
-A$\&$A, 326, 722
-\bibitem[\protect\citeauthoryear{Junqueira \& Pereira}{2001}]{junqueira2001}
-Junqueira S.,\& Pereira, C.~B. 2001, 
-AJ, 122, 360
-\bibitem[\protect\citeauthoryear{Drake \& Pereira}{2008}]{drake2008}
-Drake N.,~A.,\& Pereira, C.~B. 2008, 
-AJ, 135, 1070
-\bibitem[\protect\citeauthoryear{Pereira \& Drake}{2009}]{pereira2009}
-Pereira, C.~B.,\& Drake N.,~A. 2009, 
-A$\&$A, 496, 791
-\bibitem[\protect\citeauthoryear{Allen \& Barbuy}{2006}]{allen2006}
-Allen, D.~M.,\& Barbuy B. 2006, 
-A$\&$A, 454, 917
-\bibitem[\protect\citeauthoryear{Jorissen et al.}{2005}]{jorissen2005}
-Jorissen, A., Za$\check{c}$, L., Udry, S., Lindgren, H.,\& Musaev, F.~A. 2005, 
-A$\&$A, 441, 1135
-\bibitem[\protect\citeauthoryear{Han et al.}{1995}]{han1995}
-Han, Z., Eggleton, P.~P., Podsiadlowski, P.,\& Tout, C.~A. 1995, 
-MNRAS, 277, 1443
-\bibitem[\protect\citeauthoryear{Pereira et al.}{2011}]{pereira2011}
-Pereira, C.~B., Sales Silva, J.,~A., Chavero, C., Roig, F.,\& Jilinski E. 2011, 
-A$\&$A, 533, A51
-\bibitem[\protect\citeauthoryear{Ho et al.}{2017}]{ho2017}
-Ho, A.~Y.~Q., Ness, M.~K., Hogg, D.~W., Rix, H.-W. Liu, C., Yang, F., Zhang, Y., Hou, Y.,\& Wang, Y. 2017, 
-ApJ, 836, 5
-\bibitem[\protect\citeauthoryear{Luo A.L., Bai Z.R. et al}{2015}]{luo2015}
-Luo, A.~L., Bai, Z.~R., et al. 2015, 
-RAA, in press
-\bibitem[\protect\citeauthoryear{Jorissen et al.}{1993}]{jorissen1993}
-Jorissen, A., Frayer, D.~T., Johnson, H.~W., Mayor, M.,\& Smith, V.~V. 1993, 
-A$\&$A, 271, 463
-\bibitem[\protect\citeauthoryear{Little-Marenin \& Little}{1987}]{little1987}
-Little-Marenin, I.~R.,\& Little, S.~J. 1987, 
-AJ, 93, 1539
-\bibitem[\protect\citeauthoryear{Smith}{1984}]{smith1984}
-Smith, V.~V. 1984, 
-A$\&$A, 132, 326
-\bibitem[\protect\citeauthoryear{Smith \& Wallerstein}{1983}]{smith1983}
-Smith, V.~V.,\& Wallerstein, G. 1983, 
-ApJ, 273, 742
-\bibitem[\protect\citeauthoryear{El Eid \& Champagne}{1995}]{el1995}
-El Eid, M.~F.,\& Champagne, A.~E. 1995, 
-ApJ, 451, 298
-\bibitem[\protect\citeauthoryear{Antipova et al.}{2004}]{antipova2004}
-Antipova, L.~I., Boyarchuk, A.~A., Pakhomov, Yu.~V.,\& Panchuk, V.~E. 2004, 
-ARep, 48, 597
-\bibitem[\protect\citeauthoryear{Boyarchuk et al.}{2002}]{boyarchuk2002}
-Boyarchuk, A.~A., Pakhomov, Y.~V., Antipova, L.~I.,\& Boyarchuk, M.~E. 2002, 
-ARep, 46, 819
-\bibitem[\protect\citeauthoryear{Takeda et al.}{2008}]{takeda2008}
-Takeda, Y., Sato, B.~V.,\& Murata, D. 2008, 
-AJ, 60, 781
-\bibitem[\protect\citeauthoryear{Mishenina et al.}{2006}]{mishenina2006}
-Mishenina, T.~V., Bienaym\' e, O., Gorbaneva, T.~I.,\& Charbonnel, C. 2006, 
-A$\&$A, 456, 1109
-\bibitem[\protect\citeauthoryear{Luck \& Heiter}{2007}]{luck2007}
-Luck R.~E.,\& Heiter, U. 2007, 
-AJ, 133, 2464
-\bibitem[\protect\citeauthoryear{Denissenkov \& Ivanov}{1987}]{denissenkov1987}
-Denissenkov P.~A.,\& Ivanov, V.~V. 1987, 
-SvAL, 13, 214
-\bibitem[\protect\citeauthoryear{de Castro et al.}{2016}]{decastro2016}
-de Castro, D.~B., Pereira, C.~B., Roig, F., Jilinski, E., Drake, N.~A., Chavero, C.,\& Sales Silva, J.~V. 2016, 
-MNRAS, 459, 4299
-
 
 \end{thebibliography}
 
