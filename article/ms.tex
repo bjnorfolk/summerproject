@@ -103,9 +103,6 @@ In addition, a visual inspection was undertaken to exclude any results containin
 For the remainder of this paper we restrict our analysis to the 257 classical `Barium stars' stars that show enhancement in both barium and strontium. While the 49 or 661 stars with only barium or strontium enhancements (respectively) may also be bonafide barium stars, there may be other explanations for their chemical abundance pattern \citep[e.g.,][]{maiorca2011}, and so we restrict our inferences to a gold sample of Barium stars. Nevertheless, this sample still constitutes the largest collection of Barium stars ever discovered.\todo{cite the next biggest one or two samples}
 
 
-\subsubsection{Abundance analysis from LAMOST spectra}
-
-\todo{For andy}
 
 
 
@@ -151,10 +148,13 @@ J020316.40+462211.1 & 02:03:16.41 & +46:22:11.1 & $+$11.1     & 37  & 4897 & 2.8
 
 
 \subsubsection{Enhancements due to sodium, technetium, and carbon}
-We performed an identical analysis to the process described in Section \ref{sec:cand} in order to identify sodium, technetium, or carbon enhancement in our sample of 257 Barium stars. We used the sodium doublet lines at 5889\,\AA\ and 5895\,\AA\ to select Barium stars enhanced in sodium, and required significant absorption in both features. Only 5/257 Barium stars met this criteria, and it's important to note sodium enhancement can occur due to the presence of interstellar dust. Using the IRSA's all-sky dust map \citep{schlafly2011}, we find that 2 of 5 of these stars have strong ($\approx$0.35) E(B-V) values, suggesting that the flux residuals around the Na doublet are due to interstellar absorption. However, 3 exhibit low ($\approx$0.045) E(B-V) values, indicating the enhancement is due to stellar absorption.
+We performed an identical analysis to the process described in Section \ref{sec:cand} in order to identify sodium, technetium, or carbon enhancement in our sample of 257 Barium stars. We used the sodium doublet lines at 5889\,\AA\ and 5895\,\AA\ to select Barium stars enhanced in sodium, and required significant absorption in both features. Only 5/257 Barium stars met this criteria.
 
 For technetium enhancement we searched for significant residual deviations at the 4049\,\AA, 4238\,\AA, 4262\,\AA, 4297\,\AA, and 5924\,\AA. These absorption lines are extremely weak, and would require a substantial amount of technetium before it would be visible in a high S/N LAMOST spectrum. We found 51 Barium stars exhibited some level of significant enhancement (based on the filters above) at a single technetium line, yet none showed enhancement at more than one technetium line. We note that the single enhancement near technetium for these 51 stars may be the consequence of data reduction/calibration artefacts, but we include details of which stars matched on technetium in Table \ref{table:table1} nonetheless.
 Finally, for carbon enhancement we searched for significant deviations at the CH and G band near 4300\,\AA. We found 178/257 stars to show significant carbon enhancement (e.g., $[\textrm{C/Fe}] \gtrsim 0.5$).
+
+\subsubsection{Abundance analysis from LAMOST spectra}
+We estimated [Ba/Fe] and [Sr/Fe] abundance ratios for all s-process candidates by synthesising spectra that would account for the observed flux residuals. We assumed that absorption due to metals is captured by \emph{The Cannon} model, and deviations in flux at the 4554\,\AA\ \ion{Ba}{II} line and the 4077\,\AA\ \ion{Sr}{II} transition are solely due to enhancements in Ba and Sr, respectively\citep{marcs,sme,vald,ispec}. We adopted the stellar parameters ($T_{\rm eff}$, $\log{g}$, [Fe/H]) from \citep{ho2017}, and assume a microturbulence of $v_{mic} = 2\,{\rm km\,s}^{-1}$. Uncertainties in [Ba/Fe] and [Sr/Fe] from LAMOST are taken as the fitting error due to noise, added in quadrature with an adopted $0.2\,{\rm dex}$ systematic error floor.
 
 
 \subsection{Follow-up observations with Magellan/MIKE}
@@ -180,45 +180,56 @@ We integrated galactic orbits for 21 Barium stars using recent astrometry from G
 
 
 \subsection{Extrinsic and intrinsic Barium stars}
-Barium stars exist as either intrinsic or extrinsic objects. Intrinsic Barium stars must be massive enough to reach the TP-AGB phase, and extrinsic Barium stars must be in a binary with a previously polluting TP-AGB star companion. Figure \ref{fig:figure2} shows that the majority of our Barium stars have $\log{g} > 2$, highlighting that most stars in our sample are not massive enough to have already reached the TP-AGB phase and therefore, must be extrinsic Barium stars. The classification for Barium stars with $\log{g} < 2$ is uncertain: these stars could be intrinsic or extrinsic. From here on when we refer to extrinsic Barium stars, we specifically refer to those with $\log{g} > 2$. It is noted, in the previous literature \citet{van2017}, only 22\% of their stellar sample are post-main-sequence barium stars (extrinsic barium stars). In comparison, we find our Barium candidates constitute greater than 70\% extrinsic, this suggests the construction of our data-driven model may have missed some AGB Barium candidates.
+Barium stars exist as either intrinsic or extrinsic objects. Intrinsic Barium stars must be massive enough to reach the TP-AGB phase, and extrinsic Barium stars must be in a binary with a previously polluting TP-AGB star companion. Figure \ref{fig:figure2} shows that the majority of our Barium stars have $\log{g} > 2$, highlighting that most stars in our sample are not massive enough to have already reached the TP-AGB phase and therefore, must be extrinsic Barium stars. The classification for Barium stars with $\log{g} < 2$ is uncertain: these stars could be intrinsic or extrinsic. From here on when we refer to extrinsic Barium stars, we specifically refer to those with $\log{g} > 2$. It is noted, in the previous literature \citet{van2017}, only 22\% of their stellar sample are post-main-sequence barium stars (extrinsic barium stars). In comparison, we find our Barium candidates constitute greater than 70\% extrinsic, this suggests the construction of our data-driven model may have missed some AGB Barium candidates, or that previous studies were biased towards finding luminous intrinsic AGB Barium stars.
 
 
 \subsection{Sodium enhancment}
-According to \citet{el1995}, sodium overabundances observed in the atmospheres of supergiants is synthesised by the NeNa reaction chain in the convective core of main-sequence stars. Sodium is transported to the surface of these supergiants via mixing of CNO cycle products during the first dredge-up, although, it is important to note sodium enhancement is not constrained to supergiant stars. Stars with a  minimum mass of $1.5\,M_\odot$ can also exhibit enhanced sodium abundances through the NeNa cycle \citep{denissenkov1987}. \citet{antipova2004} reported sodium enhancements in 3 of their 16 Barium star candidates, and they relate this to the dredge-up of nuclear-burning material produced by convection during the red-giant phase. Moreover, they suggest [Na/Fe] ratios exhibit systematically higher values for giants with lower $\log{g}$ values, but do not exhibit variations in metallicity. Similarly, \citet{decastro2016} highlights the possible weak anti-correlation between [Na/Fe] ratio and $\log{g}$, and highlights that this trend in previous studies \citep[e.g.,][]{boyarchuk2002,mishenina2006,luck2007,takeda2008}.
+Sodium overabundances observed in the atmospheres of supergiants is thought to be synthesised by the NeNa reaction chain in the convective core of main-sequence stars \citep{el1995}. Sodium is transported to the surface of these supergiants via mixing of CNO cycle products during the first dredge-up, although, it is important to note sodium enhancement is not constrained to supergiant stars. Stars with a  minimum mass of $1.5\,M_\odot$ can also exhibit enhanced sodium abundances through the NeNa cycle \citep{denissenkov1987}. \citet{antipova2004} reported sodium enhancements in 3 of their 16 Barium star candidates, and they relate this to the dredge-up of nuclear-burning material produced by convection during the red-giant phase. Moreover, they suggest [Na/Fe] ratios are systematically higher for giants with lower $\log{g}$ values, \todo{but do not exhibit variations in metallicity}. Similarly, \citet{decastro2016} highlights the possible weak anti-correlation between [Na/Fe] ratio and $\log{g}$, and highlights that this trend in previous studies \citep[e.g.,][]{boyarchuk2002,mishenina2006,luck2007,takeda2008}.
 
-We find only $<2$\,\% of our Barium stars show sodium enhancement, contrary to previous studies \citep[e.g.,][]{decastro2016}. We also note that the 5 sodium-enhanced Barium stars all have $\log{g} \approx 3$, not at lower $\log{g}$ values as might be expected if low $\log{g}$ values systematically contributed to higher [Na/Fe] abundance ratios. These results suggest that sodium-rich material from a companion TP-AGB star has polluted these 5 Barium candidates, but importantly, sodium enhancement is by no means ubiquitous in Barium stars. It's important to note, sodium enhancement can occur due to the presence of interstellar dust, and using the IRSA's all-sky dust map \citep{schlafly2011}, E(B-V) values were calculated for our 5 candidates. The results show 2 sodium enhanced stars have strong ($\approx$0.35) E(B-V) values, higher then galactic stellar levels, suggesting these candidates are false positives. Whereas, 3 exhibit low ($\approx$0.045) E(B-V) values, confirming sodium enhancement results for these candidates. The comparisons made in \citep{decastro2016} made use of multiple literature comparisons, and therefore it is possible that there are systematic differences (biases) between Milky Way studies of normal FGK-type stars and those focussed on Barium stars, leading to unresolved differences in the reported [Na/Fe] abundance ratio. These same systematic effects could contribute to the observed correlation between [Na/Fe] and $\log{g}$, which we do not observe in our sample. 
+We find $<2$\,\% of our Barium stars show sodium enhancement, contrary to previous studies \citep[e.g.,][]{decastro2016}. We also note that the 5 sodium-enhanced Barium stars all have $\log{g} \approx 3$, not at lower $\log{g}$ values as might be expected if low $\log{g}$ values systematically contributed to higher [Na/Fe] abundance ratios. It's important to note sodium enhancement can occur due to the presence of interstellar dust. Using the IRSA's all-sky dust map \citep{schlafly2011}, we find that 2 of 5 of these stars have strong ($\approx$0.35) E(B-V) values, suggesting that the flux residuals around the Na doublet are due to interstellar absorption. However, 3 exhibit low ($\approx$0.045) E(B-V) values, indicating the enhancement is more likely due to stellar absorption. These results suggest that sodium-rich material from a companion TP-AGB star has polluted these 3 Barium candidates, but importantly, sodium enhancement is by no means ubiquitous in Barium stars. 
+
+The data that led \citet{decastro2016} to conclude that Barium stars have higher [Na/Fe] ratios came from many literature sources. Therefore, it is possible that there are systematic differences (biases) between Milky Way studies of normal FGK-type stars and those focussed on Barium stars, leading to unresolved differences in the reported [Na/Fe] abundance ratio. These systematic effects would also contribute to the observed correlation between [Na/Fe] and $\log{g}$, since intrinsic Barium stars (by definition) have low $\log{g}$ values. We do not observe this correlation between [Na/Fe] and $\log{g}$ in our sample. From our data we conclude that Barium stars do not have higher [Na/Fe] abundance ratios on average, and suggest that the effect seen in previous works was due to systematic effects between literature sources.
 
 \subsection{Technetium enhancement}
 
-Technetium has a half life of approximately 211,000 years and as a result, Tc enhacnement is constrained to observations intrinsic Barium stars \citep{jorissen1993} or recently polluted extrinsic Barium stars. Our analyse discovered 51 single Tc line matches within our 257 Barium star candidate sample. The majority (46/51) have $\log{g} > 2$, suggesting they cannot be AGB stars, and may indicate a recent ($<1\,\textrm{Myr}$) mass accretion event. However, for Tc to be present in  a star the enhancement lines must be considerably strong, and given that all 51 matches were at single lines it is concluded that these results are more likely data artifacts. In agreement with previous findings \citep[e.g.,][]{little1987,smith1984,smith1983}, the results indicate that none of the evolved Barium stars in our sample exhibited the presence of Tc enhancement, and it can be concluded our Barium star sample is extrinsic. It is noted, Tc enhancement is a very difficult line to analyse and that this conclusion is not concrete.
+Technetium has a half life of approximately 211,000 years and as a result, Tc enhacnement is constrained to observations intrinsic Barium stars \citep{jorissen1993} or recently polluted extrinsic Barium stars. Our analyse discovered 51 single Tc line matches within our 257 Barium star candidate sample. The majority (46/51) have $\log{g} > 2$, suggesting they cannot be AGB stars, and may indicate a recent ($<1\,\textrm{Myr}$) mass accretion event. However, for Tc to be present in the LAMOST spectra the enhancement must be considerably strong, and given that all 51 matches were at single lines it is concluded that these results are more likely data artefacts. In agreement with previous findings \citep[e.g.,][]{little1987,smith1984,smith1983}, the results indicate that none of the evolved Barium stars in our sample exhibited the presence of Tc enhancement, and it can be concluded our Barium star sample is extrinsic. However, we caution that Tc enhancement is usually a very weak signature.
 
 \subsection{Carbon bands}
-Barium stars are excellent candidates for investigating the relationship between neutron-capture elements and other species that may be depleted or enhanced, since they act as neutron seeds during the operation of the s-process. In the AGB phase the abundance of carbon is a product of helium fusion, specifically the triple-alpha process within a star. In an identical mechanism to the presence of s-process element enhancement, carbon enhanced stars exist intrinsically or extrinsically. Giants and supergiants become enhanced in carbon through TDU process discussed in Section \ref{sec:intro}, and extrinsic carbon enhancement occurs via mass transfer from a binary AGB star. 
-
-Our analsyse produced 178 CH and G band enhanced stars out of the total 257 Barium candidates. Similar to the s-process enhancement, this suggests our candidates are either intrinsic or extrinsic Barium stars.
+Barium stars are excellent candidates for investigating the relationship between neutron-capture elements and other species that may be depleted or enhanced, since they act as neutron seeds during the operation of the s-process. In the AGB phase the abundance of carbon is a product of helium fusion, specifically the triple-alpha process within a star. In an identical mechanism to the presence of s-process element enhancement, carbon enhanced stars exist intrinsically or extrinsically. Giants and supergiants become enhanced in carbon through TDU process discussed in Section \ref{sec:intro}, and extrinsic carbon enhancement occurs via mass transfer from a binary AGB star. Our analysis produced 178 CH and G band enhanced stars out of the total 257 Barium candidates. Similar to the s-process enhancement, this suggests our candidates are consistent with being either intrinsic or extrinsic Barium stars.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{HRdummy.png}
-    \caption{Effective temperature $T_{eff}$ and surface gravity $\log{g}$ for 257 candidate Barium stars from LAMOST. Stars with $\log{g} > 2$ (as marked) have not evolved through the thermally pulsing asymptotic giant branch phase, and therefore their abundance signature must be the result of an extrinsic pollution event. The classification of stars with $\log{g} < 2$ would require additional data}
+    \caption{Effective temperature $T_{\rm eff}$ and surface gravity $\log{g}$ for 257 candidate Barium stars from LAMOST. Stars with $\log{g} > 2$ (as marked) have not evolved through the thermally pulsing asymptotic giant branch phase, and therefore their abundance signature must be the result of an extrinsic pollution event. The classification of stars with $\log{g} < 2$ would require additional data.}
     \label{fig:figure2}
 \end{figure}
 
 
-\subsection{AGB yields comparison}
+\subsection{Comparison to AGB yields}
 AGB stars, and chemically unique stars that show the chemical signature
-of mass transfer pollution from binary companion AGB stars, highlight the variation of s-process enhancement. \citet{karakas_lugaro2016} demonstrates through stellar yield models, that Barium stars will have a likely minimum yeild at [Fe/H]$\approx$ -1.2. Figure \ref{fig:figure3} confirms this as the majority of the Barium stars are contained above -1.2. The final surface s-process index [hs/ls], shown in \citet{cristallo2015}, highlights the relationship between [hs/ls] yields and the mass of AGB stars. The Salpeter IMF predicts the majority of stars in the Milky Way will be at lower mass, and as predicted the [hs/ls] values of our Barium stars approximately fit the lower mass yields shown in \citet{cristallo2015}. Barium stars not fitting this relationship represent the possibly more massive AGB stars (intrinsic Barium stars) within our sample. 
+of mass transfer pollution from binary companion AGB stars, highlight the variation of s-process enhancement. \citet{karakas_lugaro2016} demonstrates through stellar yield models, that Barium stars will have a likely minimum yield at $[{\rm Fe/H}] \approx -1.2$. In Figure \ref{fig:figure3} we show the heavy-to-light s-process abundance ratio (taken as [Ba/Sr]) for all 257 Barium stars identified in LAMOST. Although the [hs/ls] ratio is quite noisy, the overall metallicity [Fe/H] is quite precise (0.1\,dex). Despite our LAMOST sample of 454,180 giants having metallicities down to about $[{\rm Fe/H}] = -2$, we only detect Barium stars down to metallicities of about $[{\rm Fe/H}] = -1.1$, consistent with expectations from \citep{karakas_lugaro2016}.
+
+
+
+\todo{The final surface s-process index [hs/ls], shown in \citet{cristallo2015}, highlights the relationship between [hs/ls] yields and the mass of AGB stars. The Salpeter IMF predicts the majority of stars in the Milky Way will be at lower mass, and as predicted the [hs/ls] values of our Barium stars approximately fit the lower mass yields shown in \citet{cristallo2015}. Barium stars not fitting this relationship represent the possibly more massive AGB stars (intrinsic Barium stars) within our sample. }
+
+\todo{Frequency with metallicity}
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{basrtest4.png}
-    \caption{Final surface s-process indexes: [hs/ls]}
+    \caption{Metallicities ([Fe/H]; x-axis) and heavy-to-light s-process abundance ratios ([hs/ls], taken as [Ba/Sr]; y-axis) for 257 Barium star candidates. \todo{Add Cristillo yields}}
     \label{fig:figure3}
 \end{figure}
 
 
 \section{Conclusions} \label{sec:con}
 
-Our research discovered 967 s-process candidates including; 257 Barium stars, 49 stars exhibiting exclusively barium enhancement, and 661 exhibiting exclusively strontium enhancement from 454,180 giant stars observed by LAMOST. This is double the currently known stellar sample of Barium stars, and the largest sample of s-process enhanced stars known to date. Nearly all of our Barium candidates are disk stars, 178 exhibit CH and G band enhancement, no plausible technetium enhancement is discovered, and it is shown sodium enhancement is not ubiquitous in s-process stars as previously claimed. AGB yields comparisons indicate the majority of our sample fit low steallar mass trends in agreement with Salpeter IMF theory. Additonally, a number of outliers highlight a small percentage of intrinsic Barium stars in our sample.
-todo{ Something about binary eccentricities.}
+We conducted the largest ever search for s-process enhanced stars using the LAMOST second data release. From 454,180 giant stars, we identify 967 s-process candidates including: 257 stars with significant enhancements in barium and strontium (so-called `Barium stars'); 49 stars exhibiting exclusively barium enhancement, and 661 exhibiting exclusively strontium enhancement. This sample size is double the total number of Barium stars known, and represents the largest sample of s-process enhanced stars to date. Nearly all of our Barium candidates are consistent with being disk stars. 
+
+We find 178/257 to show carbon enhancement, consistent with the literature. However, in contrast with previous works, we do not find Barium stars to have significantly higher [Na/Fe] than Milky Way stars. Only 5/257 of our Barium stars show enhancement in Na, and the flux residuals in three of those are likely due to interstellar dust. We suggest that biases between literature sources and systematic effects in measuring [Na/Fe] from stars with low $\log{g}$ contributed to this effect. 
+
+Despite our noisy estimates of [Ba/Fe] and [Sr/Fe] from LAMOST spectra, comparisons with AGB yields indicate that our sample is consistent with a bottom-heavy initial mass function. We encourage follow-up observations with high-resolution spectrographs in order to precisely measure neutron-capture abundances (including [hs/ls] ratios). These data would permit the most detailed comparisons with AGB star yields ever considered.
+
+ 
 
 \section*{Acknowledgements}
 We thank Alex Ji (Carnegie Observatories) for useful discussions.
@@ -246,6 +257,7 @@ Bidelman, W.~P. \& Keenan, P.~C. , 1951, ApJ, 114, 473
 Bisterzo, S., et al. 2014, 
 ApJ, 787, 10
 A$\&$A, 424, 727
+\bibitem[Blanco-Cuaresma et al.(2014)]{ispec} Blanco-Cuaresma, S., Soubiran, C., Heiter, U., \& Jofr{\'e}, P.\ 2014, \aap, 569, A111 
 \bibitem[\protect\citeauthoryear{Boffin \& Jorissen}{1988}]{boffin1988}
 Boffin H, M.~J.,\& Jorissen, A. 1988, 
 A$\&$A, 205, 155
@@ -291,6 +303,7 @@ A$\&$A, 595, A2
 \bibitem[\protect\citeauthoryear{Gaia Collaboration et al.}{2016b}]{gaia2016b}
 Gaia Collaboration, Prusti, T., de Bruijne, J.~H.~J., Brown, A.~G.~A., Vallenari, A., Babusiaux, C., Bailer-Jones, C.~A.~L., Bastian, U., Biermann, M.,\& Evans, D.~W. et al. 2016, 
 A$\&$A, 595, A1
+\bibitem[Gustafsson et al.(2008)]{marcs} Gustafsson, B., Edvardsson, B., Eriksson, K., et al.\ 2008, \aap, 486, 951 
 \bibitem[\protect\citeauthoryear{Gomez et al.}{1997}]{gomez1997}
 Gomez, A.~E., Luri, X., Grenier, S., et al. 1997, 
 A$\&$A, 319, 881
@@ -332,6 +345,7 @@ PASP, 115, 688
 \bibitem[\protect\citeauthoryear{Kobayashi et al.}{2011}]{kobayashi2011}
 Kobayashi, C., Karakas, A., \& Umeda, H. 2011, 
 MNRAS, 414, 3231
+\bibitem[Kupka et al.(1999)]{vald} Kupka, F., Piskunov, N., Ryabchikova, T.~A., Stempels, H.~C., \& Weiss, W.~W.\ 1999, \aaps, 138, 119 
 \bibitem[\protect\citeauthoryear{Little-Marenin \& Little}{1987}]{little1987}
 Little-Marenin, I.~R.,\& Little, S.~J. 1987, 
 AJ, 93, 1539
@@ -395,6 +409,7 @@ In: Leung, K.~C., Zhai, D.~S.(eds.) Critical Observations versus Physical Models
 \bibitem[\protect\citeauthoryear{Whitelock et al.}{2013}]{whitelock2013}
 Whitelock, P.~A., et al. 2013, 
 MNRAS, 428, 2216
+\bibitem[Valenti \& Piskunov(1996)]{sme} Valenti, J.~A., \& Piskunov, N.\ 1996, \aaps, 118, 595 
 \bibitem[\protect\citeauthoryear{Van der Swaelmen et al.}{2017}]{van2017}
 Van der Swaelmen, M., Boffin, H.~M.~J., Jorissen, A.,\& Van Eck, S. 2017, 
 A$\&$A, 597, A68
