@@ -1,0 +1,56 @@
+5000 J09162834+0259348 09:16:28.0 +02:59:34 2000.0 0.00 0.00 0.00 GRV 00:00:00.0 +00:00:00 2000.0 00:00:00.0 +00:00:00 2000.0 2000.0 # V=12.44 50 70 90 spec-56296-VB140N02V2_sp03-158.fits
+5001 J08351472-0548480 08:35:14.1 -05:48:48 2000.0 0.00 0.00 0.0 0 GRV 00:00:00.0 +00:00:00 2000.0 00:00:00.0 +00:00:00 2000.0 2000.0 # V=11.67 30 40 40 spec-56345-GAC130S04V1_sp02-155.fits
+
+
+spec-56296-VB140N02V2_sp03-158.fits 	HRS: 	[Sr II/Fe] = 0.76 +/- 0.10 (4215 line)
+
+					LRS: 	[Sr II/Fe] = 0.84 +/- 0.05 (4215 line)
+						[Sr II/Fe] = 0.86 +/- 0.04 (4077 line)
+
+						avg: [Sr II/Fe] = 0.85 +/- 0.05 +/- 0.20
+	
+					HRS: 	[Ba II/Fe] = 1.00 (4934 line)
+						[Ba II/Fe] = 0.72 (4554 line)
+						[Ba II/Fe] = 1.02 (6496 line)
+						
+						avg: [Ba II/Fe] = 0.92 +/- 0.10	
+
+					LRS: 	[Ba II/Fe] = 0.74 +/- 0.44 (4934 line)
+						[Ba II/Fe] = 0.77 +/- 0.07 (4554 line)
+
+						avg: [Ba II/Fe] 0.77 +/- 0.07 +/- 0.20
+Summary: 
+- [ ] Sr LRS and HRS within 1\sigma agreement
+- [ ] Ba LRS and HRS within 1\sigma agreement
+
+
+spec-56345-GAC130S04V1_sp02-155.fits 	LRS: 	[Sr II/Fe] = 0.90 +/- 0.09 (4077 line)
+						(4215 unavailable)
+
+						avg: [Sr II/Fe] = 0.90 +/- 0.09 +/- 0.20
+
+					HRS: 	[Sr II/Fe] = 0.69 (4077 line)
+						[Sr II/Fe] = 0.55 (4215 line)
+					
+						avg: [Sr II/Fe] = 0.62 +/- 0.07
+
+					LRS: 	[Ba II/Fe] = 0.80 +/- 0.16 (4554 line)
+						(4934 unavailable)
+
+						avg: [Ba II/Fe] = 0.80 +/- 0.16 +/- 0.20
+
+					HRS: 	[Ba II/Fe] = 0.78 (4554 line)
+						[Ba II/Fe] = 1.02 (4934 line)
+						[Ba II/Fe] = 1.04 (6496 line)
+					
+						avg: [Ba II/Fe] = 0.94 +/- 0.12
+
+Summary:
+- [ ] Sr LRS and HRS in agreement within 1.2 joint sigma
+- [ ] Ba LRS and HRS in agreement within 1 sigma
+
+
+
+
+
+
