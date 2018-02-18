@@ -33,33 +33,33 @@ ax.errorbar(data["cannon_m_h_1"], hs_ls,
             fmt=None, ecolor="#BBBBBB", elinewidth=1, label="_")
 
 
-cristallo = Table.read("cristallo_data_new.csv")
-fehs = np.array(cristallo.dtype.names[1:]).astype(float)
+#cristallo = Table.read("cristallo_data_new.csv")
+#fehs = np.array(cristallo.dtype.names[1:]).astype(float)
 
-masses = cristallo["Mass/[Fe/H]"]
+#masses = cristallo["Mass/[Fe/H]"]
 
-colors = {
-    "2.0": "r",
-    "3.0": "g",
-}
+#colors = {
+    #"2.0": "r",
+    #"3.0": "g",
+#}
 
-for i, mass in enumerate(masses):
-    model_hs_ls = [cristallo[feh][i] for feh in cristallo.dtype.names[1:]]
-    ax.plot(fehs, model_hs_ls, label=r"${{{:.1f}}}\,M_\odot$".format(mass),
-            lw=5, alpha=0.75)
+#for i, mass in enumerate(masses):
+    #model_hs_ls = [cristallo[feh][i] for feh in cristallo.dtype.names[1:]]
+    #ax.plot(fehs, model_hs_ls, label=r"${{{:.1f}}}\,M_\odot$".format(mass),
+            #lw=5, alpha=0.75)
 
 
-plt.legend()
+#plt.legend()
 ax.set_xlim(-2.3, 0.4)
 ax.set_ylim(-1, 1.5)
 
 ax.xaxis.set_major_locator(MaxNLocator(6))
 ax.yaxis.set_major_locator(MaxNLocator(6))
 
-ax.legend(ncol=1, loc="upper left", frameon=True, fontsize=10)
+#ax.legend(ncol=1, loc="upper left", frameon=True, fontsize=10)
 ax.set_xlabel(r"Metallicity [Fe/H]")
-ax.set_ylabel(r"Surface [Ba/Sr]")
+ax.set_ylabel(r"Surface [ba/sr]")
 
 fig.tight_layout()
 
-fig.savefig("yields_new.pdf", dpi=300, overwrite=True)
+fig.savefig("yields_basr.pdf", dpi=300, overwrite=True)

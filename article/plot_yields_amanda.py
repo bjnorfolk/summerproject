@@ -32,19 +32,18 @@ ax.errorbar(data["cannon_m_h_1"], hs_ls,
             xerr=data["cannon_m_h_err_1"], yerr=hs_ls_err,
             fmt=None, ecolor="#BBBBBB", elinewidth=1, label="_")
 
+amanda = Table.read("amanda_yields.csv")
+fehs = np.array(amanda.dtype.names[1:]).astype(float)
 
-cristallo = Table.read("cristallo_data_new.csv")
-fehs = np.array(cristallo.dtype.names[1:]).astype(float)
-
-masses = cristallo["Mass/[Fe/H]"]
+masses = amanda["mass/[Fe/H]"]
 
 colors = {
-    "2.0": "r",
-    "3.0": "g",
+    "2.0": "k",
+    "3.0": "m",
 }
 
 for i, mass in enumerate(masses):
-    model_hs_ls = [cristallo[feh][i] for feh in cristallo.dtype.names[1:]]
+    model_hs_ls = [amanda[feh][i] for feh in amanda.dtype.names[1:]]
     ax.plot(fehs, model_hs_ls, label=r"${{{:.1f}}}\,M_\odot$".format(mass),
             lw=5, alpha=0.75)
 
@@ -62,4 +61,4 @@ ax.set_ylabel(r"Surface [Ba/Sr]")
 
 fig.tight_layout()
 
-fig.savefig("yields_new.pdf", dpi=300, overwrite=True)
+fig.savefig("yields_amanda.pdf", dpi=300, overwrite=True)
