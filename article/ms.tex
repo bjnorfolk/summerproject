@@ -113,8 +113,6 @@ The barium stars analysed in this research were obtained by filtering for signif
 
 We used five filters that each spectrum, for each set of absorption lines, had to meet in order to be considered a s-process rich candidate; these included:
 
-% FOR SOME REASON LATEX FALLS OVER IF WE DONT HAVE IT HERE
-\begin{table}\end{table}
 
 \renewcommand\labelenumi{(\roman{enumi})}
 \renewcommand\theenumi\labelenumi
@@ -131,6 +129,29 @@ In addition, a visual inspection was undertaken to exclude any results containin
 For the remainder of this paper we restrict our analysis to the 257 classical `barium stars' stars that show enhancement in both barium and strontium. While the 49 or 661 stars with only barium or strontium enhancements (respectively) may also be bonafide barium stars, there may be other explanations for their chemical abundance pattern \citep[e.g.,][]{maiorca2011}, and so we restrict our inferences to a `gold sample' of barium stars. 
 
 It's important to note, previous studies \citet{malaney1988} define barium stars through an abundance criteria $\rm[Ba/Fe]\geq +0.3$, and out of our 257 barium star sample using this criteria , only one star ($\rm J092155.95+265253.4$) exhibits a lower [Ba/Fe] of 0.12. However, as previously discussed, a negative residual at the \ion{Ba}{II} resonance line 4554\,\AA\, indicates barium enhancement. Furthermore, as discussed in section \ref{sec:other enhancements}, an enhancement in carbon is observed frequently with barium enhancement. $\rm J092155.95+265253.4$ shows both a negative residual at 4554\,\AA\, and carbon enhancement, we therefor conclude that this single deviant case can be classified as a barium star. Additionally, it should be mentioned, our average abundance error is 0.1, although, these results still indicate our sample can be classified as barium stars since they exhibit enhancement at the BaII resonance line 4554, and have a $\rm[Ba/Fe] \geq 0.2$. Nevertheless, this sample still constitutes the largest collection of barium stars ever discovered, with the next sample of significant size containing 182 barium stars \citep[e.g.,][]{decastro2016}.
+
+
+\begin{table*}
+\centering
+\caption{Properties of 967 s-process candidates, the table is available online in its entirety. Here we show a portion to demonstrate its style and content.}
+\label{table:table1}
+\begin{adjustbox}{width=1\textwidth}
+\begin{tabular}{@{}|l|l|c|c|c|c|c|c|c|c|c|c|c|c|c|@{}}
+\toprule
+2MASSID             & R.~A.         & Dec.        & $v_{r}$ & S/N & $\rm T_{\rm eff}$ & $\log{g}$ & [Fe/H] & [$\alpha$/Fe] & $\chi_r^2$ & [Ba/Fe] & [Sr/Fe] & \ion{Ba}{II} & \ion{Sr}{II} &  \ion{Ba}{II} \& \ion{Sr}{II} \\
+& (J2000) & (J2000) & (km\,s$^{-1}$) & (pixel$^{-1}$) & (K)  \\ \midrule
+J000019.26+501444.8 & 00:00:19.27 & +50:14:44.9 & -3.9  & 49      & 4973         & 3.27         & 0.21         & 0.08             & 0.66               & 0.25        & 0.83        & \ding{55} & \ding{51}  & \ding{55}   \\
+J000020.55+411348.1 & 00:00:20.56 & +41:13:48.2 & -28.2 & 32      & 4882         & 2.74         & -0.22        & 0.04             & 0.23               & -0.17       & 0.90        & \ding{55}& \ding{51}  & \ding{55}    \\
+J000134.95+490743.2 & 00:01:34.96 & +49:07:43.2 & -42.3 & 72      & 5044         & 3.11         & -0.54        & 0.11             & 0.79               & 1.02        & 0.45        & \ding{55} & \ding{55} & \ding{51}  \\
+J000258.09+410730.0 & 00:02:58.10 & +41:07:30.1 & -34.5 & 41      & 4697         & 2.57         & -0.22        & 0.12             & 0.98               & -0.10       & 0.80        & \ding{55} & \ding{51}  & \ding{55}  \\
+J000403.80+160257.1 & 00:04:03.80 & +16:02:57.2 & -35.4 & 42      & 5200         & 3.40         & -0.41        & 0.09             & 0.33               & 0.92        & 0.52        & \ding{55} & \ding{55} & \ding{51}  \\
+J000439.16+183350.3 & 00:04:39.17 & +18:33:50.4 & -38.7 & 31      & 4601         & 2.50         & 0.44         & 0.03             & 0.34               & -0.11       & 0.88        & \ding{55} & \ding{51}  & \ding{55}  \\
+J000444.87+400402.1 & 00:04:44.88 & +40:04:02.1 & -94.7 & 53      & 4172         & 1.46         & -0.08        & 0.09             & 0.72               & 0.03        & 0.91        & \ding{55} & \ding{51}  & \ding{55}  \\
+J000552.76+261849.3 & 00:05:52.76 & +26:18:49.4 & -22.5 & 73      & 4924         & 3.14         & -0.05        & 0.09             & 0.67               & 0.28        & 0.85        & \ding{55} & \ding{51}  & \ding{55}  \\
+J000737.70+394055.5 & 00:07:37.70 & +39:40:55.6 & -31.5 & 33      & 4700         & 2.80         & -0.04        & 0.07             & 0.28               & -0.13       & 0.81        & \ding{55} & \ding{51}  & \ding{55}  \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table*}
 
 \subsubsection{Enhancements due to sodium, technetium, and carbon} \label{sec:other enhancements}
 Enhancements in sodium, technetium, and carbon are useful indicators when determining whether a stellar sample is populated by intrinsically enhanced AGB S stars, or polluted extrinsic barium stars. We performed an identical analysis to the process described in Section \ref{sec:cand} in order to identify sodium, technetium, or carbon enhancement in our sample of 257 barium stars. We used the sodium doublet lines at 5889\,\AA\ and 5895\,\AA\ to select barium stars enhanced in sodium, and required significant absorption in both features. Only 5/257 barium stars met this criteria.
@@ -165,8 +186,7 @@ We adopted the stellar parameters ($T_{\rm eff}$, $\log_{10}g$, [Fe/H]) provided
 Barium enhanced stars exist as either intrinsic or extrinsic objects. Intrinsically enhanced barium stars must be massive enough to reach the TP-AGB phase, and extrinsic barium stars must be in a binary with a previously polluting TP-AGB star companion (AGB S star). Figure \ref{fig:figure2} shows that the majority of our stellar sample exists within temperature and luminosity ranges not enveloped by the AGB, highlighting that all stars in our sample are not evolved enough to have already reached the TP-AGB phase and therefore, must be extrinsic barium stars. Although, it is noted, stars with temperatures below 3800K in Figure \ref{fig:figure2} are possible AGB stars, and their intrinsic or extrinsic nature is not certain. It is noted, in the previous literature \citep{van2017}, only 22\% of their stellar sample are post-main-sequence barium stars (extrinsic barium stars). In comparison, we find that all our barium candidates to be extrinsic. This suggests, the construction of our data-driven model may have missed some AGB barium candidates, or that previous studies were biased towards finding luminous intrinsic AGB barium stars. Given that our analysis limits us to only giant stars, such that we do not find any extrinsic barium stars on the main-sequence, na\"ively we would expect that our sample would be biased \emph{towards} finding a higher fraction of red giant stars. Given this bias, Figure \ref{fig:figure3} illustrates through the temperature, and log g ranges present, that our sample is entirely populated by red giant extrinsic barium stars. This suggests unaccounted selection biases in previous studies towards luminous AGB S stars.
 
 \begin{figure}
-\centering
-	\includegraphics[width=0.4\textwidth]{hrd_new.pdf}
+	\includegraphics[width=0.5\textwidth]{hrd_new.pdf}
     \caption{Effective temperature $T_{\rm eff}$ and surface gravity $\log{g}$ for 257 candidate barium stars from LAMOST.}
     %Stars with $\log{g} > 2$ (as marked) have not evolved through the thermally pulsing asymptotic giant branch phase, and therefore their abundance signature must be the result of an extrinsic pollution event. The classification of stars with $\log{g} < 2$ would require additional data.}
     \label{fig:figure2}
@@ -218,7 +238,7 @@ A.~R.~C. is supported through an Australian Research Council Discovery Project u
 A. Y. Q. H. was supported by the GROWTH project funded by the National Science Foundation under PIRE Grant No 1545949, and a National Science Foundation Graduate Research Fellowship under Grant No. DGE-1144469. 
 This research has made use of NASA's Astrophysics Data System.
 Guoshoujing Telescope (the Large Sky Area Multi-Object Fiber Spectroscopic Telescope LAMOST) is a National Major Scientific Project built by the Chinese Academy of Sciences. Funding for the project has been provided by the National Development and Reform Commission. LAMOST is operated and managed by the National Astronomical Observatories, Chinese Academy of Sciences. 
-%This work has made use of data from the European Space Agency (ESA) mission Gaia (http://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, http://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement.
+This work has made use of data from the European Space Agency (ESA) mission Gaia (http://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, http://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement.
 
 
  
