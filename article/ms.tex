@@ -92,6 +92,15 @@ Many barium stars have been discovered in the disk and halo of the Milky Way \ci
 
 In this paper we analyse 454,180 giant stars from the second LAMOST data release \citep{luo2015} and identify 967 s-process candidates. In Section \ref{sec:methods} we describe the observations and candidate selection, as well as the analysis of high-resolution follow-up observations obtained for a few candidates. In Section \ref{sec:dis} we discuss the properties of our barium stars in context of existing literature. We provide concluding remarks in Section \ref{sec:con}.
 
+\begin{figure*}
+	% To include a figure from a file named example.*
+	% Allowable file formats are eps or ps if compiling using latex
+	% or pdf, png, jpg if compiling using pdflatex
+	\includegraphics[width=\textwidth]{posterchild_final.pdf}
+    \caption{Pseudo-continuum-normalised LAMOST spectra for the s-process candidate J064451.11+263239.2. The data are shown in black and the best-fitting data-driven model is shown in red. We include zoom-in axes to show significant deviations in Sr and Ba at  4077\,\AA\ and 4554\,\AA\, respectively.}
+    \label{fig:figure1}
+\end{figure*}
+
 \section{Methods} \label{sec:methods}
 \subsection{LAMOST analysis}
 \subsubsection{Data-driven analysis}
@@ -113,49 +122,40 @@ We used five filters that each spectrum, for each set of absorption lines, had t
 \item The reduced $\chi^2$ from \emph{The Cannon} must be $\chi_r^2 < 3$.
 \item And, the LAMOST spectra must have a signal-to-noise ratio of $S/N > 30\,\textrm{pixel}^{-1}$.
 \end{enumerate}
-In addition, a visual inspection was undertaken to exclude any results containing false positives, candidates exhibiting data reduction issues, apparent absorption finer then the spectral resolution, and overly noisy normalised LAMOST spectra. This combined method generated 967 s-process rich candidates which are provided in Table \ref{table:table1} including; 257 `barium stars' enhanced in both barium and strontium, 49 stars exhibiting exclusively barium enhancement, and 661 exhibiting exclusively strontium enhancement. 
+In addition, a visual inspection was undertaken to exclude any results containing false positives, candidates exhibiting data reduction issues, apparent absorption finer then the spectral resolution, and overly noisy normalised LAMOST spectra. This combined method generated 967 s-process rich candidates which are provided in Table 1 (online only material) including; 257 `barium stars' enhanced in both barium and strontium, 49 stars exhibiting exclusively barium enhancement, and 661 exhibiting exclusively strontium enhancement. 
 
 For the remainder of this paper we restrict our analysis to the 257 classical `barium stars' stars that show enhancement in both barium and strontium. While the 49 or 661 stars with only barium or strontium enhancements (respectively) may also be bonafide barium stars, there may be other explanations for their chemical abundance pattern \citep[e.g.,][]{maiorca2011}, and so we restrict our inferences to a `gold sample' of barium stars. 
 
 It's important to note, previous studies \citet{malaney1988} define barium stars through an abundance criteria $\rm[Ba/Fe]\geq +0.3$, and out of our 257 barium star sample using this criteria , only one star ($\rm J092155.95+265253.4$) exhibits a lower [Ba/Fe] of 0.12. However, as previously discussed, a negative residual at the \ion{Ba}{II} resonance line 4554\,\AA\, indicates barium enhancement. Furthermore, as discussed in section \ref{sec:other enhancements}, an enhancement in carbon is observed frequently with barium enhancement. $\rm J092155.95+265253.4$ shows both a negative residual at 4554\,\AA\, and carbon enhancement, we therefor conclude that this single deviant case can be classified as a barium star. Additionally, it should be mentioned, our average abundance error is 0.1, although, these results still indicate our sample can be classified as barium stars since they exhibit enhancement at the BaII resonance line 4554, and have a $\rm[Ba/Fe] \geq 0.2$. Nevertheless, this sample still constitutes the largest collection of barium stars ever discovered, with the next sample of significant size containing 182 barium stars \citep[e.g.,][]{decastro2016}.
 
 
-\begin{figure*}
-	% To include a figure from a file named example.*
-	% Allowable file formats are eps or ps if compiling using latex
-	% or pdf, png, jpg if compiling using pdflatex
-	\includegraphics[width=\textwidth]{posterchild_final.pdf}
-    \caption{Pseudo-continuum-normalised LAMOST spectra for the s-process candidate J064451.11+263239.2. The data are shown in black and the best-fitting data-driven model is shown in red. We include zoom-in axes to show significant deviations in Sr and Ba at  4077\,\AA\ and 4554\,\AA\, respectively.}
-    \label{fig:figure1}
-\end{figure*}
 
-
-\begin{table*}
-\centering
-\caption{Properties of 967 s-process candidates, the table is available online in its entirety. Here we show a portion to demonstrate its style and content.}
-\label{table:table1}
-\begin{adjustbox}{width=1\textwidth}
-\begin{tabular}{@{}|l|l|c|c|c|c|c|c|c|c|c|c|c|c|c|@{}}
-\toprule
-2MASSID             & R.~A.         & Dec.        & $v_{r}$ & S/N & $\rm T_{\rm eff}$ & $\log{g}$ & [Fe/H] & [$\alpha$/Fe] & $\chi_r^2$ & [Ba/Fe] & [Sr/Fe] & \ion{Ba}{II} & \ion{Sr}{II} &  \ion{Ba}{II} \& \ion{Sr}{II} \\
-& (J2000) & (J2000) & (km\,s$^{-1}$) & (pixel$^{-1}$) & (K)  \\ \midrule
-J000019.26+501444.8 & 00:00:19.27 & +50:14:44.9 & -3.9  & 49      & 4973         & 3.27         & 0.21         & 0.08             & 0.66               & 0.25        & 0.83        & \ding{55} & \ding{51}  & \ding{55}   \\
-J000020.55+411348.1 & 00:00:20.56 & +41:13:48.2 & -28.2 & 32      & 4882         & 2.74         & -0.22        & 0.04             & 0.23               & -0.17       & 0.90        & \ding{55}& \ding{51}  & \ding{55}    \\
-J000134.95+490743.2 & 00:01:34.96 & +49:07:43.2 & -42.3 & 72      & 5044         & 3.11         & -0.54        & 0.11             & 0.79               & 1.02        & 0.45        & \ding{55} & \ding{55} & \ding{51}  \\
-J000258.09+410730.0 & 00:02:58.10 & +41:07:30.1 & -34.5 & 41      & 4697         & 2.57         & -0.22        & 0.12             & 0.98               & -0.10       & 0.80        & \ding{55} & \ding{51}  & \ding{55}  \\
-J000403.80+160257.1 & 00:04:03.80 & +16:02:57.2 & -35.4 & 42      & 5200         & 3.40         & -0.41        & 0.09             & 0.33               & 0.92        & 0.52        & \ding{55} & \ding{55} & \ding{51}  \\
-J000439.16+183350.3 & 00:04:39.17 & +18:33:50.4 & -38.7 & 31      & 4601         & 2.50         & 0.44         & 0.03             & 0.34               & -0.11       & 0.88        & \ding{55} & \ding{51}  & \ding{55}  \\
-J000444.87+400402.1 & 00:04:44.88 & +40:04:02.1 & -94.7 & 53      & 4172         & 1.46         & -0.08        & 0.09             & 0.72               & 0.03        & 0.91        & \ding{55} & \ding{51}  & \ding{55}  \\
-J000552.76+261849.3 & 00:05:52.76 & +26:18:49.4 & -22.5 & 73      & 4924         & 3.14         & -0.05        & 0.09             & 0.67               & 0.28        & 0.85        & \ding{55} & \ding{51}  & \ding{55}  \\
-J000737.70+394055.5 & 00:07:37.70 & +39:40:55.6 & -31.5 & 33      & 4700         & 2.80         & -0.04        & 0.07             & 0.28               & -0.13       & 0.81        & \ding{55} & \ding{51}  & \ding{55}  \\ \hline
-\end{tabular}
-\end{adjustbox}
-\end{table*}
+%\begin{table*}
+%\centering
+%\caption{Properties of 967 s-process candidates, the table is available online in its entirety. Here we show a portion to demonstrate its style and content.}
+%\label{table:table1}
+%\begin{adjustbox}{width=1\textwidth}
+%\begin{tabular}{@{}|l|l|c|c|c|c|c|c|c|c|c|c|c|c|c|@{}}
+%\toprule
+%2MASSID             & R.~A.         & Dec.        & $v_{r}$ & S/N & $\rm T_{\rm eff}$ & $\log{g}$ & [Fe/H] & [$\alpha$/Fe] & $\chi_r^2$ & [Ba/Fe] & [Sr/Fe] & \ion{Ba}{II} & \ion{Sr}{II} &  \ion{Ba}{II} \& \ion{Sr}{II} \\
+%& (J2000) & (J2000) & (km\,s$^{-1}$) & (pixel$^{-1}$) & (K)  \\ \midrule
+%J000019.26+501444.8 & 00:00:19.27 & +50:14:44.9 & -3.9  & 49      & 4973         & 3.27         & 0.21         & 0.08             & 0.66               & 0.25        & 0.83        & \ding{55} & \ding{51}  & \ding{55}   \\
+%J000020.55+411348.1 & 00:00:20.56 & +41:13:48.2 & -28.2 & 32      & 4882         & 2.74         & -0.22        & 0.04             & 0.23               & -0.17       & 0.90        & \ding{55}& \ding{51}  & \ding{55}    \\
+%J000134.95+490743.2 & 00:01:34.96 & +49:07:43.2 & -42.3 & 72      & 5044         & 3.11         & -0.54        & 0.11             & 0.79               & 1.02        & 0.45        & \ding{55} & \ding{55} & \ding{51}  \\
+%J000258.09+410730.0 & 00:02:58.10 & +41:07:30.1 & -34.5 & 41      & 4697         & 2.57         & -0.22        & 0.12             & 0.98               & -0.10       & 0.80        & \ding{55} & \ding{51}  & \ding{55}  \\
+%J000403.80+160257.1 & 00:04:03.80 & +16:02:57.2 & -35.4 & 42      & 5200         & 3.40         & -0.41        & 0.09             & 0.33               & 0.92        & 0.52        & \ding{55} & \ding{55} & \ding{51}  \\
+%J000439.16+183350.3 & 00:04:39.17 & +18:33:50.4 & -38.7 & 31      & 4601         & 2.50         & 0.44         & 0.03             & 0.34               & -0.11       & 0.88        & \ding{55} & \ding{51}  & \ding{55}  \\
+%J000444.87+400402.1 & 00:04:44.88 & +40:04:02.1 & -94.7 & 53      & 4172         & 1.46         & -0.08        & 0.09             & 0.72               & 0.03        & 0.91        & \ding{55} & \ding{51}  & \ding{55}  \\
+%J000552.76+261849.3 & 00:05:52.76 & +26:18:49.4 & -22.5 & 73      & 4924         & 3.14         & -0.05        & 0.09             & 0.67               & 0.28        & 0.85        & \ding{55} & \ding{51}  & \ding{55}  \\
+%J000737.70+394055.5 & 00:07:37.70 & +39:40:55.6 & -31.5 & 33      & 4700         & 2.80         & -0.04        & 0.07             & 0.28               & -0.13       & 0.81        & \ding{55} & \ding{51}  & \ding{55}  \\ \hline
+%\end{tabular}
+%\end{adjustbox}
+%\end{table*}
 
 \subsubsection{Enhancements due to sodium, technetium, and carbon} \label{sec:other enhancements}
 Enhancements in sodium, technetium, and carbon are useful indicators when determining whether a stellar sample is populated by intrinsically enhanced AGB S stars, or polluted extrinsic barium stars. We performed an identical analysis to the process described in Section \ref{sec:cand} in order to identify sodium, technetium, or carbon enhancement in our sample of 257 barium stars. We used the sodium doublet lines at 5889\,\AA\ and 5895\,\AA\ to select barium stars enhanced in sodium, and required significant absorption in both features. Only 5/257 barium stars met this criteria.
 
-For technetium enhancement we searched for significant residual deviations at 4049\,\AA, 4238\,\AA, 4262\,\AA, 4297\,\AA, and 5924\,\AA. These absorption lines are extremely weak, and would require a substantial amount of technetium before it would be visible in a high S/N LAMOST spectrum. We found that 51 barium stars exhibited some level of significant enhancement (based on the filters above) at a single technetium line, yet none showed enhancement at more than one technetium line. We note that the single enhancement near technetium for these 51 stars may be the consequence of data reduction/calibration artefacts, but we include details of which stars matched on technetium in Table \ref{table:table1} nonetheless.
+For technetium enhancement we searched for significant residual deviations at 4049\,\AA, 4238\,\AA, 4262\,\AA, 4297\,\AA, and 5924\,\AA. These absorption lines are extremely weak, and would require a substantial amount of technetium before it would be visible in a high S/N LAMOST spectrum. We found that 51 barium stars exhibited some level of significant enhancement (based on the filters above) at a single technetium line, yet none showed enhancement at more than one technetium line. We note that the single enhancement near technetium for these 51 stars may be the consequence of data reduction/calibration artefacts, but we include details of which stars matched on technetium in Table 1 nonetheless.
 Finally, for carbon enhancement we searched for significant deviations at the CH and G band near 4300\,\AA. We found 178/257 stars to show significant carbon enhancement (i.e., $[\textrm{C/Fe}] \gtrsim 0.5$). 
 
 \subsubsection{Abundances estimated from LAMOST spectra}
@@ -184,6 +184,11 @@ We adopted the stellar parameters ($T_{\rm eff}$, $\log_{10}g$, [Fe/H]) provided
 \subsection{Extrinsic or intrinsic}
 Barium enhanced stars exist as either intrinsic or extrinsic objects. Intrinsically enhanced barium stars must be massive enough to reach the TP-AGB phase, and extrinsic barium stars must be in a binary with a previously polluting TP-AGB star companion (AGB S star). Figure \ref{fig:figure2} shows that the majority of our stellar sample exists within temperature and luminosity ranges not enveloped by the AGB, highlighting that all stars in our sample are not evolved enough to have already reached the TP-AGB phase and therefore, must be extrinsic barium stars. Although, it is noted, stars with temperatures below 3800K in Figure \ref{fig:figure2} are possible AGB stars, and their intrinsic or extrinsic nature is not certain. It is noted, in the previous literature \citep{van2017}, only 22\% of their stellar sample are post-main-sequence barium stars (extrinsic barium stars). In comparison, we find that all our barium candidates to be extrinsic. This suggests, the construction of our data-driven model may have missed some AGB barium candidates, or that previous studies were biased towards finding luminous intrinsic AGB barium stars. Given that our analysis limits us to only giant stars, such that we do not find any extrinsic barium stars on the main-sequence, na\"ively we would expect that our sample would be biased \emph{towards} finding a higher fraction of red giant stars. Given this bias, Figure \ref{fig:figure3} illustrates through the temperature, and log g ranges present, that our sample is entirely populated by red giant extrinsic barium stars. This suggests unaccounted selection biases in previous studies towards luminous AGB S stars.
 
+\begin{figure}
+	\includegraphics[width=\columnwidth]{hrd_new.pdf}
+    \caption{Effective temperature $T_{\rm eff}$ and surface gravity $\log{g}$ for 257 candidate barium stars from LAMOST. Stars with $\log{g} > 2$ (as marked) have not evolved through the thermally pulsing asymptotic giant branch phase, and therefore their abundance signature must be the result of an extrinsic pollution event. The classification of stars with $\log{g} < 2$ would require additional data.}
+    \label{fig:figure2}
+\end{figure}
 
 \subsection{Sodium enhancment}
 Sodium overabundances observed in the atmospheres of giants is thought to be synthesised by the NeNa reaction chain in the convective core of main-sequence stars \citep{el1995}. Sodium is transported to the surface of these giants via mixing during the first dredge-up and stars with a  minimum mass of $1.5\,M_\odot$ can exhibit enhanced sodium abundances through the NeNa cycle \citep{denissenkov1987,smiljanic2012}. \citet{antipova2004} reported sodium enhancements in 3 of their 16 barium star candidates, and they relate this to the dredge-up of nuclear-burning material produced by convection during the red-giant phase. Moreover, they suggest that [Na/Fe] ratios are systematically higher for giants with lower $\log{g}$ values, however, these [Na/Fe] ratios do not exhibit variations in metallicity. Similarly, \citet{decastro2016} highlights the possible weak anti-correlation between [Na/Fe] ratio and $\log{g}$, and highlights that this trend is present in previous studies \citep[e.g.,][]{boyarchuk2002,mishenina2006,luck2007,takeda2008}.
@@ -199,12 +204,6 @@ Technetium has a half life of approximately 211,000 years and as a result, the p
 \subsection{Carbon bands}
 barium stars are excellent candidates for investigating the relationship between neutron-capture elements and other species that may be depleted or enhanced, since iron within these stars act as neutron seeds during the operation of the s-process. In the AGB phase the abundance of carbon is a product of helium fusion, specifically the triple-alpha process within a star. In an identical mechanism to the presence of s-process element enhancement, carbon enhanced stars exist intrinsically or extrinsically. Giants and supergiants become enhanced in carbon through TDU process discussed in Section \ref{sec:intro}, and extrinsic carbon enhancement occurs via mass transfer from a binary AGB star. Our analysis produced 178 CH and G band significantly enhanced stars (i.e., $[\textrm{C/Fe}] \gtrsim 0.5$) out of the total 257 barium candidates. These 178 stars exist in a metallicity range of 0 to -1.2, and can be termed "CH stars" are defined in previous literature \citep[e.g.][]{luck1991, mcclure1997}.
 %Similar to the s-process enhancement, this suggests our candidates are consistent with being either intrinsic or extrinsic Barium stars.
-
-\begin{figure}
-	\includegraphics[width=\columnwidth]{hrd_new.pdf}
-    \caption{Effective temperature $T_{\rm eff}$ and surface gravity $\log{g}$ for 257 candidate barium stars from LAMOST. Stars with $\log{g} > 2$ (as marked) have not evolved through the thermally pulsing asymptotic giant branch phase, and therefore their abundance signature must be the result of an extrinsic pollution event. The classification of stars with $\log{g} < 2$ would require additional data.}
-    \label{fig:figure2}
-\end{figure}
 
 
 \subsection{Comparison to AGB yields}
@@ -230,7 +229,7 @@ Despite our noisy estimates of [Ba/Fe] and [Sr/Fe] from LAMOST spectra, comparis
  
 
 \section*{Acknowledgements}
-We thank  Alex Ji (Carnegie Observatories), David W. Hogg (NYU), Melissa Ness (Columbia), Hans-Walter Rix (MPIA) and especially Andrew Casey (Monash) for useful discussions. 
+We thank  Alex Ji (Carnegie Observatories), David W. Hogg (NYU), Melissa Ness (Columbia), and Hans-Walter Rix (MPIA) for useful discussions. 
 A.~R.~C. is supported through an Australian Research Council Discovery Project under grant DP160100637.
 A. Y. Q. H. was supported by the GROWTH project funded by the National Science Foundation under PIRE Grant No 1545949, and a National Science Foundation Graduate Research Fellowship under Grant No. DGE-1144469. 
 This research has made use of NASA's Astrophysics Data System.
@@ -437,10 +436,6 @@ MNRAS, 428, 2216
 \bibitem[\protect\citeauthoryear{Van der Swaelmen et al.}{2017}]{van2017}
 Van der Swaelmen, M., Boffin, H.~M.~J., Jorissen, A.,\& Van Eck, S. 2017, 
 A$\&$A, 597, A68
-
-
-
-
 
 
 \end{thebibliography}
