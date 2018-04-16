@@ -1,0 +1,170 @@
+Reviewer's Comments:
+
+Despite the fact that this paper relies on data having a great scientific potential  (to uncover a lot of new s-process-enriched stars), the paper suffers from major weaknesses and I cannot recommend it for publication in MNRAS.
+
+1. The methodology appears very poor and unconvincing.
+
+1.1 The positive luminosity effect on the Ba II and Sr II line strength
+
+Using lines of the ionized species in these stars makes the line strength sensitive to the electronic pressure (through Saha equation governing the Ba II / Ba I ratio, since Ba II is the minority species), hence to gravity, and hence to luminosity. This is what has been called a "positive luminosity effect" in the literature: Ba II and Sr II lines are getting stronger in high-luminosity stars not because of a Ba and Sr overabundance, but because of Saha equation favoring the ionized species over the neutral one. Mention of this effect have appeared here and there
+in the barium-star literature (for instance Fig. 13 of Escorza et al. 2017 2017A&A...608A.100E  and related discussion in the paragraph before last in Sect. 4.2; Pinsonneault et al. 1984 1984PASP...96..239P about 12 Pup), but the seminal paper describing the effect is the one by Keenan & Wilson 1977ApJ...214..399K .
+
+Without a discussion that the classification method used by the authors properly disentangle abundance and luminosity effects, no credit can be given to their list of s-process enhanced stars.
+
+I actually wonder whether this luminosity effect could explain the 49 stars with Ba-only enhancement and 661 stars with Sr-only enhancement among their 967 “s-process-rich” stars. Even when [hs/ls] < 0, some Ba enhancement is nevertheless present (and conversely, when [hs/ls] >0, some Sr enhancement remains). This may be checked directly from the de Castro et al. (2016) sample: are there stars with Ba-only or Sr-only enhancements in that large sample?
+Of course, this argument is directly related to the next issue: what is the detection threshold of the method used in the present paper?
+
+Reply: 
+The detection threshold is the 5 filters stated in Sect. 2.1.2
+(i) Profile amplitude (A) < -0.05
+(ii) Both amplitudes must be measured within 3sigma 
+(iii) The wavelength at each absorption line must be with 2 A
+(iv) The reduced chi squared from The Cannon must be less then 3
+(v) The signal to noise ratio must be greater than 30 per pixel
+
+
+It’s important to note a positive luminosity effort is of no consideration in regards to false results. Yes a positive luminosity effect could cause the false assumption of s-process element enhancement but, the method undertaken in this paper searches for residual fluxes deviating from a data driven model constructed using high fidelity APOGEE labels of 9,952 stars. This data driven model would therefore include any possible positive luminosity effects, and a deviation from this would indicate s-process element enhancement. This was the method used to discover the largest sample of s-process element enhanced stars.
+
+
+
+1.2 The method used to derive abundances and their associated errors is not described with enough details
+
+Table 1 provides [Ba/Fe] and [Sr/Fe] values with two significant digits, but the paper is lacking a detailed discussion about how these abundances are derived (Sect.2.1.4 does not contain enough details): Which set of model atmospheres were used? Which log gf values? What are the error bars on the abundances? What is the abundance threshold for flagging a star as “s-process-rich”?
+
+Reply:
+Andy ?
+
+        1.3 Validating the low-resolution discovery of more than 900 targets with a high-resolution analysis of only two among those (what was the criterion used to select these two specific targets?) is not convincing without arguing that these two are representative. I would even think that at least three check targets should be used: one with Ba-only enhancement, one with Sr-only enhancement, and one with Ba- and Sr-enhancement (see also Sect.5 below).
+
+Reply: 
+Observations presented in this study are not representative of the entire sample, and are not used to imply validity of the results. They are merely present as spare time was available at the end of an observing night, the inclusion was simply for completeness of the paper but, not the main purpose of the study. 
+
+
+
+
+2. Scientific inaccuracies and errors
+
+The paper contains a large number of scientific inaccuracies, ambiguities and even errors:
+
+2.1. l. 47, p.5 : The “half-life of technetium” is a meaningless statement, since the different Tc isotopes have different half lives.
+
+Reply:
+Only 99Tc is produced by the s-process in AGB stars. Lighter isotopes of Tc could only be made by beta-decays and all isotopes of Mo below Tc are stable and will be in the chain of capture from 94Mo(n,g)95Mo(n,g)... to 99Mo, which then decays. 99Tc could capture a neutron to make 100Tc but 100Tc is very short lived and would not be observed. It can thus be concluded the half life of 99Tc (211,000yrs) is the only significant half life of Tc, and mentioning it is perfectly acceptable.
+
+2.2. l. 59, p. 5: strictly speaking, it cannot be concluded, based on the absence of Tc I lines, that barium stars are extrinsic. Given the Ba star effective temperatures, to be sure about the absence of Tc, one should rather look for Tc II lines, but these are located in the far UV. Therefore, any mention of Tc enhancement should be suppressed in Sect. 2.1.3 as well, since the Teff plotted in Fig. 2 barely reach the range of S stars where Tc I could be present. Moreover, it is well known that some Tc lines are severely blended by other s-process lines (Van Eck & Jorissen 1999A&A...345..127V), and this explains why only some Tc I lines appeared enhanced.
+
+Reply: 
+The Tc discussion is shorten as per the advice by the referee. It is important to note Tc enhancement has been explored in previous literature (deCastro  2016MNRAS.459.4299D Sect. 4.2, Smith & Lambert 1986ApJ...311..843S Sect.4e,  Van Eck & Jorissen 1999 1999A&A...345..127V, Little 1987AJ.....93.1539L, Jorissen 1993A%26A...271..463J, ect...), and enhancement was by no means used to imply the barium star sample is extrinsic, it was merely used as a possible confirmation.
+
+2.3. end of p. 5 - beginning p. 6: "Given our barium stars exist in this metallicity range of 0 to -1.1, we can define them as CH stars as done in previous literature":  Why do the authors involve the full metallicity range up to solar metallicity to define CH stars, since in previous literature, CH stars were restricted to low metallicities (say below -0.5). And moreover, what does this sentence add to the science case?
+
+Reply:
+This classification is used to be somewhat consistent with literature that contains extensive ambiguity in the definition used for barium stars.
+
+2.4. Fig.3 and l. 8, p.6: "Fig.3 highlights the relationship between [Ba/Sr] yields and the mass of AGB stars": The relationship with metallicity is much stronger, and the relationship with AGB mass is not at all robust. The latter strongly depends on the intricacies of the stellar models (treatment of convection and mass loss, which govern the appearance of 3DU...), as demonstrated by the offset between the Cristallo et al. and Karakas et al. tracks! Moreover, the Cristallo et al. tracks show no sensitivity on the mass, as they are all superimposed. On the contrary, the metallicity effect is much more robust, since it is based on a simple arithmetic argument, comparing the number of available neutrons with that of Fe seed nuclei (Clayton 1980, when 13C(alpha,n)16O is the neutron source). Therefore the constraints set on the initial-mass functions or on the mass-transfer episode presented at the end of Sect. 4.5 are too far-fetched.
+
+Reply:
+The discussion on this topic has been reduced as suggested, and the conclusion is altered. It’s important to note for further analysis requires detailed chemical abundances, and improved models of AGB stars
+
+2.5. At several places, the authors refer to “intrinsic barium stars” (l.53, p.1 is the first occurrence). This is not a conventional designation, and should be avoided because it is confusing. Barium stars, being K giants, are too warm to lie on the AGB, and can therefore by no means be of intrinsic nature.
+
+Reply: 
+This definition has been expanded on in the introduction. It’s important to note, the terminology surrounding barium stars is historic, and in Sect. 1, the definitions used in the paper that have been used previously are stated for a clear discussion to follow. 
+
+2.6. ll. 6-7, p.2: 'These energy bursts drive a convective zone that sweeps almost the entire region lying between the core and the He-shell'. This is incorrect, since the convective zone develops between the He- and H-burning shells. 
+
+Reply: 
+In previous literature it is stated that flash driven convect extends up to the core (see: Karakas 2016MmSAI..87..229K Sect. 2,  Karakas 2002PASA...19..515K Sect. 1)
+
+2.7. ll.21-24, p.2: “Barium giants can form within a metallicity-dependent initial mass range of approximately 0.8 - 8 Msun. The minimum mass for these giants is defined by the mass needed for core helium and carbon burning.” Carbon burning is not going to happen in the above-mentioned mass range.
+
+Reply:
+Previous literature state core carbon burning can occur at 8Msun and varies with metallicity (see:  Karakas 2016MmSAI..87..229K Sect. 1, Ryan 2010sen..book.....R )
+
+2.8. Etc…
+
+Reply: 
+Were there any further points that I needed to go through ?
+
+3. Incorrect interpretation of literature papers
+
+3.1 Sect.4.1: results from Van der Swaelmen et al. (2017) are not correctly quoted: these authors state that 22% of binary red giants in open clusters show orbital signatures of being post-mass-transfer systems. But they by no means state that all among these are barium stars, quite to the contrary. Therefore, the remainder of Sect.4.1 should be deeply revised.
+
+Reply:
+Correct, the sample present in Van der Swaelmen et al. (2017) contains 33% extrinsic Barium stars, this section has been deeply revised.
+
+3.2 Sect. 4.2: “The data that led deCastro et al. (2016) to conclude that barium stars have higher [Na/Fe] ratios came from many literature sources.” This is not correct, since these authors derived Na abundances from their own abundance analysis (see their Sect. 5.2.2).
+
+Reply: 
+The discussion on the importance of this results is shortened, it’s important to note that de Castro not only derived their own abundances but compared their own to other literature sources (see: deCastro 2016MNRAS.459.4299D fig 20)
+
+
+
+4. The paper is not organized in a consistent way. Moreover, it addresses unrelevant issues, and misses important ones.
+
+4.1. Sect. 2.1.2 provides the number of barium stars discovered, before discussing how abundances are derived (Sect. 2.1.4) and what is the adopted abundance threshold.
+
+Reply: 
+This is because they were discovered using a data driven analysis as described in Sect. 2.1.2, data driven does not provide abundances, so far abundances were not stated in the paper and an abundance threshold was not specified. A flux threshold was stated with filters:
+(i) Profile amplitude (A) < -0.05
+(ii) Both amplitudes must be measured within 3sigma 
+(iii) The wavelength at each absorption line must be with 2 A
+(iv) The reduced chi squared from The Cannon must be less then 3
+(v) The signal to noise ratio must be greater than 30 per pixel
+After said filters, abundances were determined for later analysis and discussion
+
+4.2. Sect. 4.2: Why is there so much importance given to sodium? This is by no means justified, as Na is not accompanying s-process nucleosynthesis and exhibits no clear trend in a way or another (only a few barium stars exibit Na overabundances). Moreover, the authors' conclusion (l.39 p.5) "the effect seen in previous works was due to systematic effects between literature sources") is not worth such a lengthy discussion.
+Reply: 
+The biggest survey to date in previous literature claims sodium enhancement is frequently present within barium stars, this paper disproved that claim, however this section has been revised and shortened
+
+4.3. On the other hand, truly interesting results possibly lurking in this large data set have been totally overlooked: for instance, what is the l,b distribution of the barium stars? What is their distribution above the Galactic plane (easily feasible using Gaia DR2 released by the end of April 2018). What is the scale height of their vertical distribution, etc...? See for example Sect.4.2 of Jorissen et al. 1993 1993A%26A...271..463J or Gomez et al. 1997A%26A...319..881G
+
+Reply:
+Gomez1997
+Conclusions: 
+- Sample contains 4 group, 3 belonging to the disk and 1 belonging to the halo
+- luminosities of barium stars exist within a large range, from class Ib to IV-V, and most exhibiting that of normal giants, as consistent with the literature
+- Previously not undertaken, the author has obtained visual absolute magnitudes and kinematics
+- Two groups have been discriminated, a young and high luminosity, and main sequence/ subgiant stars
+
+Future prospects:
+- High res spectra needed to determine CNO and s-process abundances and to better discriminate between barium and non barium stars
+
+
+Jorissen1993 Sect. 4.2
+Conclusions:
+- intrinsic S stars more concentrated towards the galactic plane in comparison to extrinsic S stars
+- made comment on most intrinsic S stars which have been observed for Tc are high-latitude objects, since they are the closest and thus brightest of the group … makes remark on bias of sample since intrinsic are brighter
+- similar spread to M giants from Michigan spectral catalog
+- extrinsic S stars are low-mass stars populating the RGB 
+- derives scale height and absolute magnitude equation
+Future prospects:
+- not stated
+
+4.4. Sect. 2.1.3 announces the discovery of 51 stars with enhancement at one single Tc line (which one?), and Sect. 4.1 thereafter argues that Tc-rich stars cannot be present in this sample containing warm stars (see also item 2.2 above).
+
+Reply:
+This has been addressed in referee comment 2.2 above, the discussion will be shortened and revised.
+
+5. Inconsistencies
+
+Sect. 3.2: a star is mentioned at three different places in the section, but with only slightly different names (J09162834+02593480, J09162834+0259348 and J09162834+0259348) and vastly different abundances. This is very confusing; I believe that the authors refer to three different stars observed at high resolution, but even more confusing, Sect. 3.1 mentions that high-resolution spectra were obtained for two targets only??
+
+Reply: 
+Ando ?
+
+6. Paper badly written
+
+It should be rewritten by an experienced author with English as native language.
+Here are two among many examples of awkward sentences:
+1. ll. 56-57, p.1: “... where the overabundance of both carbon and heavy elements produced through the slow neutron capture process and exist on the surface as the result of a thermal pulsing cycle.”
+2. l.44, p. 3: "exhibited some level of significant enhancement"
+
+There are many typos which I do not list here; a careful reading of the paper should suffice to spot them.
+
+Moreover, there are several concepts or notations not explained. For instance, item (i) in Sect.2.1.2: what is A? Item (iv): a reference should be given for “The Cannon”.
+
+Reply: 
+The paper has been revised thoroughly
+A was defined in Sect. 2.1.2 as the profile amplitude, this is analogous to the depth an absorption line
+
