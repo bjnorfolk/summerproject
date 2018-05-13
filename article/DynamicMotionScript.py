@@ -53,6 +53,16 @@ V = np.zeros((L, N))
 V = V.flatten(L)
 W = np.zeros((L, N))
 W = W.flatten(L)
+ecc = np.zeros((L, N))
+ecc = ecc.flatten(L)
+apocenter = np.zeros((L, N))
+apocenter = apocenter.flatten(L)
+
+orbit_energy = np.zeros((L, N))
+orbit_energy = orbit_energy.flatten(L)
+
+angular_mom_z = np.zeros((L, N))
+angular_mom_z = angular_mom_z.flatten(L)
 
 L = len(controls)
 
@@ -62,10 +72,20 @@ V_lamost = np.zeros((L, N))
 V_lamost = V.flatten(L)
 W_lamost = np.zeros((L, N))
 W_lamost = W.flatten(L)
+ecc_lamost = np.zeros((L, N))
+ecc_lamost = ecc.flatten(L)
+apocenter_lamost = np.zeros((L, N))
+apocenter_lamost = apocenter_lamost.flatten(L)
+
+orbit_energy_lamost = np.zeros((L, N))
+orbit_energy_lamost = orbit_energy_lamost.flatten(L)
+
+angular_mom_z_lamost = np.zeros((L, N))
+angular_mom_z_lamost = angular_mom_z_lamost.flatten(L)
 
 for index, star in enumerate(stars):
 
-  #potential = gp.MilkyWayPotential()
+  potential = gp.MilkyWayPotential()
 
   icrs = coord.ICRS(ra=star["ra"] * u.deg,
                   dec=star["dec"] * u.deg,
@@ -90,7 +110,7 @@ for index, star in enumerate(stars):
   gc = icrs.transform_to(gc_frame)
 
   w0 = gd.PhaseSpacePosition(gc.data)
-  #orbit = potential.integrate_orbit(w0, dt=-0.5*u.Myr, n_steps=2000)
+  orbit = potential.integrate_orbit(w0, dt=-0.5*u.Myr, n_steps=2000)
 
   #fig = orbit.plot()
   #plt.show()
@@ -126,7 +146,15 @@ for index, star in enumerate(stars):
   U[index]= w0.v_x.to(u.km/u.s).value
   V[index]= w0.v_y.to(u.km/u.s).value
   W[index]= w0.v_z.to(u.km/u.s).value
+  apocenter[index]= orbit.apocenter().value
+  ecc[index]= orbit.eccentricity()
+  orbit_energy[index] = np.mean(orbit.energy().to(u.km * u.km / u.s / u.s)).value
+  angular_mom_z[index] = np.mean(orbit.angular_momentum()[2].to(u.kpc * u.km / u.s)).value
 
+stars["apocenter"] = apocenter
+stars["ecc"] = ecc
+stars["orbit_energy"] = orbit_energy
+stars["angular_mom_z"] = angular_mom_z
 stars["U_vel(km/s)"] = U
 stars["V_vel(km/s)"] = V
 stars["W_vel(km/s)"] = W
@@ -138,7 +166,7 @@ stars.write("velocity_dynamics.csv", overwrite=True)
 '''
 for index, control in enumerate(controls):
 
-  #potential = gp.MilkyWayPotential()
+  potential = gp.MilkyWayPotential()
 
   icrs = coord.ICRS(ra=control["ra"] * u.deg,
                   dec=control["dec"] * u.deg,
@@ -163,7 +191,7 @@ for index, control in enumerate(controls):
   gc = icrs.transform_to(gc_frame)
 
   w0 = gd.PhaseSpacePosition(gc.data)
-  #orbit = potential.integrate_orbit(w0, dt=-0.5*u.Myr, n_steps=2000)
+  orbit = potential.integrate_orbit(w0, dt=-0.5*u.Myr, n_steps=2000)
   
   C_velx.append(w0.v_x.to(u.km/u.s).value)
   C_vely.append(w0.v_y.to(u.km/u.s).value)
@@ -172,7 +200,15 @@ for index, control in enumerate(controls):
   U_lamost[index]= w0.v_x.to(u.km/u.s).value
   V_lamost[index]= w0.v_y.to(u.km/u.s).value
   W_lamost[index]= w0.v_z.to(u.km/u.s).value
+  apocenter_lamost[index]= orbit.apocenter().value
+  ecc_lamost[index]= orbit.eccentricity()
+  orbit_energy_lamost[index] = np.mean(orbit.energy().to(u.km * u.km / u.s / u.s)).value
+  angular_mom_z_lamost[index] = np.mean(orbit.angular_momentum()[2].to(u.kpc * u.km / u.s)).value
 
+controls["apocenter"] = apocenter_lamost
+controls["ecc"] = ecc_lamost
+controls["orbit_energy"] = orbit_energy_lamost
+controls["angular_mom_z"] = angular_mom_z_lamost
 controls["U_vel"] = U_lamost
 controls["V_vel"] = V_lamost
 controls["W_vel"] = W_lamost   
