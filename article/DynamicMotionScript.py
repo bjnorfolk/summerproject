@@ -25,6 +25,10 @@ from gala.units import galactic
 #csv=np.array(data)
 
 stars = Table.read("dynamics_complete.csv")
+controls = Table.read("lamost_gaia_result.fits")
+L = len(stars)
+N=1
+
 
 Ba_velx = []
 Ba_vely = []
@@ -38,10 +42,30 @@ Barium_velx = []
 Barium_vely = []
 Barium_velz = []
 Barium_y = []
+C_velx = []
+C_vely = []
+C_velz = []
+C_y = []
+
+U = np.zeros((L, N))
+U = U.flatten(L)
+V = np.zeros((L, N))
+V = V.flatten(L)
+W = np.zeros((L, N))
+W = W.flatten(L)
+
+L = len(controls)
+
+U_lamost = np.zeros((L, N))
+U_lamost = U.flatten(L)
+V_lamost = np.zeros((L, N))
+V_lamost = V.flatten(L)
+W_lamost = np.zeros((L, N))
+W_lamost = W.flatten(L)
 
 for index, star in enumerate(stars):
 
-  potential = gp.MilkyWayPotential()
+  #potential = gp.MilkyWayPotential()
 
   icrs = coord.ICRS(ra=star["ra"] * u.deg,
                   dec=star["dec"] * u.deg,
@@ -99,20 +123,89 @@ for index, star in enumerate(stars):
    Barium_vely.append(w0.v_y.to(u.km/u.s).value)
    Barium_velz.append(w0.v_z.to(u.km/u.s).value)
    Barium_y.append(np.sqrt(Barium_velx[-1]**2+Barium_velz[-1]**2))
-   
+  U[index]= w0.v_x.to(u.km/u.s).value
+  V[index]= w0.v_y.to(u.km/u.s).value
+  W[index]= w0.v_z.to(u.km/u.s).value
+
+stars["U_vel(km/s)"] = U
+stars["V_vel(km/s)"] = V
+stars["W_vel(km/s)"] = W
+stars.write("velocity_dynamics.fits", overwrite=True)
+stars.write("velocity_dynamics.csv", overwrite=True) 
   #odict_keys(['v_x', 'v_y', 'v_z'])
  #plt.plot(v_z, sqrt(v_x**2+v_y**2))
 #plt.plot(Ba_vely, Ba_y, marker='D')
+'''
+for index, control in enumerate(controls):
 
-plt.scatter(Ba_vely, Ba_y, c='b', label='Ba', s=1)
-plt.scatter(Sr_vely, Sr_y, c='r', label='Sr', s=1)
-plt.scatter(Barium_vely, Barium_y, c='m', label='BaSr', s=1)
+  #potential = gp.MilkyWayPotential()
+
+  icrs = coord.ICRS(ra=control["ra"] * u.deg,
+                  dec=control["dec"] * u.deg,
+                  distance=1.0 / control["parallax"] * u.kpc,
+                  pm_ra_cosdec=control["pmra"]*u.mas/u.yr,
+                  pm_dec=control["pmdec"]*u.mas/u.yr,
+                  radial_velocity=-0*u.km/u.s)
+
+  """
+  icrs_err = coord.ICRS(ra=0*u.deg, dec=0*u.deg, distance=6*u.kpc,
+                      pm_ra_cosdec=0.009*u.mas/u.yr,
+                      pm_dec=0.009*u.mas/u.yr,
+                      radial_velocity=0.1*u.km/u.s)
+
+  """
+  v_sun = coord.CartesianDifferential([11.1, 250, 7.25]*u.km/u.s)
+  gc_frame = coord.Galactocentric(galcen_distance=8.3*u.kpc,
+                                z_sun=0*u.pc,
+                                galcen_v_sun=v_sun)
+
+
+  gc = icrs.transform_to(gc_frame)
+
+  w0 = gd.PhaseSpacePosition(gc.data)
+  #orbit = potential.integrate_orbit(w0, dt=-0.5*u.Myr, n_steps=2000)
+  
+  C_velx.append(w0.v_x.to(u.km/u.s).value)
+  C_vely.append(w0.v_y.to(u.km/u.s).value)
+  C_velz.append(w0.v_z.to(u.km/u.s).value)
+  C_y.append(np.sqrt(C_velx[-1]**2+C_velz[-1]**2))
+  U_lamost[index]= w0.v_x.to(u.km/u.s).value
+  V_lamost[index]= w0.v_y.to(u.km/u.s).value
+  W_lamost[index]= w0.v_z.to(u.km/u.s).value
+
+controls["U_vel"] = U_lamost
+controls["V_vel"] = V_lamost
+controls["W_vel"] = W_lamost   
+'''
+
+thinx = np.linspace(-85,85,10000) 
+thiny = np.sqrt(85**2-thinx**2)
+thickx = np.linspace(-180,180,100000) 
+thicky = np.sqrt(180**2-thickx**2)
+
+fig, ax = plt.subplots()
+#ax.scatter(C_vely, C_y,s=1, alpha=0.5, facecolor='#1B0000', edgecolor='none')
+ax.scatter(thinx, thiny,s=1, alpha=0.5, facecolor='#1B0000', edgecolor='none')
+ax.scatter(thickx, thicky,s=1, alpha=0.5, facecolor='#1B0000', edgecolor='none')
+ax.scatter(Ba_vely, Ba_y,label='Ba',s=5, alpha=0.5, facecolor='#B50B0E', edgecolor='none',zorder=2)
+ax.scatter(Sr_vely, Sr_y, label='Sr',s=5, alpha=0.5, facecolor='#030CED', edgecolor='none',zorder=2)
+ax.scatter(Barium_vely, Barium_y, label='BaSr',s=5, alpha=0.5, facecolor='#ED28BF', edgecolor='none',zorder=2)
+
 plt.legend(loc='upper left')
+plt.text(-25, 0, 'Thin', fontsize=12)
+plt.text(-90,75, 'Thick', fontsize=12)
+plt.text(-150, 150, 'Halo', fontsize=12)
 plt.xlim(310, -310)
+plt.ylim(0, 400)
+plt.title('Toomre Diagram')
 plt.xlabel('V (km/s)')
-plt.ylabel('sqrt(U^2+W^2) (km/s)')
-plt.savefig('toomre'+'.png')
+plt.ylabel(r'$\sqrt{U^2+W^2}$ (km/s)')
+plt.savefig('testtoomre'+'.png')
 
+#`fig, ax = plt.subplots()`
+
+#`ax.scatter`
+#because `plt.scatter` just plots it on the most recently created figure, which may or may not be the figure you wanted it to plot on (e.g., if you are making multiple figures at one time)
 """
 plt.plot(orbit.t, orbit.spherical.distance, marker='None')
 
