@@ -30,19 +30,22 @@ grid_sl = np.transpose(grid_sl)
 grid_slm = np.ma.masked_where(grid_sl < 0.001, grid_sl)
 
 fig, axes = plt.subplots(3, 1)
-axes[0].plot(xs, ys,s=1, alpha=0.5, facecolor='#FF9309', edgecolor='none')
+axes[0].scatter(xs, ys, s=1, alpha=0.5, facecolor='#FF9309', edgecolor='none',
+                rasterized=True)
 axes[0].set_xlabel(r'$l$ $[^\circ]$')
 axes[0].set_ylabel(r'$b$ $[^\circ]$')
 
-axes[1].plot(xl, yl,s=1, alpha=0.5, facecolor='#FF9309', edgecolor='none')
+axes[1].scatter(xl, yl, s=1, alpha=0.5, facecolor='#FF9309', edgecolor='none',
+                rasterized=True)
 axes[1].set_xlabel(r'$l$ $[^\circ]$')
 axes[1].set_ylabel(r'$b$ $[^\circ]$')
 
 cmap = cm.viridis
 cmap.set_bad(color='white')
-axes[2].pcolormesh(grid_xs, grid_ys, grid_slm, cmap=cmap, edgecolors='None',
-    norm=colors.LogNorm(vmin=0+0.001, vmax=0.1))
-axes[2].colorbar().set_label(r'\textrm{Candidate fraction}', rotation=270)
+pmesh = axes[2].pcolormesh(grid_xs, grid_ys, grid_slm, 
+    cmap=cmap, edgecolors='None', norm=colors.LogNorm(vmin=0+0.001, vmax=0.1))
+cbar = plt.colorbar(pmesh)
+cbar.set_label(r'\textrm{Candidate fraction}', rotation=270)
 axes[2].set_xlabel(r'$l$ $[^\circ]$')
 axes[2].set_ylabel(r'$b$ $[^\circ]$')
 
