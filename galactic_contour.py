@@ -57,4 +57,5 @@ fig.tight_layout()
 
 plt.show()
 
-plt.savefig('DynamicFigures/'+'testcontoursub'+'.png')
+fig.savefig('DynamicFigures/'+'testcontoursub'+'.png')
+fig.savefig("DynamicFigures/contour.pdf", dpi=150)

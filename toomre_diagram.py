@@ -1,18 +1,26 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from astropy.table import Table
-from mpl_utils import mpl_style
-from matplotlib import (colors, cm, ticker)
+# Some imports we'll need later:
+
+# Third-party
 import astropy.units as u
 import astropy.coordinates as coord
 from astropy.io import ascii
+from astropy.table import Table
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# Gala
+from gala.mpl_style import mpl_style
+plt.style.use(mpl_style)
 import gala.dynamics as gd
 import gala.integrate as gi
 import gala.potential as gp
 from gala.units import galactic
 
-stars = Table.read("velocity_dynamics.csv")
-lamost = Table.read("lamostUVW_dynamics.csv")
+stars = Table.read("dynamics_complete_test.csv")
+L = len(stars)
+N=1
+
 Ba_velx = []
 Ba_vely = []
 Ba_velz = []
@@ -25,6 +33,13 @@ Barium_velx = []
 Barium_vely = []
 Barium_velz = []
 Barium_y = []
+
+U = np.zeros((L, N))
+U = U.flatten(L)
+V = np.zeros((L, N))
+V = V.flatten(L)
+W = np.zeros((L, N))
+W = W.flatten(L)
 
 for index, star in enumerate(stars):
 
@@ -76,25 +91,16 @@ for index, star in enumerate(stars):
    Barium_velz.append(w0.v_z.to(u.km/u.s).value)
    Barium_y.append(np.sqrt(Barium_velx[-1]**2+Barium_velz[-1]**2))
 
-
-xs = stars['V_vel(km/s)_1']
-ys = np.sqrt(stars['U_vel(km/s)_1']**2+stars['W_vel(km/s)_1']**2)
-xl = lamost['V_vel']
-yl = np.sqrt(lamost['U_vel']**2+lamost['W_vel']**2)
+  U[index]= w0.v_x.to(u.km/u.s).value
+  V[index]= w0.v_y.to(u.km/u.s).value
+  W[index]= w0.v_z.to(u.km/u.s).value
 
 
-grid_xs = np.linspace(-310, 310, 620)
-grid_xl = np.linspace(-310, 310, 620)
-grid_ys = np.linspace(0, 400, 400)
-grid_yl = np.linspace(0, 400, 400)
-
-grid_s, _, _ = np.histogram2d(xs, ys, bins=[grid_xs, grid_ys])
-grid_l, _, _ = np.histogram2d(xl, yl, bins=[grid_xl, grid_yl])
-div = np.divide(grid_s, grid_l, out=np.zeros_like(grid_s), where=grid_l!=0)
-grid_sl = div
-grid_sl = np.transpose(grid_sl)
-
-grid_slm = np.ma.masked_where(grid_sl < 0.001, grid_sl)
+stars["U_vel(km/s)"] = U
+stars["V_vel(km/s)"] = V
+stars["W_vel(km/s)"] = W
+stars.write("velocity_dynamics.fits", overwrite=True)
+stars.write("velocity_dynamics.csv", overwrite=True) 
 
 thinx = np.linspace(-85,85,10000) 
 thiny = np.sqrt(85**2-thinx**2)
@@ -102,32 +108,20 @@ thickx = np.linspace(-180,180,100000)
 thicky = np.sqrt(180**2-thickx**2)
 
 fig, ax = plt.subplots()
-cmap = cm.Greys
-cmap.set_bad(color='white')
-pmesh = ax.pcolormesh(grid_xs, grid_ys, grid_slm, 
-    cmap=cmap, edgecolors='None', norm=colors.LogNorm(vmin=0+0.001, vmax=0.1))
-cbar = plt.colorbar(pmesh)
-cbar.set_label(r'\textrm{Candidate fraction}', rotation=270)
+ax.scatter(thinx, thiny,s=1, alpha=0.5, facecolor='#1B0000', edgecolor='none')
+ax.scatter(thickx, thicky,s=1, alpha=0.5, facecolor='#1B0000', edgecolor='none')
+ax.scatter(Ba_vely, Ba_y,label='Ba enhanced',s=5, alpha=0.5, facecolor='#B50B0E', edgecolor='none',zorder=2)
+ax.scatter(Sr_vely, Sr_y, label='Sr enhanced',s=5, alpha=0.5, facecolor='#030CED', edgecolor='none',zorder=2)
+ax.scatter(Barium_vely, Barium_y, label='Ba & Sr enhanced',s=5, alpha=0.5, facecolor='#ED28BF', edgecolor='none',zorder=2)
 
-ax.scatter(Ba_vely, Ba_y,label='Ba', s=1, alpha=0.5, facecolor='#030CED', edgecolor='none',
-                rasterized=True)
-ax.scatter(Sr_vely, Sr_y, label='Sr', s=1, alpha=0.5, facecolor='#ED28BF', edgecolor='none',
-                rasterized=True)
-ax.scatter(Barium_vely, Barium_y, label='BaSr', s=1, alpha=0.5, facecolor='#B50B0E', edgecolor='none',
-                rasterized=True)
-ax.scatter(thinx, thiny, s=1, alpha=0.5, facecolor='#1B0000', edgecolor='none',
-                rasterized=True)
-ax.scatter(thickx, thicky, s=1, alpha=0.5, facecolor='#1B0000', edgecolor='none',
-                rasterized=True)
-ax.set_xlabel('V (km/s)')
-ax.set_ylabel(r'$\sqrt{U^2+W^2}$ (km/s)')
-
+plt.legend(loc='upper right')
+plt.text(30, 10, 'Thin', fontsize=10)
+plt.text(90,75, 'Thick', fontsize=10)
+plt.text(150, 150, 'Halo', fontsize=10)
 plt.xlim(-310, 310)
-plt.ylim(0, 400)
-plt.legend(loc='upper left')
-plt.text(30, 10, 'Thin', fontsize=12)
-plt.text(90,75, 'Thick', fontsize=12)
-plt.text(150, 150, 'Halo', fontsize=12)
-plt.tight_layout()
-
+plt.ylim(0, 300)
+plt.xlabel('V (km/s)')
+plt.ylabel(r'$\sqrt{U^2+W^2}$ (km/s)')
 plt.savefig('DynamicFigures/'+'toomre'+'.png')
+plt.savefig("DynamicFigures/toomre.pdf", dpi=150)
+
