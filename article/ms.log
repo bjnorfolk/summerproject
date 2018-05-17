@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6650) (preloaded format=pdflatex 2018.4.14)  24 APR 2018 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6650) (preloaded format=pdflatex 2018.4.14)  13 MAY 2018 15:24
 entering extended mode
 **./ms.tex
 (ms.tex
@@ -1207,7 +1207,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
  [2]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 8.0pt on input line 143.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 170.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 175.
 
 
 (/home/brodie/.miktex/texmfs/install/tex/latex/ae/t1aett.fd
@@ -1219,9 +1219,7 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
                                                   \fi \fi 
 l.176 
        <./posterchild_final.pdf>]
-Underfull \vbox (badness 3646) has occurred while \output is active []
-
-<hrd_new.pdf, id=305, 289.08pt x 289.08pt>
+<hrd_new.pdf, id=285, 289.08pt x 289.08pt>
 File: hrd_new.pdf Graphic file (type pdf)
 <use hrd_new.pdf>
 Package pdftex.def Info: hrd_new.pdf  used on input line 191.
@@ -1236,11 +1234,15 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.201 
-      ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+l.199 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2}) has been already used, duplicate ignored
 
-<yields_test.pdf, id=368, 289.08pt x 289.08pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.199 
+       <./hrd_new.pdf>]
+<yields_test.pdf, id=367, 289.08pt x 289.08pt>
 File: yields_test.pdf Graphic file (type pdf)
 <use yields_test.pdf>
 Package pdftex.def Info: yields_test.pdf  used on input line 210.
@@ -1255,23 +1257,16 @@ Underfull \hbox (badness 1817) in paragraph at lines 216--218
 \T1/ntxtlf/m/n/9 Barium stars are excellent candidates for investigating the
  []
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
-has been already used, duplicate ignored
+
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.218 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.218 
-       <./hrd_new.pdf> <./yields_test.pdf
-
-pdfTeX warning: pdflatex (file ./yields_test.pdf): PDF inclusion: multiple pdfs
- with page group included in a single page
->]
+l.222 
+       <./yields_test.pdf>]
 Underfull \hbox (badness 1515) in paragraph at lines 233--234
 []\T1/ntxtlf/m/n/9 We find 178/257 barium star candidates show carbon
  []
@@ -1288,7 +1283,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--246
 
 [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 454.
- [7]
+ [7
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 454.
  (ms.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 454.
@@ -1309,7 +1306,7 @@ Here is how much of TeX's memory you used:
  14119 multiletter control sequences out of 15000+200000
  115547 words of font info for 185 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 35i,15n,37p,2467b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,15n,37p,2467b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1342,9 +1339,9 @@ wtx/rntxmi7.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/txfonts
 brodie/.miktex/texmfs/install/fonts/type1/public/newtx/txsys.pfb></home/brodie/
 .miktex/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></home/brodie/.miktex/
 texmfs/install/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on ms.pdf (7 pages, 918312 bytes).
+Output written on ms.pdf (7 pages, 913902 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
+ 550 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)
  128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
