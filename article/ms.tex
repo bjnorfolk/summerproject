@@ -66,7 +66,7 @@ $^{6}$Carnegie Observatories
 
 \begin{abstract}
 
-In this paper we present the discovery of 967 s-process candidates from 454,180 giant stars observed by LAMOST: this sample constitutes the largest number of s-process enhanced stars ever discovered. We identify these stars in the LAMOST sample by using a data-driven search approach on the spectra directly, and then measure the s-process abundance enhancements using stellar synthesis. Finally, we take advantage of free observing time, and obtain high resolution spectra of a number of candidates. Our sample includes; 257 'barium stars', that are enhanced in both barium and strontium, 49 stars with significant barium enhancement only, and 661 stars which exhibit strontium enhancement only. Our entire barium star stellar sample exists within temperature and luminosity ranges not enveloped by the AGB, which may indicate a recent ($<1\,\textrm{Myr}$) mass accretion event from an AGB companion. Most of our barium stars ($69\%$) show strong carbon enhancements, yet, only 5 candidates ($<2$\,\%) show evidence of sodium enhancement, in contrast with previous claims of preferential sodium enhancement. We argue this may have been a selection bias in previous studies. A comparison with AGB yields suggests the main neutron source responsible for the Ba and Sr enhancements is the $C^{13}(\alpha,n)O^{16}$ reaction chain. Additionally, theoretical models show that this source is dominant in low-mass AGB stars thus, it follows that most of the progenitors of s-process elements in our sample are low-mass AGB stars between $1 - 3\,M_{\odot}$. 
+In this paper we present the discovery of 967 s-process candidates from 454,180 giant stars observed by LAMOST: this sample constitutes the largest number of s-process enhanced stars ever discovered. We identify these stars in the LAMOST sample by using a data-driven search approach on the spectra directly, and then measure the s-process abundance enhancements using stellar synthesis. Finally, we take advantage of free observing time, and obtain high resolution spectra of a number of candidates. Our sample includes; 257 'barium stars', that are enhanced in both barium and strontium, 49 stars with significant barium enhancement only, and 661 stars which exhibit strontium enhancement only. Our entire barium star stellar sample exists within temperature and luminosity ranges not enveloped by the AGB, which may indicate a recent ($<1\,\textrm{Myr}$) mass accretion event from an AGB companion. Most of our barium stars ($69\%$) show strong carbon enhancements, yet, only 5 candidates ($<2$\,\%) show evidence of sodium enhancement, in contrast with previous claims of preferential sodium enhancement. We argue this may have been a selection bias in previous studies. Our kinematical analysis revealed our stellar sample contains \% disk stars (\% thin and \% thick), and \% halo stars. A comparison with AGB yields suggests the main neutron source responsible for the Ba and Sr enhancements is the $C^{13}(\alpha,n)O^{16}$ reaction chain. Additionally, theoretical models show that this source is dominant in low-mass AGB stars thus, it follows that most of the progenitors of s-process elements in our sample are low-mass AGB stars between $1 - 3\,M_{\odot}$. 
 
 %that the majority of our sample are consistent with Salpeter-like initial mass function, with pollution from a low mass AGB star.
 
@@ -88,7 +88,7 @@ The s-process, occurring in the interior of AGB stars, synthesises roughly half 
 
 Barium giants can form within a metallicity-dependent initial mass range of approximately $0.8 - 8\,M_{\odot}$. The minimum mass for these giants is defined by the mass needed for core helium and carbon burning, which decrease as metallicity decreases. The age of these stars vary considerably, with some as old as $\approx$ 12\,Gyr in metal-poor globular clusters. Metal poor stars enhanced in barium are defined in the literature as CH stars. In contrast, metal-rich, less massive stars may reach ages of $\approx$ 100Myr, this includes stars that are at the core carbon burning limit or very close to it \citep[e.g.,][]{whitelock2013}. Furthermore, metal rich stars enhanced in barium are defined in the literature classically as barium stars.
 
-Many barium stars have been discovered in the disk and halo of the Milky Way \citep{gomez1997,mennessier1997}. In \citet{pereira2011} it is concluded that metal-rich barium stars share similar kinematics to other metal-rich and super metal-rich stars already analysed, suggesting that they do not belong to the bulge population. It remains necessary to establish known abundances of s-process elements in a greater sample of barium stars in order to: compare their birth rate to theoretical expectations \citep{han1995}, explore the binary fraction at different metallicities, and compare to AGB star yields at different masses and metallicities.
+Many barium stars have been discovered in the disk and halo of the Milky Way \citep{jorissen1993,gomez1997,mennessier1997}. In \citet{pereira2011} it is concluded that metal-rich barium stars share similar kinematics to other metal-rich and super metal-rich stars already analysed, suggesting that they do not belong to the bulge population. It remains necessary to establish known abundances of s-process elements in a greater sample of barium stars in order to: compare their birth rate to theoretical expectations \citep{han1995}, explore the binary fraction at different metallicities, and compare to AGB star yields at different masses and metallicities.
 %The relationship between barium stars in the halo \citep[e.g.,][]{junqueira2001,drake2008,pereira2009,allen2006} and metal-poor, yellow, symbiotic halo stars has been established by \citet{jorissen2005} and \citet{pereira2009}.
 
 In this paper we analyse 454,180 giant stars from the second LAMOST data release \citep{luo2015} and identify 967 s-process candidates. In Section \ref{sec:methods}, we describe the observations and candidate selection. Section \ref{sec:observations} details the analysis of high-resolution follow-up observations obtained for a few candidates. In Section \ref{sec:dis}, we discuss the properties of our barium stars in context of existing literature. We provide concluding remarks in Section \ref{sec:con}.
@@ -167,7 +167,7 @@ Finally, for carbon enhancement we searched for significant deviations at the CH
 We estimated [Ba/Fe] and [Sr/Fe] abundance ratios for all s-process enhanced candidates by synthesising spectra that would account for the observed flux residuals. We assumed that absorption due to metals is captured by \emph{The Cannon} model, and deviations in flux at the 4554\,\AA\ \ion{Ba}{II} line and the 4077\,\AA\ \ion{Sr}{II} transition are solely due to enhancements in Ba and Sr, respectively \citep{marcs,sme,vald,ispec}. We adopted the stellar parameters ($T_{\rm eff}$, $\log{g}$, [Fe/H]) from \citet{ho2017}, and assume a microturbulence of $v_{mic} = 2\,{\rm km\,s}^{-1}$. Uncertainties in [Ba/Fe] and [Sr/Fe] from LAMOST are taken as the fitting error due to noise, added in quadrature with an adopted $0.2\,{\rm dex}$ systematic error floor.
 
 \subsection{Dynamics}
-
+Using recent astrometry from Gaia/TGAS \citep{gaia2016,gaia2018b, cropper2018, katz2018, lindegren2018, sartoretti2018}, with section filters parallax > 0, and parallax/parallax error >5, we integrated the galactic orbits for 898 s-process enhanced stars. Utilising the \texttt{gala} Python package \citep{price2017}, we integrated each star backwards for $0.5\,\textrm{Gyr}$ in a Milky Way-like potential that consists of four components: a \citet{hernquist1990} bulge and nucleus, a \citet{miyamoto1975} disk, and the \citet{nfw1997} halo. In this potential, the disk and bulge parameters were adjusted to be consistent with previous work \citep{bovy2015}. For our Gaia matched sample, we computed spatial velocities and galactic longitude and latitudes. Spatial velocities are relative to the local standard of rest, where $U_{LSR}$ is positive towards the Galactic centre, $V_{LSR}$ is positive in the direction of Galactic rotation ($l=90^{\circ}, b=0^{\circ}$), and $W_{LSR}$ is positive towards the north galactic pole ($b=90^{\circ}$). Our analysis revealed our stellar sample contains \% disk stars (\% thin and \% thick), and \% halo stars.
 
 \section{Follow-up observations with Magellan/MIKE} \label{sec:observations}
 
@@ -224,11 +224,25 @@ The final surface s-process index [Ba/Sr], illustrated in Figure \ref{fig:figure
 
 %The Salpeter initial mass function (or any bottom-heavy initial mass function) predicts the majority of stars in the Milky Way will have lower masses, and as predicted the [Ba/Sr] values of our barium stars approximately fit the lower mass yields as seen in Figure \ref{fig:figure3}.
 
+\subsection{Dynamics}
 
+The majority of our sample showed pro-grade orbits that were consistent with membership in the Milky Way disk, indicating they do not originate from an unusual stellar event. Figure \ref{fig:figure4} illustrates the galactic position of each class of s-process enhanced star investigated. For our entire 898 sample, the figure shows \% reside within the galactic disk(\% thin disk and \% thick disk ), and \% within the halo. Our results show similar trends to the literature, samples from \cite{gomez1997} and \cite{mennessier1997} present populations of 75\% contained within the disk, and 25\% within the halo. \cite{pereira2011}’s entire sample resides within the disk, and \cite{decastro2016} states their sample contains 90\% thin disk stars. Although, excluding \cite{decastro2016}’s sample, it is important to note previous studies contain limited stellar populations ranging from 4 to 12 stars, and cannot be representative of the overall galactic position of s-process enhanced stars. \cite{jorissen1993} attributes the galactic position of s-process enhanced stars as dependent on their intrinsic or extrinsic nature, given our sample is entirely extrinsic we cannot comment on the comparison between the two enhancement sources. However, given our extrinsically s-process enhanced sample concentrates towards the galactic plane, we can propose the sample in \cite{jorissen1993} was not large enough to represent the overall galactic position of extrinsic S stars.
+
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{toomre.pdf}
+	\caption{Toomre diagram Spatial velocities ([V (km/s)]; x-axis) and ([$\sqrt{U^2+W^2}$ (km/s)]; y-axis) for number of s-process enhanced candidates matched with Gaia DR2. Coloured markers red, blue, and purple highlight barium, strontium, and both barium and strontium enhancement respectively.}
+	\label{fig:figure4}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{contour.pdf}
+	\caption{Galactic longitude ([$l^{\circ}$]; x-axis) and galactic latitude ([$b^{\circ}$]; y-axis) shown for: number of s-process enhanced candidates matched with Gaia DR2, the LAMOST sample matched with Gaia DR2, and a density contour between the latter two}
+	\label{fig:figure5}
+\end{figure}
 
 \section{Conclusions} \label{sec:con}
 
-We conducted the largest ever search for s-process enhanced stars using the LAMOST second data release. From 454,180 giant stars, we identify 967 s-process candidates including: 257 stars with significant enhancements in barium and strontium (so-called `barium stars'), 49 stars exhibiting exclusively barium enhancement, and 661 exhibiting exclusively strontium enhancement. This sample size is the greatest total number of barium stars known, and represents the largest sample of s-process enhanced stars to date. Nearly all of our barium candidates are consistent with being disk stars, indicating our sample was not produced through an unusual galactic event. 
+We conducted the largest ever search for s-process enhanced stars using the LAMOST second data release. From 454,180 giant stars, we identify 967 s-process candidates including: 257 stars with significant enhancements in barium and strontium (so-called `barium stars'), 49 stars exhibiting exclusively barium enhancement, and 661 exhibiting exclusively strontium enhancement. This sample size is the greatest total number of barium stars known, and represents the largest sample of s-process enhanced stars to date.  Our kinematical analysis revealed our stellar sample contains \% disk stars (\% thin and \% thick), and \% halo stars, indicating our barium stars were not produced through an unusual galactic event. 
 
 We find 178/257 barium star candidates show carbon enhancement, consistent with the literature, and are possible CH stars. However, in contrast with previous works, we do not find barium stars to have significantly higher [Na/Fe] than Milky Way field giants. Only 5/257 of our barium stars show enhancement in Na, and the flux residuals in three of those are likely due to interstellar dust. We suggest that biases between literature sources and systematic effects in measuring [Na/Fe] from stars with low $\log{g}$ contributed to this effect. 
 
@@ -242,7 +256,12 @@ A.~R.~C. is supported through an Australian Research Council Discovery Project u
 A. Y. Q. H. was supported by the GROWTH project funded by the National Science Foundation under PIRE Grant No 1545949, and a National Science Foundation Graduate Research Fellowship under Grant No. DGE-1144469. 
 This research has made use of NASA's Astrophysics Data System.
 Guoshoujing Telescope (the Large Sky Area Multi-Object Fiber Spectroscopic Telescope LAMOST) is a National Major Scientific Project built by the Chinese Academy of Sciences. Funding for the project has been provided by the National Development and Reform Commission. LAMOST is operated and managed by the National Astronomical Observatories, Chinese Academy of Sciences. 
-This work has made use of data from the European Space Agency (ESA) mission Gaia (http://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, http://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement.
+This work has made use of data from the European Space Agency (ESA) mission
+{\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC,
+\url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC
+has been provided by national institutions, in particular the institutions
+participating in the {\it Gaia} Multilateral Agreement.
 
 
  
@@ -294,6 +313,8 @@ PhD Thesis, Australian National University
 \bibitem[\protect\citeauthoryear{Cristallo et al.}{2015}]{cristallo2015}
 Cristallo, S., Straniero, O., Piersanti, L.,\& Gobrecht, D. 2015, 
 ApJ, 219, 40
+\bibitem[\protect\citeauthoryear{Cropper et al.}{2018}]{cropper2018}
+Cropper, M., Katz, D., Sartoretti, P., Prusti, T., de Bruijne, J.~H.~J., Chassat, F., Charvet, P., Boyadijan, J., Perryman, M., Sarri, G., Gare, P., Erdmann, M., Munari, U., Zwitter, T., Wilkinson, M., Arenou, F., Vallenari, A., G{\'o}mez, A., Panuzzo, P., Seabroke, G., Allende Prieto, C., Benson, K., Marchal, O., Huckle, H., Smith, M., Dolding, C., Jan{\ss}en, K., Viala, Y., Blomme, R., Baker, S., Boudreault, S., Crifo, F., Soubiran, C., Fr{\'e}mat, Y., Jasniewicz, G., Guerrier, A., Guy, L.~P., Turon, C., Jean-Antoine-Piccolo, A., Th{\'e}venin, F., David, M. Gosset, E.,\& Damerdji, Y. 2018
 \bibitem[\protect\citeauthoryear{deCastro et al.}{2016}]{decastro2016}
 deCastro, D.~B., Pereira, C.~B., Roig, F., Jilinski, E., Drake, N.~A., Chavero, C.,\& Sales Silva, J.~V. 2016, 
 MNRAS, 459, 4299
@@ -309,12 +330,11 @@ ApJ, 451, 298
 \bibitem[\protect\citeauthoryear{Fishlock et al}{2014}]{fishlock2014}
 Fishlock, C.~K., Karakas, A.~I., Lugaro, M.,\& Yong, D. 2014, 
 ApJ, 797, 44
-\bibitem[\protect\citeauthoryear{Gaia Collaboration et al.}{2016a}]{gaia2016a}
-Gaia Collaboration, Brown, A.~G.~A., Vallenari, A., Prusti, T., de Bruijne, J.~H.~J., Mignard, F., Drimmel, R., Babusiaux, C., Bailer-Jones, C.~A.~L.,\& Bastian, U., et al. 2016, 
-A$\&$A, 595, A2
-\bibitem[\protect\citeauthoryear{Gaia Collaboration et al.}{2016b}]{gaia2016b}
+\bibitem[\protect\citeauthoryear{Gaia Collaboration et al.}{2016}]{gaia2016}
 Gaia Collaboration, Prusti, T., de Bruijne, J.~H.~J., Brown, A.~G.~A., Vallenari, A., Babusiaux, C., Bailer-Jones, C.~A.~L., Bastian, U., Biermann, M.,\& Evans, D.~W. et al. 2016, 
 A$\&$A, 595, A1
+\bibitem[\protect\citeauthoryear{Gaia Collaboration et al.}{2018b}]{gaia2018b}
+Gaia Collaboration, Brown, A.~G.~A., Vallenari, A, Prusti, T., de Bruijne, J.~H.~J., Babusiaux, C.,\& Bailer-Jones, C.~A.~L. 2018, 
 \bibitem[Gustafsson et al.(2008)]{marcs} Gustafsson, B., Edvardsson, B., Eriksson, K., et al.\ 2008, \aap, 486, 951 
 \bibitem[\protect\citeauthoryear{Gomez et al.}{1997}]{gomez1997}
 Gomez, A.~E., Luri, X., Grenier, S., et al. 1997, 
@@ -352,6 +372,8 @@ ApJS, 825, 26
 \bibitem[\protect\citeauthoryear{Karakas et al.}{2018}]{karakas2018}
 Karakas, A.~I. 2018, 
 MNRAS, submitted
+\bibitem[\protect\citeauthoryear{Katz et al.}{2018}]{katz2018}
+Katz, D., Sartoretti, P., Cropper, M., Panuzzo, P., Seabroke, G.~M., Viala, Y., Benson, K., Blomme, R., Jasniewicz, G., Jean-Antoine, A., Huckle, H., Smith, M., Baker, S., Crifo, F., Damerdji, Y., David, M., Dolding, C., Fr{\'e}mat, Y., Gosset, E., Guerrier, A., Guy, L.~P., Haigron, R., Jan{\ss}en, K., Marchal, O., Plum, G., Soubiran, C., Th{\'e}venin, F. ,Ajaj, M., Allende Prieto, C., Babusiaux, C., Boudreault, S., Chemin, L., Delle Luche, C., Fabre, C., Gueguen, A., Hambly, N.~C., Lasne, Y., Meynadier, F., Pailler, F., Panem, C., Royer, F., Tauran, G., Zurbach, C., Zwitter, T., Arenou, F., Bossini, D., Gomez, A., Lemaitre, V., Leclerc, N., Morel, T., Munari, U., Turon, C., Vallenari, A.,\& {\v Z}erjal, M. 2018
 \bibitem[\protect\citeauthoryear{Kelson et al.}{2000}]{kelson2000}
 Kelson, D.~D., Illingworth, G.~D., van Dokkum, P.~G.,\& Franx, M. 2000, ApJ, 531, 159
 %\bibitem[\protect\citeauthoryear{Kelson}{2003}]{kelson2003}
@@ -361,6 +383,8 @@ Kelson, D.~D., Illingworth, G.~D., van Dokkum, P.~G.,\& Franx, M. 2000, ApJ, 531
 %Kobayashi, C., Karakas, A., \& Umeda, H. 2011, 
 %MNRAS, 414, 3231
 \bibitem[Kupka et al.(1999)]{vald} Kupka, F., Piskunov, N., Ryabchikova, T.~A., Stempels, H.~C., \& Weiss, W.~W.\ 1999, \aaps, 138, 119 
+\bibitem[\protect\citeauthoryear{Lindegren et al.}{2018}]{lindegren2018}
+Lindegren, L., Hernandez, J., Bombrun, A., Klioner, S., Bastian, U., Ramos-Lerate, M., de Torres, A., Steidelmuller, H, Stephenson, C., Hobbs, D., Lammers, U., Biermann, M. ,Geyer, R., Hilger, T., Michalik, D., Stampa, U., McMillan, P.~J., Castaneda, J., Clotet, M., Comoretto, G., Davidson, M., Fabricius, C., Gracia, G., Hambly, N.~C., Hutton, A., Mora, A., Portell, J., van Leeuwen, F., Abbas, U., Abreu, A., Altmann, M., Andrei, A., Anglada, E., Balaguer-Nunez, L., Barache, C., Becciani, U., Bertone, S., Bianchi, L., Bouquillon, S., Bourda, G., Brusemeister, T., Bucciarelli, B., Busonero, D., Buzzi, R., Cancelliere, R., Carlucci, T., Charlot, P., Cheek, N., Crosta, M., Crowley, C., de Bruijne, J., de Felice, F., Drimmel, R. Esquej, P., Fienga, A., Fraile, E., Gai, M., Garralda, N., Gonzalez-Vidal, J.~J., Guerra, R., Hauser, M., Hofmann, W., Holl, B., Jordan, S., Lattanzi, M.~G., Lenhardt, H., Liao, S., Licata, E., Lister, T., Loffler, W., Marchant, J., Martin-Fleitas, J.-M., Messineo, R., Mignard, F., Morbidelli, R., Poggio, E., Riva, A., Rowell, N., Salguero, E., Sarasso, M., Sciacca, E., Siddiqui, H., Smart, R.~L., Spagna, A., Steele, I., Taris, F., Torra, J., van Elteren, A., van Reeven, W.,\& Vecchiato, A. 2018
 \bibitem[\protect\citeauthoryear{Little-Marenin \& Little}{1987}]{little1987}
 Little-Marenin, I.~R.,\& Little, S.~J. 1987, 
 AJ, 93, 1539
@@ -412,6 +436,8 @@ The Journal of Open Source Software, 2, 388
 %\bibitem[\protect\citeauthoryear{Romano et al.}{2010}]{romano2010}
 %Romano, D., et al. 2010, 
 %A$\&$A, 522, A32
+\bibitem[\protect\citeauthoryear{Sartoretti et al.}{2018}]{sartoretti2018}
+Sartoretti, P., Katz, D., Cropper, M., Panuzzo, P., Seabroke, G.~M. ,Viala, Y., Benson, K., Blomme, R., Jasniewicz, G., Jean-Antoine, A., Huckle, H., Smith, M., Baker, S., Crifo, F., Damerdji, Y., David, M., Dolding, C., Fremat, Y., Gosset, E., Guerrier, A., Guy, L.~P., Haigron, R., Janssen, K., Marchal, O., Plum, G., Soubiran, C., Thevenin, F., Ajaj, M., Allende Prieto, C., Babusiaux, C., Boudreault, S., Chemin, L., Delle Luche, C., Fabre, C., Gueguen, A., Hambly, N.~C., Lasne, Y., Meynadier, F., Pailler, F., Panem, C., Riclet, F., Royer, F., Tauran, G., Zurbach, C., Zwitter, T., Arenou, F., Gomez, A., Lemaitre, V., Leclerc, N., Morel, T., Munari, U., Turon, C.,\& Zerjal, M. 2018
 \bibitem[\protect\citeauthoryear{Schectman \& Johns}{2003}]{schectman2003}
 Shectman, S.~A.,\& Johns, M. 2003, 
 SPIE, 4837, 910
