@@ -17,7 +17,7 @@ import gala.integrate as gi
 import gala.potential as gp
 from gala.units import galactic
 
-stars = Table.read("dynamics_complete_test.csv")
+stars = Table.read("dynamics_final.csv")
 L = len(stars)
 N=1
 
@@ -43,8 +43,8 @@ W = W.flatten(L)
 
 for index, star in enumerate(stars):
 
-  icrs = coord.ICRS(ra=star["ra_1"] * u.deg,
-                  dec=star["dec_1"] * u.deg,
+  icrs = coord.ICRS(ra=star["ra_1_1"] * u.deg,
+                  dec=star["dec_1_1"] * u.deg,
                   distance=1.0 / star["parallax_1"] * u.kpc,
                   pm_ra_cosdec=star["pmra_1"]*u.mas/u.yr,
                   pm_dec=star["pmdec_1"]*u.mas/u.yr,
@@ -68,7 +68,7 @@ for index, star in enumerate(stars):
 
   w0 = gd.PhaseSpacePosition(gc.data)
 
-  if (star["Ba_only_candidate_1"]=='true' and star["Ba_Sr_candidate_1"]=='false'):
+  if (star["Ba_only_candidate_1_1"]=='true' and star["Ba_Sr_candidate_1_1"]=='false'):
 
    Ba_velx.append(w0.v_x.to(u.km/u.s).value)
    Ba_vely.append(w0.v_y.to(u.km/u.s).value)
@@ -76,7 +76,7 @@ for index, star in enumerate(stars):
    Ba_y.append(np.sqrt(Ba_velx[-1]**2+Ba_velz[-1]**2))
 
    
-  if (star["Sr_only_candidate_1"]=='true' and star["Ba_Sr_candidate_1"]=='false'):
+  if (star["Sr_only_candidate_1_1"]=='true' and star["Ba_Sr_candidate_1_1"]=='false'):
 
    Sr_velx.append(w0.v_x.to(u.km/u.s).value)
    Sr_vely.append(w0.v_y.to(u.km/u.s).value)
@@ -84,7 +84,7 @@ for index, star in enumerate(stars):
    Sr_y.append(np.sqrt(Sr_velx[-1]**2+Sr_velz[-1]**2))
 
    
-  if (star["Ba_Sr_candidate_1"]=='true'):
+  if (star["Ba_Sr_candidate_1_1"]=='true'):
 
    Barium_velx.append(w0.v_x.to(u.km/u.s).value)
    Barium_vely.append(w0.v_y.to(u.km/u.s).value)
