@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6650) (preloaded format=pdflatex 2018.4.14)  24 MAY 2018 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6650) (preloaded format=pdflatex 2018.4.14)  24 MAY 2018 11:56
 entering extended mode
 **./ms.tex
 (ms.tex
@@ -1268,13 +1268,23 @@ l.218
 pdfTeX warning: pdflatex (file ./yields_test.pdf): PDF inclusion: multiple pdfs
  with page group included in a single page
 >]
-<toomre.pdf, id=499, 578.16pt x 433.62pt>
+<toomre.pdf, id=500, 578.16pt x 433.62pt>
 File: toomre.pdf Graphic file (type pdf)
 <use toomre.pdf>
 Package pdftex.def Info: toomre.pdf  used on input line 232.
 (pdftex.def)             Requested size: 252.0pt x 189.00032pt.
 
 Overfull \hbox (12.0pt too wide) in paragraph at lines 232--233
+[][]
+ []
+
+<contour.pdf, id=501, 432.8973pt x 433.62pt>
+File: contour.pdf Graphic file (type pdf)
+<use contour.pdf>
+Package pdftex.def Info: contour.pdf  used on input line 238.
+(pdftex.def)             Requested size: 252.0pt x 252.41946pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 238--239
 [][]
  []
 
@@ -1290,11 +1300,15 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.249 D
        espite our noisy estimates of [Ba/Fe] and [Sr/Fe] from LAMOST spectra...
- <./toomre.pdf>] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 480.
- [8
+ <./toomre.pdf>] [7pdfTeX warning (ext4): destination with the same identifier 
+(name{figure.5}) has been already used, duplicate ignored
 
-]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.377 ...horyear{Kelson et al.}{2000}]{kelson2000}
+                                                   <./contour.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 480.
+ [8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 480.
  (ms.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 480.
@@ -1309,13 +1323,13 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 480.
  ) 
 Here is how much of TeX's memory you used:
- 10910 strings out of 494894
- 155415 string characters out of 3178672
- 255975 words of memory out of 3000000
- 14137 multiletter control sequences out of 15000+200000
+ 10917 strings out of 494894
+ 155534 string characters out of 3178672
+ 256237 words of memory out of 3000000
+ 14142 multiletter control sequences out of 15000+200000
  120120 words of font info for 197 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 35i,15n,37p,2467b,562s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,15n,37p,2467b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1334,23 +1348,24 @@ all/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/brodie/.miktex/texmfs/insta
 ll/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/brodie/.miktex/texmfs/install
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/brodie/.miktex/texmfs/install
 /fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/brodie/.miktex/texmfs/install/
-fonts/type1/public/amsfonts/cm/cmtt9.pfb></home/brodie/.miktex/texmfs/install/f
-onts/type1/public/amsfonts/symbols/msam10.pfb></home/brodie/.miktex/texmfs/inst
-all/fonts/type1/public/tex-gyre/qtmb.pfb></home/brodie/.miktex/texmfs/install/f
-onts/type1/public/tex-gyre/qtmr.pfb></home/brodie/.miktex/texmfs/install/fonts/
-type1/public/tex-gyre/qtmri.pfb></home/brodie/.miktex/texmfs/install/fonts/type
-1/public/newtx/rntxmi.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/publ
-ic/newtx/rntxmi5.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/ne
-wtx/rntxmi7.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/txfonts
-/rtxmi.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/newtx/rtxmi5
-.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/newtx/rtxmi7.pfb><
-/home/brodie/.miktex/texmfs/install/fonts/type1/public/txfonts/rtxr.pfb></home/
-brodie/.miktex/texmfs/install/fonts/type1/public/newtx/txsys.pfb></home/brodie/
-.miktex/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></home/brodie/.miktex/
-texmfs/install/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on ms.pdf (8 pages, 1467890 bytes).
+fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/brodie/.miktex/texmfs/install/f
+onts/type1/public/amsfonts/cm/cmtt9.pfb></home/brodie/.miktex/texmfs/install/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></home/brodie/.miktex/texmfs/insta
+ll/fonts/type1/public/tex-gyre/qtmb.pfb></home/brodie/.miktex/texmfs/install/fo
+nts/type1/public/tex-gyre/qtmr.pfb></home/brodie/.miktex/texmfs/install/fonts/t
+ype1/public/tex-gyre/qtmri.pfb></home/brodie/.miktex/texmfs/install/fonts/type1
+/public/newtx/rntxmi.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/publi
+c/newtx/rntxmi5.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/new
+tx/rntxmi7.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/txfonts/
+rtxmi.pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/newtx/rtxmi5.
+pfb></home/brodie/.miktex/texmfs/install/fonts/type1/public/newtx/rtxmi7.pfb></
+home/brodie/.miktex/texmfs/install/fonts/type1/public/txfonts/rtxr.pfb></home/b
+rodie/.miktex/texmfs/install/fonts/type1/public/newtx/txsys.pfb></home/brodie/.
+miktex/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></home/brodie/.miktex/t
+exmfs/install/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on ms.pdf (8 pages, 1797777 bytes).
 PDF statistics:
- 664 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 698 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
