@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730) (preloaded format=pdflatex 2018.4.14)  24 AUG 2018 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730) (preloaded format=pdflatex 2018.4.14)  24 AUG 2018 19:08
 entering extended mode
 **./ms.tex
 (ms.tex
@@ -1199,25 +1199,25 @@ Underfull \hbox (badness 1237) in paragraph at lines 92--93
  []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 103.
+(Font)              scaled to size 9.0pt on input line 101.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 9.0pt on input line 108.
+(Font)              scaled to size 9.0pt on input line 106.
 
-Underfull \hbox (badness 1067) in paragraph at lines 108--110
+Underfull \hbox (badness 1067) in paragraph at lines 106--108
 \T1/ntxtlf/m/n/9 absorption line. These included; 4554Å ([]) and 4077Å
  []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 128.
+(Font)              scaled to size 12.0pt on input line 124.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 128.
+(Font)              scaled to size 12.0pt on input line 124.
 [2]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 136.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 158.
+(Font)              scaled to size 8.0pt on input line 134.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 165.
 
  (/home/brodie/.miktex/texmfs/install/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -1226,109 +1226,101 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.164 
+l.166 
        <./posterchild_final.pdf>]
-<hrd_new.pdf, id=334, 289.08pt x 289.08pt>
+<hrd_new.pdf, id=343, 289.08pt x 289.08pt>
 File: hrd_new.pdf Graphic file (type pdf)
 <use hrd_new.pdf>
-Package pdftex.def Info: hrd_new.pdf  used on input line 180.
+Package pdftex.def Info: hrd_new.pdf  used on input line 187.
 (pdftex.def)             Requested size: 252.0pt x 252.00041pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 180--181
+Overfull \hbox (12.0pt too wide) in paragraph at lines 187--188
 [][]
  []
 
-
-Underfull \vbox (badness 1248) has occurred while \output is active []
-
- [4pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
-has been already used, duplicate ignored
+[4pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.188 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.188 
-       <./hrd_new.pdf>]
-<yields_test.pdf, id=416, 289.08pt x 289.08pt>
+l.195 
+      ]
+<yields_test.pdf, id=403, 289.08pt x 289.08pt>
 File: yields_test.pdf Graphic file (type pdf)
 <use yields_test.pdf>
-Package pdftex.def Info: yields_test.pdf  used on input line 199.
+Package pdftex.def Info: yields_test.pdf  used on input line 206.
 (pdftex.def)             Requested size: 252.0pt x 252.00041pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 199--200
+Overfull \hbox (12.0pt too wide) in paragraph at lines 206--207
 [][]
  []
 
 
-Underfull \hbox (badness 1817) in paragraph at lines 205--207
+Underfull \hbox (badness 1817) in paragraph at lines 212--214
 \T1/ntxtlf/m/n/9 Barium stars are excellent candidates for investigating the
  []
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.207 
-       <./yields_test.pdf>]
-<toomre.pdf, id=507, 578.16pt x 433.62pt>
+l.214 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.214 
+       <./hrd_new.pdf> <./yields_test.pdf
+
+pdfTeX warning: pdflatex (file ./yields_test.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+>]
+<toomre.pdf, id=516, 578.16pt x 433.62pt>
 File: toomre.pdf Graphic file (type pdf)
 <use toomre.pdf>
-Package pdftex.def Info: toomre.pdf  used on input line 221.
+Package pdftex.def Info: toomre.pdf  used on input line 228.
 (pdftex.def)             Requested size: 252.0pt x 189.00032pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 221--222
+Overfull \hbox (12.0pt too wide) in paragraph at lines 228--229
 [][]
  []
 
-<contour.pdf, id=508, 432.8973pt x 433.62pt>
+<contour.pdf, id=517, 432.8973pt x 433.62pt>
 File: contour.pdf Graphic file (type pdf)
 <use contour.pdf>
-Package pdftex.def Info: contour.pdf  used on input line 227.
+Package pdftex.def Info: contour.pdf  used on input line 234.
 (pdftex.def)             Requested size: 252.0pt x 252.41946pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 227--228
+Overfull \hbox (12.0pt too wide) in paragraph at lines 234--235
 [][]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.235 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-5}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.235 
-       <./toomre.pdf> <./contour.pdf
-
-pdfTeX warning: pdflatex (file ./contour.pdf): PDF inclusion: multiple pdfs wit
-h page group included in a single page
->]
-Underfull \hbox (badness 1515) in paragraph at lines 236--237
+Underfull \hbox (badness 1515) in paragraph at lines 243--244
 []\T1/ntxtlf/m/n/9 We find 178/257 barium star candidates show carbon
  []
 
-[7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 478.
- [8
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
+has been already used, duplicate ignored
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 478.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.244 
+       <./toomre.pdf>] [7pdfTeX warning (ext4): destination with the same ident
+ifier (name{figure.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.379 ...horyear{Kelson et al.}{2000}]{kelson2000}
+                                                   <./contour.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 488.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 488.
  (ms.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 478.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 478.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 488.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 488.
 Package rerunfilecheck Info: File `ms.out' has not changed.
 (rerunfilecheck)             Checksum: F605CBD1A734521B0EAFB1A9AA8F7B13;930.
 
@@ -1336,16 +1328,16 @@ Package rerunfilecheck Info: File `ms.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 478.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 488.
  ) 
 Here is how much of TeX's memory you used:
- 10929 strings out of 494894
- 155714 string characters out of 3178672
- 256341 words of memory out of 3000000
- 14151 multiletter control sequences out of 15000+200000
+ 10934 strings out of 494894
+ 155810 string characters out of 3178672
+ 256373 words of memory out of 3000000
+ 14155 multiletter control sequences out of 15000+200000
  120120 words of font info for 197 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 35i,15n,37p,1728b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,15n,37p,1728b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1379,9 +1371,9 @@ home/brodie/.miktex/texmfs/install/fonts/type1/public/txfonts/rtxr.pfb></home/b
 rodie/.miktex/texmfs/install/fonts/type1/public/newtx/txsys.pfb></home/brodie/.
 miktex/texmfs/install/fonts/type1/urw/times/utmri8a.pfb></home/brodie/.miktex/t
 exmfs/install/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on ms.pdf (8 pages, 1797834 bytes).
+Output written on ms.pdf (8 pages, 1800416 bytes).
 PDF statistics:
- 707 PDF objects out of 1000 (max. 8388607)
- 111 named destinations out of 1000 (max. 500000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
