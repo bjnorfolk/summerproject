@@ -36,6 +36,8 @@ Regarding the detection threshold, this is itemised clearly in Section 2.1.2. Sp
 (iv) The reduced chi squared value from our data-driven model must be less than 3
 (v) The signal to noise ratio in the spectrum must be greater than 30 per pixel
 
+We also examined de Castro's sample, all stars were enhanced in the BaII 4554A line. We cross matched our sample against de Castro's and found no matches. This was expected given LAMOST is a database of northern hemisphere stars and de Castro's samples were from the southern hemisphere.
+
 
 REFEREE: 
 

@@ -19,23 +19,21 @@ b_l = np.absolute(l)
 s_h, bin_edges = np.histogram(b, 89)
 l_h, bin_edges = np.histogram(b_l, 89)
 div = np.divide(s_h, l_h)
-#sl_h = div
-#sl_h = np.transpose(sl_h)
+menStd = np.sqrt(s_h)
+menStd_f = ((s_h + np.sqrt(s_h))/(l_h + np.sqrt(l_h))) - (s_h/l_h)
 
-#grid_slm = np.ma.masked_where(grid_sl < 0.001, grid_sl)
-
-fig, axes = plt.subplots(2, 1)
-axes[0].bar(bin_edges[:-1], s_h, width = 1, facecolor='#FF9309', alpha=0.5)
+fig, axes = plt.subplots(2, 1, figsize=(8, 12))
+axes[0].bar(bin_edges[:-1], s_h, width = 1, facecolor='#FF9309', alpha=0.5,
+	                               yerr=menStd)
 axes[0].set_xlim(min(bin_edges), max(bin_edges))
 axes[0].set_xlabel(r'$|b|$ $[^\circ]$')
-axes[0].set_ylabel(r'Number of candidates', 
-	                rotation=90)
+axes[0].set_ylabel(r'$N$')
 
-axes[1].bar(bin_edges[:-1], div, width = 1, facecolor='#FF9309', alpha=0.5)
+axes[1].bar(bin_edges[:-1], div, width = 1, facecolor='#FF9309', alpha=0.5,
+	                               yerr=menStd_f)
 axes[1].set_xlim(min(bin_edges), max(bin_edges))
 axes[1].set_xlabel(r'$|b|$ $[^\circ]$')
-axes[1].set_ylabel(r'Fraction of candidates relative to LAMOST',
-	                 rotation=90)
+axes[1].set_ylabel(r'$N/N$ $_{LAMOST}$')
 
 for ax in axes:
     ax.xaxis.set_major_locator(ticker.MaxNLocator(6))
@@ -43,7 +41,7 @@ for ax in axes:
 
 fig.tight_layout()
 plt.show()
-'''
+
 fig.savefig('DynamicFigures/'+'histogram'+'.png')
 fig.savefig("DynamicFigures/histogram.pdf", dpi=150)
-'''
+plt.close()
